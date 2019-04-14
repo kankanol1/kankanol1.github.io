@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>css轮播图</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="shortcut icon" href="../../../img/favicon.ico" type="image/x-icon" />
+
+    <style>
+        body{
+            margin: 0;
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #wrap{
+            /*margin: 100px;*/
+            /*width: 800px;*/
+            /*width:4800px;*/
+            width: 4000px;
+            height: 360px;
+            overflow: hidden;
+            position: relative;
+            border: 2px solid red;
+            vertical-align: top;
+            margin-left: 0;
+        }
+        #wrap:hover #list{
+            animation-play-state: paused;
+        }
+        #list{
+            left: 0;
+            /*width: 4800px;*/
+            height: 360px;
+            width: 200%;
+            font-size: 0;
+            position: absolute;
+            animation: kankan1 10s infinite linear;
+        }
+        #list li{
+            float: left;
+        }
+       @keyframes kankan{
+            0%,10%{transform: translate3d(0,0,0);}
+            20%,30%{transform: translate3d(-800px,0,0);}
+           40%,50%{transform: translate3d(-1600px,0,0);}
+           60%,70%{transform: translate3d(-2400px,0,0);}
+           80%,90%{transform: translate3d(-3200px,0,0);}
+              100%{transform: translate3d(-4000px,0,0);}
+       }
+        @keyframes kankan1{
+            from{transform: translate3d(0,0,0);}
+            to{transform: translate3d(-4000px,0,0);}
+        }
+    </style>
+</head>
+<body>
+<h2>css轮播图</h2>
+<div id="wrap">
+    <ul id="list">
+        <li><img src="../img/1.jpg" alt=""></li>
+        <li><img src="../img/2.jpg" alt=""></li>
+        <li><img src="../img/3.jpg" alt=""></li>
+        <li><img src="../img/4.jpg" alt=""></li>
+        <li><img src="../img/6.jpg" alt=""></li>
+        <li><img src="../img/1.jpg" alt=""></li>
+        <li><img src="../img/2.jpg" alt=""></li>
+        <li><img src="../img/3.jpg" alt=""></li>
+        <li><img src="../img/4.jpg" alt=""></li>
+        <li><img src="../img/6.jpg" alt=""></li>
+    </ul>
+</div>
+
+
+<script type="text/javascript">
+
+</script>
+</body>
+
+</html>

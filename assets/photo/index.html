@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon" />
+
+    <style>
+        h3{
+            text-align: center;
+        }
+        div{
+            margin: 0 auto;
+            width: 500px;
+        }
+        ul{
+            margin: 0 auto;
+            padding: 0;
+            list-style: none;
+        }
+        li{
+            height: 312px;
+        }
+        li >img{
+            height:312px;
+            width: 500px;
+        }
+        #floatL{
+            position: absolute;
+            left: 30px;
+            top: 200px;
+            width:300px;
+            height:200px;
+        }
+        #floatR{
+            /*position: absolute;*/
+            right: 30px;
+            top: 200px;
+            width:600px;
+            height:400px;
+            overflow: hidden;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+
+<h3>图片懒加载</h3>
+
+<!-------------------------------背景音乐设置--------------------------->
+<audio  id="music" src="./mp3/stt_by.mp3" autoplay  loop="loop" preload controls>
+    流浪（苏谭谭版）
+</audio>
+
+<!------------------------------加载图片区域----------------------------->
+<div id="outbox">
+</div>
+
+
+<script>
+    var oBox = document.querySelector('#outbox');
+    var oUl = document.createElement("ul");
+    var n=0;
+    var allLi;
+    var oFrame = document.getElementById("float");
+
+
+    //加载图片到Box
+    for(let i=0;i<23;i++){
+        var oLi = document.createElement('li');
+        oLi.innerHTML = '<img src="" data-src="'+ 'img/'+(i+10)+'.jpg' +'">';
+        oUl.appendChild(oLi);
+    }
+    oBox.appendChild(oUl);
+
+    allLi  =oBox.querySelectorAll('img');
+
+    //动态加载图片
+    window.addEventListener('scroll',function(){
+        if(n < allLi.length){
+            if(allLi[n].offsetTop <window.scrollY+window.innerHeight){
+                console.log(n);
+                allLi[n].src = allLi[n].dataset.src;
+                n ++;
+            }
+        }
+    },false);
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+@charset "UTF-8";
+#top {
+  height: 1.84rem;
+  padding: 0.3rem 0.2rem;
+  border-bottom: 0.04rem solid #b0b0b0;
+}
+#top .wx,
+#top .sc {
+  margin: 0;
+  display: inline-block;
+  color: #b6b6b6;
+  width: 2rem;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  font-size: 0.6rem;
+  box-sizing: border-box;
+  vertical-align: middle;
+  text-align: center;
+}
+#top form {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 10.12rem;
+}
+#top .search {
+  padding: 0;
+  border: none;
+  color: #666;
+  width: 10.12rem;
+  border-radius: 0.2rem;
+  box-sizing: border-box;
+  padding-left: 1.2rem;
+  background-color: #e6e6e6;
+  height: 1.2rem;
+  line-height: 1.2rem;
+}
+.fwrap {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.fwrap .fnav {
+  flex-grow: 1;
+  width: 25%;
+  background-color: #f6f6f6;
+}
+.fwrap .fnav ul li {
+  padding-top: 0.6rem;
+  height: 1.8rem;
+  line-height: 1.8rem;
+  vertical-align: middle;
+}
+.fwrap .fnav ul li p {
+  line-height: 0.64rem;
+  height: 0.64rem;
+  font-size: 0.6rem;
+  margin-bottom: 0;
+  border-left: 0.16rem solid #f6f6f6;
+}
+.fwrap .fnav ul .flactive {
+  background-color: white;
+}
+.fwrap .fnav ul .flactive p {
+  border-left: 0.16rem solid #ff5577;
+  color: #f57;
+}
+.fwrap .fcontent {
+  flex-grow: 1;
+  width: 75%;
+}
+.fwrap .fcontent .fimg {
+  position: relative;
+  padding: 0.6rem 0.4rem 0;
+  display: flex;
+  justify-content: space-around;
+  justify-content: space-evenly;
+}
+.fwrap .fcontent .fimg div {
+  margin: 0.4rem 0 0;
+  flex-grow: 1;
+  border-bottom: 0.04rem solid #e6e6e6;
+}
+.fwrap .fcontent .fimg div img {
+  width: 2.6rem;
+  height: 2.6rem;
+}
+.fwrap .fcontent .fimg div p {
+  font-size: 0.52rem;
+  margin-top: 0.2rem;
+}
+.fwrap .fcontent .rnav {
+  background-color: white;
+  height: 1.56rem;
+  display: flex;
+  z-index: 10;
+  justify-content: space-evenly;
+  border-bottom: 0.04rem solid #e6e6e6;
+  position: absolute;
+}
+.fwrap .fcontent .rnav a {
+  display: inline-block;
+  height: 1.56rem;
+  line-height: 1.56rem;
+  width: 3.72rem;
+  padding-top: 0.4rem;
+}
+.fwrap .fcontent .rnav a p {
+  height: 0.8rem;
+  line-height: 0.8rem;
+  width: 3.72rem;
+  font-size: 0.56rem;
+  margin-bottom: 0;
+}
+.fwrap .fcontent .rnav a .fpactive {
+  border-right: 0.08rem solid #e6e6e6;
+}
+.fwrap .fcontent .rnav .faactive {
+  color: #ef4562;
+}
+.fwrap .fcontent .fbody {
+  position: relative;
+  width: 100%;
+  margin-top: 1.56rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+.fwrap .fcontent .fbody .fdivall {
+  width: 5.36rem;
+  padding: 0.16rem 0;
+  margin-left: -0.08rem;
+}
+.fwrap .fcontent .fbody .fdivall a {
+  background-color: #fff;
+  height: 9.2rem;
+  position: relative;
+  margin-bottom: 0.2rem;
+  display: block;
+  box-shadow: 0.2rem 0.2rem 0.2rem #f6f6f6;
+  overflow: hidden;
+}
+.fwrap .fcontent .fbody .fdivall a .img {
+  width: 5.36rem;
+  height: 7.2rem;
+}
+.fwrap .fcontent .fbody .fdivall a .img img {
+  border-radius: 0.08rem;
+  width: 5.36rem;
+  height: 7.2rem;
+}
+.fwrap .fcontent .fbody .fdivall a .flbox {
+  padding: 0.2rem;
+}
+.fwrap .fcontent .fbody .fdivall a .flbox p {
+  color: #555;
+  text-align: left;
+  font-size: 0.52rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  margin-bottom: 0;
+}
+.fwrap .fcontent .fbody .fdivall a .flbox .content-div-in {
+  margin-top: 0.2rem;
+  height: 0.8rem;
+}
+.fwrap .fcontent .fbody .fdivall a .flbox .content-div-in .price {
+  color: red;
+  float: left;
+  font-size: 0.64rem;
+}
+.fwrap .fcontent .fbody .fdivall a .flbox .content-div-in .star {
+  float: right;
+}
+.fwrap .fcontent .fbody .fdivall a .ffloat {
+  position: relative;
+  top: -3rem;
+  height: 0.8rem;
+  width: 2.4rem;
+  opacity: 0.8;
+  background: linear-gradient(to right, #000000, #ffffff);
+}
+.fwrap .fcontent .fbody .fdivall a .flp {
+  position: relative;
+  top: -3.68rem;
+  width: 2.4rem;
+  color: white;
+  font-size: 0.4rem;
+  margin-bottom: 0;
+}

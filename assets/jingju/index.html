@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon" />
+
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+            border: 0;
+        }
+        img{
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            border: none;
+        }
+        div{
+            width: 333px;
+            margin: 200px auto auto;
+            height: 226px;
+            border: 1px solid #fff;
+        }
+        body{
+            background-color: black;
+        }
+        ul{
+            width: 324px;
+            height: 212px;
+            margin-top: 8px;
+            margin-left: 8px;
+            list-style: none;
+        }
+        ul li{
+            opacity: 0.4;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            float: left;
+        }
+    </style>
+    <script src="../js/jquery-1.12.4.js"></script>
+    <script>
+        $(function(){
+
+            $('ul>li').mouseenter(function(){
+                //链式编程
+                $(this).css('opacity',1).siblings().css('opacity',0.4);
+            });
+            $('ul').mouseleave(function(){
+                //链式编程
+                $(this).children('li').css('opacity',0.4);
+            });
+        });
+    </script>
+</head>
+<body>
+<div>
+    <ul >
+        <li><img src="img/01.jpg" alt=""></li>
+        <li><img src="img/02.jpg" alt=""></li>
+        <li><img src="img/03.jpg" alt=""></li>
+        <li><img src="img/04.jpg" alt=""></li>
+        <li><img src="img/05.jpg" alt=""></li>
+        <li><img src="img/06.jpg" alt=""></li>
+    </ul>
+</div>
+</body>
+</html>

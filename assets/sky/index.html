@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>璀璨星空</title>
+    <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon" />
+
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+        #canvas{
+            background-color: black;
+        }
+
+    </style>
+    <script>
+        window.onload = function(){
+            // 色列
+            var oColor = [
+                "#D1EE00","#003366","#FFA54F","#FF00FF","#FF3030",
+                "#FF33FF","#FF00FF","#32CD32","#B23AEE","#9932CC",
+                "#98FB98","#00EE00","#FFE7BA","#FFCC00", "#CC9990",
+                "#FF6600","#663300","#663333","#CC6666","#FF6666",
+                "#FFFF99","#FF0000","#00FFCC","#009966","#CCCC00",
+                "#66CCCC","#FF0099","#FF66FF","#990066","#FF3333"
+            ];
+            var c = document.getElementById('canvas');
+            var ctx = c.getContext('2d');
+
+            //设置画布全屏显示
+            c.width = window.innerWidth;
+            c.height = window.innerHeight;
+            ballMove();
+          
+            window.addEventListener('resize',function(){
+            	ballMove = null;
+                c.width = window.innerWidth;
+                c.height = window.innerHeight;
+//              clearInterval(timer);
+               
+                ballMove();
+
+            },false);
+
+
+        
+            function ballMove(){
+                //圆的半径可以随机生成
+                var r = 2;
+
+                //总球球数
+                var num = 400;
+
+                var allNum = [];
+                for(var i=0;i<num;i++){
+                    //速度也可以随机生成 为速度的矢量和
+                    var speed = 1;
+                    var speedX = Math.random() * speed - speed/2;
+                    var speedY = Math.random() * speed - speed/2;
+
+                    //默认滚动条宽度
+                    var scrollW = 0;
+
+                    //随机坐标
+                    var c_X = Math.random()*(window.innerWidth  - scrollW);
+                    var c_Y = Math.random()*(window.innerHeight - scrollW);
+
+                    //生成颜色
+                    var color = Math.floor(Math.random() * oColor.length);
+                    drawArc(c_X,c_Y,color);
+                    allNum[i] = [c_X,c_Y,color,speedX,speedY];
+                }
+                console.log(allNum);
+
+                //画圆
+                function drawArc(c_X,c_Y,color){
+                    ctx.beginPath();
+                    ctx.fillStyle = oColor[color];
+                    ctx.strokeStyle = "#000";
+
+                    ctx.arc(c_X,c_Y,r,0,Math.PI * 2,false);
+                    ctx.stroke();
+                    ctx.fill();
+                }
+
+
+                //移动
+                var timer = setInterval(function(){
+                    ctx.clearRect(0,0,c.width,c.height);
+
+                    ctx.fillStyle = 'red';
+                    ctx.font = 'bold 70px Arial';
+                    // var text = 'Beautiful Starry Sky';
+                    var text = '';
+                    var cW = ctx.measureText(text).width;
+                    ctx.strokeText(text,(window.innerWidth - cW)/2,200);
+                    ctx.font = 'bold 20px Arial';
+                    ctx.fillStyle = 'pink';
+
+
+
+                    // ctx.font = 'bold 20px Arial';
+                    // ctx.fillStyle = 'pink';
+                    // ctx.fillText('by kankan',window.innerWidth - 400,500);
+                    ctx.fill();
+
+
+
+
+                    move();
+                },12);
+
+                function move(){
+
+                    for(var i=0;i<num;i++){
+                        var cX = allNum[i][0];
+                        var cY = allNum[i][1];
+                        var speed_X = allNum[i][3];
+                        var speed_Y = allNum[i][4];
+                        if(cX > window.innerWidth - scrollW || cX < 0){
+                            speed_X = - speed_X;
+                            allNum[i][3] = speed_X;
+
+                        }
+                        if(cY > window.innerHeight  - scrollW || cY < 0){
+                            speed_Y = - speed_Y;
+                            allNum[i][4] = speed_Y;
+
+                        }
+                        cX = cX + speed_X;
+                        cY = cY + speed_Y;
+                        allNum[i][0] = cX;
+                        allNum[i][1] = cY;
+                        drawArc(cX,cY,allNum[i][2]);
+                    }
+                    for(var j=0;j<num-1;j++){
+                        for(var k=j+1;k<num;k++){
+                            var oSqrt = Math.sqrt(Math.pow(allNum[j][0] - allNum[k][0],2) + Math.pow(allNum[j][1] - allNum[k][1],2));
+                            if(oSqrt < 50){
+                                ctx.beginPath();
+                                ctx.moveTo(allNum[j][0],allNum[j][1]);
+                                ctx.lineTo(allNum[k][0],allNum[k][1]);
+                                ctx.closePath();
+
+                                ctx.strokeStyle = oColor[allNum[j][2]];
+                                ctx.stroke();
+                            }
+                        }
+                    }
+                }
+            }
+
+
+
+
+        };
+    </script>
+</head>
+<body>
+
+
+<canvas id="canvas">
+    <span>不支持该功能</span>
+</canvas>
+</body>
+</html>

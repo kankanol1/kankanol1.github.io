@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>账户</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="js/top.js"></script>
+    <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+<h2 style="text-align: center">请先登录</h2>
+
+<footer class="bottom">
+    <div data-href="index.html" >
+        <span class="glyphicon glyphicon-home"  ></span>
+        首页
+    </div>
+    <div data-href="fenye.html">
+        <span class="glyphicon glyphicon-th-large"></span>
+        分页
+    </div>
+    <div data-href="shopcar.html" >
+        <span class="glyphicon glyphicon-shopping-cart"></span>
+        购物车
+    </div>
+    <div data-href="my.html"  style="color:  #ef4562;">
+        <span class="glyphicon glyphicon-user"  style="color:  #ef4562;"></span>
+        我的
+    </div>
+</footer>
+<script type="text/javascript">
+
+    //头部和尾部js
+    (function(){
+        var oA = document.querySelector('.bottom').children;
+        for(var i=0;i<oA.length;i++){
+            oA[i].addEventListener('touchstart',function(){
+                window.location.href =this.getAttribute('data-href');
+                console.log(this.getAttribute('data-href'));
+            },false);
+        }
+        var oInput = document.querySelector('.search-form input');
+        oInput.addEventListener('touchstart',function(ev){
+            ev.stopPropagation();
+        },false);
+
+    })();
+</script>
+</body>
+
+</html>

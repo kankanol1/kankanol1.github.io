@@ -1,0 +1,140 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  color: #666;
+}
+.wrap {
+  width: 100%;
+}
+.wrap .header {
+  background-color: #eee;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  height: 1.8rem;
+  line-height: 1.8rem;
+  border-bottom: 0.04rem solid #b0b0b0;
+  text-align: center;
+}
+.wrap .header div {
+  float: left;
+}
+.wrap .header .back {
+  font-size: 1rem;
+  width: 1.8rem;
+  height: 1.8rem;
+}
+.wrap .header .world {
+  width: 11.4rem;
+  font-size: 0.7rem;
+}
+.wrap .header .edit {
+  width: 1.8rem;
+  height: 1.8rem;
+  font-size: 0.6rem;
+  box-sizing: border-box;
+  padding-right: 0.5rem;
+}
+.wrap .content {
+  width: 15rem;
+  height: 12rem;
+  overflow: hidden;
+}
+.wrap .content img {
+  position: relative;
+  width: 15rem;
+}
+.wrap .content .s-c-d {
+  position: relative;
+  height: 4rem;
+  top: -4rem;
+  text-align: center;
+}
+.wrap .content .s-c-d .s-c-d-p {
+  font-size: 0.6rem;
+}
+.wrap .content .s-c-d .s-c-d-d {
+  background-color: #ff5777;
+  width: 4rem;
+  padding-top: 0.2rem;
+  height: 1.2rem;
+  font-size: 0.7rem;
+  color: #fff;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 0.12rem;
+}
+.wrap .content .s-c-d .s-c-d-d a {
+  color: #fff;
+}
+.wrap .s-p p {
+  font-size: 0.6rem;
+  padding-left: 0.4rem;
+  background-color: #f6f6f6;
+  margin: 0;
+  line-height: 2rem;
+  height: 2rem;
+}
+.wrap .s-body {
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: space-evenly;
+}
+.wrap .s-body .s-style {
+  width: 6.96rem;
+}
+.wrap .s-body .s-style a {
+  margin-top: 0.4rem;
+  display: block;
+  height: 13rem;
+  background-color: #fff;
+  font-size: 0.4rem;
+  width: 6.96rem;
+}
+.wrap .s-body .s-style a .img {
+  height: 10rem;
+}
+.wrap .s-body .s-style a .img img {
+  width: 6.96rem;
+  height: 10rem;
+}
+.wrap .s-body .s-style a .d-one {
+  margin-top: 0.2rem;
+  width: 100%;
+  height: 1.5rem;
+}
+.wrap .s-body .s-style a .d-one div {
+  height: 0.5rem;
+  float: left;
+  padding: 0.08rem 0.2rem;
+  margin: 0.08rem 0.08rem;
+  background-color: #eff3f6;
+  border-radius: 0.04rem;
+}
+.wrap .s-body .s-style a .d-three {
+  padding: 0 0.2rem;
+  height: 1rem;
+  width: 100%;
+  margin-top: 0.4rem;
+}
+.wrap .s-body .s-style a .d-three p {
+  font-size: 0.5rem;
+  margin: 0;
+}
+.wrap .s-body .s-style a .d-three .p1 {
+  float: left;
+  width: 3rem;
+  font-size: 0.6rem;
+  font-weight: bold;
+}
+.wrap .s-body .s-style a .d-three .p1 span {
+  color: #ff5777;
+}
+.wrap .s-body .s-style a .d-three .p2 {
+  float: right;
+  width: 3rem;
+  text-align: right;
+  margin-right: 0.4rem;
+}

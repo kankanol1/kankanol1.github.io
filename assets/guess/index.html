@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>你画我猜</title>
+    <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon" />
+
+    <style>
+        body{
+            background-color: #b0b0b0;
+        }
+        #canvas{
+            background-color: whitesmoke;
+        }
+        span{
+            color: #000;
+        }
+        h2{
+            color: #fff;
+            text-align: center;
+            font-size: 100px;
+        }
+    </style>
+    <script>
+
+        window.onload = function(){
+
+            var c = document.getElementById('canvas');
+            var ctx = c.getContext('2d');
+
+            // c.onmousedown = function(ev){
+
+            c.ontouchstart = function(ev) {
+                    var ev = ev || event;
+                    ctx.moveTo(ev.clientX-c.offsetLeft,ev.clientY - c.offsetTop);
+                    c.ontouchmove = function(ev) {
+                        var ev = ev || event;
+                        ctx.lineTo(ev.clientX-c.offsetLeft,ev.clientY - c.offsetTop);
+                        ctx.stroke();
+                    };
+
+                    c.ontouchend = function() {
+                        c.ontouchstart = c.ontouchmove = null;
+                    };
+            };
+            c.onmousedown = function(ev){
+                var ev = ev || event;
+                ctx.moveTo(ev.clientX-c.offsetLeft,ev.clientY - c.offsetTop);
+                c.onmousemove = function(ev){
+                    var ev = ev || event;
+                    ctx.lineTo(ev.clientX-c.offsetLeft,ev.clientY - c.offsetTop);
+                    ctx.stroke();
+                };
+                c.onmouseup = function(){
+                    c.onmousemove = c.onmouseup = null;
+                };
+            };
+            c.onmouseleave = function() {
+                c.onmousemove = c.onmouseup = null;
+            };
+            c.ontouchcancel = function(){
+                c.ontouchstart = c.ontouchmove = null;
+
+            }
+
+
+
+        }
+    </script>
+</head>
+<body>
+
+<!--<h2>你画我猜</h2>-->
+<!--<p>PC端可见</p>-->
+<canvas id="canvas" height="600px" width="800px">
+    <span>hahahha</span>
+</canvas>
+</body>
+</html>

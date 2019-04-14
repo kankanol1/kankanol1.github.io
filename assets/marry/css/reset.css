@@ -1,0 +1,220 @@
+@charset "UTF-8";
+/*声明变量*/
+/*-------------------resetCSSS-----------------------*/
+a,
+input,
+button {
+  /* 清楚点击阴影 */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  color: #000;
+}
+a:hover,
+a:focus {
+  color: black;
+  text-decoration: none;
+}
+input,
+button {
+  /* 清除按钮圆角 iOS */
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  /* 禁止用户选中文字 */
+  -webkit-user-select: none;
+  /* 禁止文字缩放 */
+  -webkit-text-size-adjust: 100%;
+  /*s设置字体*/
+  font-family: Times New Roman, Arial, Helvetica, sans-serif;
+}
+h1 {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+iframe {
+  border: 0;
+}
+/*-------------------------------------------------------*/
+.wrap {
+  overflow: hidden;
+}
+.wrap .title {
+  background-color: #3c3844;
+  width: 15rem;
+  height: 1.91666667rem;
+  text-align: center;
+  color: #fff;
+  padding-top: 0.7rem;
+  box-sizing: border-box;
+}
+.wrap .title p {
+  position: relative;
+  left: 0;
+  top: 0;
+}
+.wrap .title .p-title {
+  margin: 0;
+  height: 0.53333333rem;
+  line-height: 0.53333333rem;
+  font-size: 0.53333333rem;
+}
+.wrap .title .p-des {
+  margin: 0;
+  margin-top: 0.21666667rem;
+  height: 0.16666667rem;
+  line-height: 0.16666667rem;
+  font-size: 0.16666667rem;
+}
+.wrap .title .p-des span {
+  height: 0;
+  display: inline-block;
+  border: 0.00833333rem solid #ffffff;
+  width: 1rem;
+  margin-bottom: 0.06666667rem;
+}
+.wrap .nav {
+  height: 1.2rem;
+  background-color: #56545e;
+  box-sizing: border-box;
+  padding: 0.125rem 0;
+  text-align: center;
+  border-bottom: 0.00833333rem solid #dfdfe1;
+  margin-bottom: 0.125rem;
+}
+.wrap .nav ul li {
+  float: left;
+  width: 2.5rem;
+  height: 0.96666667rem;
+  box-sizing: border-box;
+  border-left: 0.00833333rem solid #56545e;
+  border-right: 0.00833333rem solid #ffffff;
+  padding-top: 0.08333333rem;
+}
+.wrap .nav ul li h3 {
+  box-sizing: border-box;
+  font-size: 0.45833333rem;
+  height: 0.70833333rem;
+  padding-top: 0.025rem;
+  line-height: 0.68333333rem;
+  margin: 0;
+  color: #fff;
+}
+.wrap .nav ul li p {
+  transform: scale(0.7);
+  margin: 0;
+  margin-top: -0.125rem;
+  font-size: 0.11666667rem;
+  color: #a598a0;
+}
+.wrap .nav ul li:last-child {
+  border-right: 0.00833333rem solid #56545e;
+}
+.wrap .nav ul .active h3 {
+  color: #1dddd3;
+}
+.wrap .nav ul .active p {
+  color: #1dddd3;
+}
+.wrap .con {
+  background-color: #38a8a6;
+  text-align: center;
+  padding-top: 0.41666667rem;
+}
+.wrap .con .p1 {
+  color: #fff;
+  font-size: 0.44166667rem;
+  margin-bottom: 0;
+}
+.wrap .con .p2 {
+  color: #fff;
+  font-size: 0.20833333rem;
+  margin: 0;
+}
+.wrap .con .num {
+  color: #fff;
+  margin: 0;
+  margin-top: 0.41666667rem;
+  font-size: 1.60833333rem;
+}
+.wrap .con ul {
+  box-sizing: border-box;
+  margin: 1rem 0;
+  padding: 0.58333333rem;
+  width: 100%;
+  height: 2.66666667rem;
+}
+.wrap .con ul li {
+  float: left;
+  width: 2.08333333rem;
+  margin: 0 0.33333333rem;
+  text-align: center;
+}
+.wrap .con ul li .img {
+  margin-left: 0.20833333rem;
+  width: 1.63333333rem;
+  height: 1.63333333rem;
+  line-height: 1.63333333rem;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.wrap .con ul li .img img {
+  margin-top: 0.10833333rem;
+  width: 1.33333333rem;
+  height: 1.33333333rem;
+}
+.wrap .con ul li p {
+  height: 0.83333333rem;
+  line-height: 0.83333333rem;
+  font-size: 0.41666667rem;
+  color: #fff;
+}
+.wrap .con .title4 {
+  width: 15rem;
+  height: 1.91666667rem;
+  text-align: center;
+  color: #fff;
+  padding-top: 0.7rem;
+  box-sizing: border-box;
+}
+.wrap .con .title4 p {
+  position: relative;
+  left: 0;
+  top: 0;
+}
+.wrap .con .title4 .p-title {
+  margin: 0;
+  height: 0.53333333rem;
+  line-height: 0.58333333rem;
+  font-size: 0.58333333rem;
+}
+.wrap .con .title4 .p-des {
+  margin: 0;
+  margin-top: 0.21666667rem;
+  height: 0.16666667rem;
+  line-height: 0.16666667rem;
+  font-size: 0.25rem;
+}
+.wrap .con .title4 .p-des span {
+  height: 0;
+  display: inline-block;
+  border: 0.00833333rem solid #ffffff;
+  width: 1rem;
+  margin-bottom: 0.06666667rem;
+}
+.wrap .con .last {
+  font-size: 0.16666667rem;
+  color: #297074;
+  margin-top: 0.08333333rem;
+  padding-bottom: 0.83333333rem;
+  margin-bottom: 0;
+}

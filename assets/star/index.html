@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        var html,
+            htmlW;
+        html = document.documentElement;
+        htmlW = html.getBoundingClientRect().width;
+        // htmlW = html.clientWidth;
+        html.style.fontSize = htmlW/15 + 'px';
+        window.addEventListener('resize',function(){
+            htmlW = html.getBoundingClientRect().width;
+            html.style.fontSize = htmlW/15 + 'px';
+        });
+
+    </script>
+    <title>星巴克</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon">
+    <script src="../js/jquery-1.12.4.js"></script>
+    <script src="../js/bootstrap.js"></script>
+</head>
+<body>
+
+<!--<div class="box">-->
+    <div class="top">
+        <nav class="navbar nv-xbk">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <img src="img/logo.svg" alt="">
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">门店</a></li>
+                        <li><a href="#">我的账户</a></li>
+                        <li><a href="#">菜单</a></li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <span class="glyphicon glyphicon-align-justify"></span>
+                                <!--<span class="caret"></span>-->
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+        <div class="container-fluid">
+            <span class="co">心情惬意，来杯咖啡吧 ☕</span>
+            <div class="re">
+                <a href="javascript:;" class="login"><img src="img/icon-account.svg" alt="">登录</a>
+                <a href="javascript:;" class="register"><span class="btn-register">注册</span></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="body">
+        <div id="example1" class="carousel slide" data-ride="carousel">
+
+            <div class="carousel-inner  box1" role="listbox">
+                <div class="item active">
+                    <img src="img/kv-bever.jpg" alt="...">
+                </div>
+                <div class="item">
+                    <img src="img/kv-mooncake.jpg" alt="...">
+                </div>
+                <div class="item">
+                    <img src="img/fp-cold-foam.jpg" alt="...">
+                </div>
+            </div>
+
+
+            <a class="left carousel-control" href="#example1" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#example1" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <div id="example2" class="carousel slide" data-ride="carousel">
+
+            <div class="carousel-inner box2" role="listbox">
+                <div class="item active">
+                    <img src="img/kv-mooncake-mobile.jpg" alt="...">
+                </div>
+                <div class="item">
+                    <img src="img/kv-bever-mobile.jpg" alt="...">
+                </div>
+                <div class="item">
+                    <img src="img/fp-cold-mobile.jpg" alt="...">
+                </div>
+            </div>
+
+            <a class="left carousel-control" href="#example2" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#example2" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <div class="container-fluid up-img">
+            <div class="row move">
+                <div class="col-xs-12 col-sm-4">
+                    <a href="javascript:;"><img src="img/3-0.jpg" alt=""></a>
+
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <a href="javascript:;"><img src="img/3-1.jpg" alt=""></a>
+
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <a href="javascript:;"><img src="img/3-3.jpg" alt=""></a>
+
+                </div>
+            </div>
+        </div>
+        <div class="container job">
+            <div class="row">
+                <div class="left col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <h3>星象俱乐部</h3>
+                    <p class="pdes">开启您的星享之旅，星星越多、会员等级越高、好礼越丰富。
+                        <a href="javascript:;" class="more">了解更多></a>
+                    </p>
+                    <p class="re">
+                        <a href="javascript:;" class="register"><span class="btn-register">登录</span></a>
+                        <a href="javascript:;" class="register"><span class="btn-register">注册</span></a>
+                    </p>
+                </div>
+                <div  class="right col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <img src="img/logo-msr.svg" alt="">
+
+                </div>
+            </div>
+        </div>
+        <div class="select">
+            <h2>星巴克精选</h2>
+            <h4 class="little">在星巴克天猫旗舰店发现更多咖啡心意</h4>
+            <div class="container">
+                <div class="row card">
+                    <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 show">
+                        <div class="contentbox">
+                            <div class="img">
+                                <img src="img/card-01.png" alt="">
+                            </div>
+                            <div class="cont">
+                                <h4>星享卡</h4>
+                                <p>开始您的</p>
+                                <p>星巴克之旅</p>
+                                <a href="javascript:;" class="more">了解更多></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 show">
+                        <div class="contentbox">
+                            <div class="img">
+                                <img src="img/card-02.png" alt="">
+                            </div>
+                            <div class="cont">
+                                <h4>星礼卡</h4>
+                                <p>用一份心礼</p>
+                                <p>让心意相随</p>
+                                <a href="javascript:;" class="more">了解更多></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 show">
+                        <div class="contentbox">
+                            <div class="img">
+                                <img src="img/tmall-eticket.png" alt="">
+                            </div>
+                            <div class="cont">
+                                <h4>电子产品券</h4>
+                                <p>心意</p>
+                                <p>从这一杯开始</p>
+                                <a href="javascript:;" class="more">了解更多></a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 show">
+                        <a href="https://starbucks.tmall.com/category-1141443816.htm?spm=a1z10.1-b-s.w4006-14489348233.10.MtuIoi" class="outer">
+                            <div class="contentbox">
+                                <div class="img">
+                                    <img src="img/tmall-reserve.png" alt="">
+                                </div>
+                                <div class="cont">
+                                    <h4>咖啡生活</h4>
+                                    <p>星巴克</p>
+                                    <p>用心制作</p>
+                                    <a href="javascript:;" class="more">了解更多></a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="course">
+            <h2>1912 派克街 | 咖啡星讲堂</h2>
+            <h4 class="little">了解更多星巴克咖啡文化</h4>
+            <div class="box-c">
+                <ul class="oul">
+                    <li>
+                        <img src="img/last-01.jpg" alt="">
+                        <span>咖啡知识</span>
+                        <p class="p1">咖啡的起源与培植</p>
+                    </li>
+                    <li>
+                        <img src="img/last-02.jpg" alt="">
+                        <span>咖啡品鉴</span>
+                        <p class="p1">咖啡调剂</p>
+                    </li>
+                    <li>
+                        <img src="img/last-03.jpg" alt="">
+                        <span>咖啡知识</span>
+                        <p class="p1">咖啡烘焙</p>
+                    </li>
+                    <li>
+                        <img src="img/last-04.jpg" alt="">
+                        <span>咖啡品鉴</span>
+                        <p class="p1">手冲咖啡</p>
+                    </li>
+                </ul>
+                <div class="left"><</div>
+                <div class="right">></div>
+            </div>
+
+
+        </div>
+    </div>
+<!--</div>-->
+
+
+<script src="js/index.js"></script>
+</body>
+</html>

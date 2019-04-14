@@ -1,0 +1,25 @@
+
+html，body{overflow-x:hidden;}
+.bottom {
+    position: fixed;
+    bottom: 0;
+    z-index: 9999 !important;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    border-top: 0.04rem solid #bbbbbb;
+    padding: 0.4rem 0;
+}
+.bottom div {
+    color: #333;
+    flex-grow: 1;
+    height: 1.64rem;
+    line-height: 1.6rem;
+}
+.bottom div span {
+    display: block;
+    font-size: 0.72rem;
+    color: #999;
+}

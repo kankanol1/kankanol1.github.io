@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>移动回放</title>
+    <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon" />
+
+    <style>
+        body{
+            background-color: black;
+        }
+        #canvas{
+            background-color: whitesmoke;
+            /*margin: 0 auto;*/
+            margin: 100px;
+        }
+        span{
+            color: #000;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var c = document.getElementById('canvas');
+            var ctx = c.getContext('2d');
+            ctx.fillStyle = 'red';
+            ctx.fillRect(0,0,100,100);
+            ctx.stroke();//描边
+            var num = 0;
+            var num1 = 0;
+            // x,y 的矢量和就是盒子移动速度
+            var speed = 5;
+            var ws = speed;
+            var hs = speed;
+            setInterval(function(){
+                num = num + ws;
+                num1 = num1 + hs;
+                if(num1 > c.height -100) hs = -speed;
+                if(num > c.width -100)   ws = -speed;
+                if(num<0)  ws = speed ;
+                if(num1<0) hs = speed;
+                ctx.clearRect(0,0,c.width,c.height);//清除画布
+                ctx.fillRect(num,num1,100,100);
+            },1000/36);
+        }
+    </script>
+</head>
+<body>
+<canvas id="canvas" height="600px" width="800px">
+    <span>kankan</span>
+</canvas>
+</body>
+</html>

@@ -1,0 +1,321 @@
+@charset "UTF-8";
+/*声明变量*/
+/*-------------------resetCSSS-----------------------*/
+a,
+input,
+button {
+  /* 清楚点击阴影 */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  color: #000;
+}
+a:hover,
+a:focus {
+  color: black;
+  text-decoration: none;
+}
+input,
+button {
+  /* 清除按钮圆角 iOS */
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+body {
+  margin: 0;
+  /* 禁止用户选中文字 */
+  -webkit-user-select: none;
+  /* 禁止文字缩放 */
+  -webkit-text-size-adjust: 100%;
+  /*s设置字体*/
+  font-family: Times New Roman, Arial, Helvetica, sans-serif;
+}
+h1 {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/*--------------------------------/注册按钮------------------------------*/
+/*------------------------------------------------------/通用样式-----------------------------------------------------------*/
+@media screen and (min-width: 1170px) {
+  .body .row .one {
+    width: 30%;
+  }
+  .body .row .two {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .body .job .left {
+    text-align: center;
+  }
+  #example1 {
+    display: none;
+  }
+  #example2 {
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) {
+  #example1 {
+    display: block;
+  }
+  #example2 {
+    display: none;
+  }
+}
+.box {
+  margin: 0;
+}
+.box .padc {
+  padding: 0;
+}
+.top {
+  box-shadow: 0 0 5px 5px #b0b0b0;
+  font-weight: bold;
+  padding: 20px;
+}
+.top .navbar {
+  box-sizing: content-box;
+  height: 48px;
+  padding: 16px;
+  background-color: #fff;
+  margin-bottom: 0;
+  color: #000;
+}
+.top .navbar .navbar-brand {
+  padding: 0;
+}
+.top .container-fluid .co {
+  font-size: 30px;
+}
+.top .container-fluid .re {
+  font-weight: initial;
+  height: 50px;
+  line-height: 50px;
+}
+.top .container-fluid .re .login {
+  color: #00A862;
+  font-size: 16px;
+}
+.top .container-fluid .re .login img {
+  margin-top: -3px;
+  margin-right: 5px;
+  height: 26px;
+}
+.top .container-fluid .re .register {
+  font-size: 16px;
+  margin-left: 10px;
+  border-radius: 20px;
+  border: 1px solid #00A862;
+  padding: 8px 15px;
+  color: #00A862;
+}
+body {
+  overflow-x: hidden;
+}
+.body {
+  padding-bottom: 50px;
+}
+.body #carousel-example-generic img {
+  width: 100%;
+}
+.body .up-img {
+  background-color: #e6e6e6;
+  padding: 40px 0;
+}
+.body .up-img .move {
+  padding: 0 50px;
+}
+.body .up-img .move div {
+  padding: 10px;
+}
+.body .up-img .move div a {
+  display: block;
+}
+.body .up-img .move div a img {
+  width: 100%;
+  transition: .2s;
+}
+.body .up-img .move div a img:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 1px 1px #b0b0b0;
+}
+.body .job {
+  padding: 20px 0;
+}
+.body .job .left .pdes {
+  line-height: 30px !important;
+  color: rgba(0, 0, 0, 0.56);
+  margin: 20px 0 40px;
+  font-size: 18px;
+}
+.body .job .left .pdes .more {
+  color: #C2A661;
+}
+.body .job .left .re {
+  margin: 0;
+}
+.body .job .left .re .register {
+  font-size: 16px;
+  margin-right: 10px;
+  border-radius: 20px;
+  border: 1px solid #00A862;
+  padding: 8px 15px;
+  color: #00A862;
+}
+.body .job .right {
+  padding: 50px;
+}
+.body .job .right img {
+  width: 285px;
+  display: block;
+  margin: 0 auto;
+}
+.body .select {
+  background-color: #e8e8e8;
+  text-align: center;
+  padding-top: 20px;
+}
+.body .select .little {
+  margin: 20px;
+}
+.body .select .card {
+  padding-top: 30px;
+}
+.body .select .card .outer {
+  display: block;
+  height: 100%;
+}
+.body .select .card .show {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  padding: 20px 5px;
+}
+.body .select .card .show h4 {
+  margin: 0;
+  margin-bottom: 10px;
+}
+.body .select .card .show .contentbox {
+  background-color: #fff;
+  padding: 10px;
+}
+.body .select .card .show .contentbox .more {
+  color: #C2A661;
+  font-size: 12px;
+  margin-top: 20px;
+}
+.body .select .card .show .contentbox .img {
+  height: 50px;
+}
+.body .select .card .show .contentbox .cont {
+  padding: 0 30px;
+}
+.body .select .card .show .contentbox:hover {
+  transform: translateY(-3px);
+  transition: .2s;
+  box-shadow: 0 0 5px 5px #e2e2e2;
+}
+.body .select .card .show:nth-of-type(1) .img img {
+  position: relative;
+  width: 84px;
+  height: 108px;
+  background-size: 84px 108px;
+  top: -50px;
+}
+.body .select .card .show:nth-of-type(2) .img img {
+  position: relative;
+  width: 102px;
+  height: 72px;
+  background-size: 102px 72px;
+  top: -30px;
+}
+.body .select .card .show:nth-of-type(3) .img img {
+  position: relative;
+  width: 75px;
+  height: 72px;
+  background-size: 75px 72px;
+  top: -40px;
+}
+.body .select .card .show:nth-of-type(4) .img img {
+  position: relative;
+  width: 80px;
+  height: 72px;
+  background-size: 80px 72px;
+  top: -40px;
+}
+.body .course {
+  text-align: center;
+  padding-top: 20px;
+}
+.body .course .little {
+  margin: 20px;
+}
+.body .course .box-c {
+  height: 254px;
+  overflow: hidden;
+  margin-top: 30px;
+}
+.body .course .box-c ul {
+  overflow: hidden;
+  height: 254px;
+  position: relative;
+  left: 0;
+  width: 1240px;
+  transition: .5s;
+}
+.body .course .box-c ul li {
+  height: 234px;
+  width: 290px;
+  text-align: left;
+  border-radius: 2px;
+  box-shadow: 0 0 1px 1px #b0b0b0;
+  float: left;
+  margin: 10px;
+}
+.body .course .box-c ul li img {
+  width: 290px;
+  height: 168px;
+}
+.body .course .box-c ul li span {
+  position: relative;
+  display: block;
+  background-color: #C2A661;
+  width: 80px;
+  top: -156px;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  padding-left: 12px;
+}
+.body .course .box-c ul li .p1 {
+  margin: 0;
+  padding: 0 16px 16px;
+}
+.body .course .box-c .left,
+.body .course .box-c .right {
+  position: relative;
+  font-size: 30px;
+  width: 100px;
+  height: 234px;
+  line-height: 234px;
+  z-index: 1;
+  top: -244px;
+  color: #fff;
+}
+.body .course .box-c .left {
+  float: left;
+}
+.body .course .box-c .right {
+  float: right;
+}
+.body .course .box-c .left:hover,
+.body .course .box-c .right:hover {
+  background-color: rgba(226, 226, 226, 0.21);
+  font-weight: bold;
+}

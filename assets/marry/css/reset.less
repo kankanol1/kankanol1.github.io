@@ -1,0 +1,234 @@
+@charset "UTF-8";
+/*声明变量*/
+/*-------------------resetCSSS-----------------------*/
+a,
+input,
+button {
+  /* 清楚点击阴影 */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  color: #000;
+}
+a:hover,
+a:focus {
+  color: black;
+  text-decoration: none;
+}
+input,
+button {
+  /* 清除按钮圆角 iOS */
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+body,html {
+  margin: 0;
+  padding: 0;
+  /* 禁止用户选中文字 */
+  -webkit-user-select: none;
+  /* 禁止文字缩放 */
+  -webkit-text-size-adjust: 100%;
+  /*s设置字体*/
+  font-family: Times New Roman, Arial, Helvetica, sans-serif;
+}
+h1 {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+iframe{
+  border: 0;
+}
+/*-------------------------------------------------------*/
+@width:25*4.8rem;
+.wrap{
+  overflow: hidden;
+  .title{
+    background-color: #3c3844;
+    width: 15rem;
+    height: 230/@width;
+    text-align: center;
+    color: #fff;
+    padding-top: 84/@width;
+    box-sizing: border-box;
+    p{
+      position: relative;
+      left: 0;
+      top: 0;
+    }
+    .p-title{
+      margin: 0;
+      height: 64/@width;
+      line-height: 64/@width;
+      font-size: 64/@width;
+    }
+    .p-des{
+      margin: 0;
+      margin-top: 26/@width;
+      height: 20/@width;
+      line-height: 20/@width;
+      font-size: 20/@width;
+      span{
+        height: 0;
+        display: inline-block;
+        border:1/@width solid #fff;;
+        width: 1rem;
+        margin-bottom: 8/@width;
+      }
+    }
+
+  }
+  .nav{
+    height: 144/@width;
+    background-color: #56545e;
+    box-sizing: border-box;
+    padding: 15/@width 0;
+    text-align: center;
+    border-bottom: 1/@width solid #dfdfe1;
+    margin-bottom: 15/@width;
+    ul{
+      li{
+        float: left;
+        width: 300/@width;
+        height: 116/@width;
+        box-sizing: border-box;
+        border-left: 1/@width solid #56545e;
+        border-right: 1/@width solid white;
+        padding-top: 10/@width;
+        h3{
+          box-sizing: border-box;
+          font-size: 55/@width;
+          height: 85/@width;
+          padding-top: 3/@width;
+          line-height: 82/@width;
+          margin: 0;
+          color: #fff;
+        }
+        p{
+          transform: scale(.7);
+          margin: 0;
+          margin-top: -15/@width;
+          font-size: 14/@width;
+          color: #a598a0;
+        }
+      }
+      li:last-child{
+        border-right:1/@width solid #56545e;
+
+      }
+      .active{
+        h3{
+          color: #1dddd3;
+        }
+        p{
+          color: #1dddd3;
+          //margin: 0;
+
+        }
+      }
+    }
+  }
+  .con{
+    background-color: #38a8a6;
+    text-align: center;
+    padding-top: 50/@width;
+    .p1{
+      color: #fff;
+      font-size: 53/@width;
+      margin-bottom: 0;
+    }
+    .p2{
+      color: #fff;
+      font-size: 25/@width;
+      margin: 0;
+    }
+    .num{
+      color: #fff;
+      margin: 0;
+      margin-top: 50/@width;
+      font-size: 193/@width;
+    }
+    ul{
+      box-sizing: border-box;
+      margin: 120/@width 0;
+      padding: 70/@width;
+      width: 100%;
+      height: 320/@width;
+      li{
+        float: left;
+        width: 250/@width;
+        margin: 0 40/@width;
+        text-align: center;
+        .img{
+          margin-left: 25/@width;
+          width: 196/@width;
+          height: 196/@width;
+          line-height: 196/@width;
+          border-radius: 50%;
+          background-color: #fff;
+          img{
+            margin-top: 13/@width;
+            width: 160/@width;
+            height: 160/@width;
+          }
+        }
+        p{
+          height: 100/@width;
+          line-height: 100/@width;
+          font-size: 50/@width;
+          color: #fff;
+        }
+      }
+    }
+    .title4{
+      width: 15rem;
+      height: 230/@width;
+      text-align: center;
+      color: #fff;
+      padding-top: 84/@width;
+      box-sizing: border-box;
+      p{
+        position: relative;
+        left: 0;
+        top: 0;
+      }
+      .p-title{
+        margin: 0;
+        height: 64/@width;
+        line-height: 70/@width;
+        font-size: 70/@width;
+      }
+      .p-des{
+        margin: 0;
+        margin-top: 26/@width;
+        height: 20/@width;
+        line-height: 20/@width;
+        font-size: 30/@width;
+        span{
+          height: 0;
+          display: inline-block;
+          border:1/@width solid #fff;;
+          width: 1rem;
+          margin-bottom: 8/@width;
+        }
+      }
+
+    }
+    .last{
+      font-size: 20/@width;
+      color: #297074;
+      margin-top: 10/@width;
+      padding-bottom: 100/@width;
+      margin-bottom: 0;
+    }
+
+  }
+
+
+}

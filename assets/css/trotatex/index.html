@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>相册集</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="shortcut icon" href="../../../img/favicon.ico" type="image/x-icon" />
+
+    <style>
+
+        .box{
+            width: 300px;
+            height: 200px;
+            margin: 0 auto;
+        }
+        .btn{
+            position: relative;
+            width: 360px;
+            height: 30px;
+            top: 150px;
+            left: -30px;
+        }
+        .btn input{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            font-size:20px;
+            color: #fff;
+            outline-style: none;
+            border: 1px solid #27fff9;
+        }
+        .btn .left{
+            float: left;
+        }
+        .btn .right{
+            float: right;
+        }
+        #imgs{
+            perspective: 1000px;
+            position: relative;
+            font-size: 0;
+            width: 300px;
+            height: 200px;
+            transform-style: preserve-3d;
+        }
+        #imgs img{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 300px;
+            height: 200px;
+            transform-origin: bottom;
+            transform: rotateX(180deg);
+            opacity: 0;
+        }
+        #imgs img:nth-of-type(1){
+            transform: rotateX(0deg);
+            opacity: 1;
+        }
+
+        @keyframes kankan {
+            0%{transform: rotateX(90deg);
+            opacity: 0}
+            60%{transform: rotateX(0deg);
+            opacity: 1}
+            65%{transform: rotateX(10deg)}
+            70%{transform: rotateX(0deg)}
+            75%{transform: rotateX(6deg)}
+            80%{transform: rotateX(0deg)}
+            85%{transform: rotateX(3deg)}
+            90%{transform: rotateX(0deg)}
+            95%{transform: rotateX(1deg)}
+            100%{transform: rotateX(0deg)}
+        }
+        @keyframes kankan1 {
+            0%{transform: rotateX(0deg);opacity: 0.3}
+            100%{transform: rotateX(-270deg);
+                opacity: 0;}
+        }
+
+        h4{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<h4>前后翻转相册集</h4>
+
+<div class="box">
+<div class="btn">
+    <input type="button" class="left" value="<">
+    <input type="button" class="right" value=">">
+</div>
+
+    <div id="imgs">
+        <img src="../img/1.jpg" alt="">
+        <img src="../img/2.jpg" alt="">
+        <img src="../img/3.jpg" alt="">
+        <img src="../img/4.jpg" alt="">
+        <img src="../img/6.jpg" alt="">
+    </div>
+    <div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+
+</div>
+
+
+<script type="text/javascript">
+
+    var btn = document.querySelector('.right');
+    var btnL = document.querySelector('.left');
+    var imgs = document.querySelector('#imgs').children;
+    // console.log(imgs[0]);
+    var flag =0;
+    btn.addEventListener('click',function(){
+        if(flag == 4){
+            flag=0;
+        }
+        for(var i=0;i<imgs.length;i++){
+            imgs[i].style.animation = 'kankan1 1s linear';
+            imgs[i].style.transform = 'rotateX(-180deg)';
+            imgs[i].style.opacity = '0';
+        }
+        imgs[flag].style.opacity = '1';
+        imgs[flag].style.animation = 'kankan 2s linear';
+        imgs[flag].style.transform = 'rotateX(0deg)';
+        flag +=1;
+
+    },false);
+
+    btnL.addEventListener('click',function(){
+        if(flag < 0){
+            flag = 4;
+        }
+        for(var i=0;i<imgs.length;i++){
+            imgs[i].style.animation = 'kankan1 1s linear';
+            imgs[i].style.transform = 'rotateX(-180deg)';
+            imgs[i].style.opacity = '0';
+        }
+        imgs[flag].style.opacity = '1';
+        imgs[flag].style.animation = 'kankan 2s linear';
+        imgs[flag].style.transform = 'rotateX(0deg)';
+        flag -=1;
+
+    },false);
+
+
+
+</script>
+</body>
+
+</html>

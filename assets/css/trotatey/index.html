@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>左右翻转相册集</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="shortcut icon" href="../../../img/favicon.ico" type="image/x-icon" />
+
+    <style>
+
+        .box{
+            width: 300px;
+            margin: 0 auto;
+        }
+        .btn{
+            position: relative;
+            width: 360px;
+            height: 30px;
+            top: 70px;
+            left: -30px;
+        }
+        .btn input{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            font-size: 20px;
+            color: #fff;
+            outline-style: none;
+            border: 1px solid #27fff9;
+        }
+        .btn .left{
+            float: left;
+        }
+        .btn .right{
+            float: right;
+        }
+        #imgs{
+            background-image: url("../img/2.jpg");
+            background-repeat: no-repeat;
+            background-size: 300px 200px;
+            perspective: 1000px;
+            position: relative;
+            font-size: 0;
+            width: 150px;
+            height: 100px;
+            transform-style: preserve-3d;
+        }
+        #imgs img{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 150px;
+            height: 100px;
+            transform-origin: right;
+            transform: rotateY(179deg);
+        }
+        #imgs img:nth-of-type(1){transform: rotateY(0deg);}
+
+        @keyframes kankan {
+            0%{transform: rotateY(180deg);}
+            60%{transform: rotateY(0deg);}
+            65%{transform: rotateY(10deg)}
+            70%{transform: rotateY(0deg)}
+            75%{transform: rotateY(6deg)}
+            80%{transform: rotateY(0deg)}
+            85%{transform: rotateY(3deg)}
+            90%{transform: rotateY(0deg)}
+            95%{transform: rotateY(1deg)}
+            100%{transform: rotateY(0deg)}
+        }
+        @keyframes kankan1 {
+            0%{transform: rotateY(0deg);}
+            60%{transform: rotateY(179deg);}
+            65%{transform: rotateY(169deg)}
+            70%{transform: rotateY(179deg)}
+            75%{transform: rotateY(173deg)}
+            80%{transform: rotateY(179deg)}
+            85%{transform: rotateY(176deg)}
+            90%{transform: rotateY(179deg)}
+            95%{transform: rotateY(178deg)}
+            100%{transform: rotateY(179deg)}
+        }
+        @keyframes kankan1 {
+            0%{transform: rotateY(0deg)}
+            100%{transform: rotateY(180deg);}
+        }
+
+        h4{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h4>左右翻转相册</h4>
+<div class="box">
+<div class="btn">
+    <input type="button" class="left" value="<">
+    <input type="button" class="right" value=">">
+</div>
+
+    <div id="imgs">
+        <img src="../img/1.jpg" alt="">
+        <img src="../img/2.jpg" alt="">
+        <img src="../img/3.jpg" alt="">
+        <img src="../img/4.jpg" alt="">
+        <img src="../img/6.jpg" alt="">
+    </div>
+</div>
+
+
+<script type="text/javascript">
+
+    var btn = document.querySelector('.right');
+    var btnL = document.querySelector('.left');
+    var imgs = document.querySelector('#imgs').children;
+    // console.log(imgs[0]);
+    var flag =0;
+    btn.addEventListener('click',function(){
+        if(flag == 4){
+            flag=0;
+        }
+
+        imgs[flag].style.animation = 'kankan1 2s linear';
+        imgs[flag].style.transform = 'rotateY(1deg)';
+        flag +=1;
+
+    },false);
+
+    btnL.addEventListener('click',function(){
+        if(flag < 0){
+            flag = 4;
+        }
+
+        imgs[flag].style.animation = 'kankan1 2s linear';
+        imgs[flag].style.transform = 'rotateY(179deg)';
+        flag -=1;
+
+    },false);
+
+
+
+</script>
+</body>
+
+</html>

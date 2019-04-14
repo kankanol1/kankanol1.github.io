@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <script>
+        window.addEventListener('resize',function(){
+            var html = document.documentElement;
+            var htmlW = html.getBoundingClientRect().width;
+            html.style.fontSize = htmlW/16 + "px";
+        },false);
+
+        var html = document.documentElement;
+        var htmlW = html.getBoundingClientRect().width;
+        html.style.fontSize = htmlW/16 + "px";
+    </script>
+    <style>
+
+        body,html{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-size: 0.5rem;
+            text-align: center;
+            color: #fff;
+        }
+        input{
+            left: 12rem;
+            position: absolute;
+            margin-top: 0;
+            top: 100px;
+        }
+        .wrap{
+            margin: 0 auto;
+            width: 8rem;
+            height: 8rem;
+            perspective: 16rem;
+            perspective-origin: center center;
+        }
+        .wrap h2{
+            height: 1.1rem;
+            line-height: 1rem;
+            background-color: brown;
+            font-size: 0.6rem;
+            z-index: 10;
+            position: relative;
+        }
+        .wrap div{
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 1rem;
+            transform-style: preserve-3d;
+            transform-origin: top;
+            transform: rotateX(-120deg);
+            margin: 0.1rem 0;
+
+            /*animation: kankan 3s ;*/
+
+        }
+        .wrap span{
+            position: absolute;
+            display: block;
+            width: 100%;
+            background-color:blue;
+            height: 1rem;
+            line-height: 1rem;
+            text-align: left;
+            text-indent: 0.5rem;
+            box-shadow: 0 0 0 20px rgba(0,0,0,1) inset;
+            transition: 1s;
+
+        }
+        .wrap>div:nth-of-type(1){
+            top: 1rem;
+        }
+
+        @keyframes kankanShow{
+            0%{transform: rotateX(-120deg)}
+            60%{transform: rotateX(30deg)}
+            75%{transform: rotateX(-15deg)}
+            90%{transform: rotateX(6deg)}
+            100%{transform: rotateX(0deg)}
+        }
+        @keyframes kankanHidden{
+            0%{transform: rotateX(0deg)}
+            100%{transform: rotateX(-120deg)}
+        }
+
+        .wrap .show{
+            animation: kankanShow 2s linear;
+            transform: rotateX(0);
+        }
+        .wrap .show>span{
+            box-shadow: 0 0 0 20px rgba(0,0,0,0) inset;
+
+        }
+        .wrap .hidden{
+            animation: kankanHidden .8s linear;
+            transform: rotateX(-120deg);
+        }
+
+        p{
+            text-align: right;
+            padding-right: 2rem;
+            color: #000;
+            top: 2rem;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="wrap">
+    <h2>王者荣耀战绩排行榜</h2>
+    <div>
+        <span>第一名：worldling</span>
+        <div>
+            <span>第二名：hadoop</span>
+            <div>
+                <span>第三名：'</span>
+                <div>
+                    <span>第四名：小妹</span>
+                    <div>
+                        <span>第五名：Tomas III</span>
+                        <div>
+                            <span>第六名：冰原狼</span>
+                            <div>
+                                <span>......</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<input type="button" value="显示战绩" id="btn">
+
+<script type="text/javascript">
+
+    var oBox = document.querySelector('.wrap');
+    var oDiv = oBox.querySelectorAll('div');
+
+    var oBtn = document.querySelector('#btn');
+    var onOff = true;
+    var timer = null;
+    var i = 0;
+    var delay = 150;
+    oBtn.onclick = function () {
+        if(oBtn.value == "显示战绩"){
+            oBtn.value = "隐藏战绩";
+        }else{oBtn.value = "显示战绩";
+
+        }
+        if (timer) {
+            return;
+        }
+        if (onOff) {
+            i = 0;
+            timer = setInterval(function () {
+                oDiv[i].className = 'show';
+                i++;
+                if (i == oDiv.length) {
+                    clearInterval(timer);
+                    onOff = false;
+                    timer = null;
+                }
+            },delay);
+        } else {
+            i = oDiv.length - 1;
+            timer = setInterval(function () {
+                oDiv[i].className = 'hidden';
+                i--;
+                if (i == -1) {
+                    clearInterval(timer);
+                    onOff = true;
+                    timer = null;
+                }
+            },delay);
+        }
+
+    };
+
+</script>
+</body>
+
+</html>

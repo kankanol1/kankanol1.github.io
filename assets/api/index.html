@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width: 400px;
+            display: none;
+            text-align: center;
+            margin: 0 auto;
+        }
+        #box img{
+            display: inline-block;
+            width: 400px;
+        }
+        .box{
+            width: 400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        h1{
+          font-weight: lighter;
+        }
+    </style>
+    <script src="../js/jquery-1.12.4.js"></script>
+    <script>
+        $(function(){
+
+
+            $('input').eq(0).click(function(){$('#box').show(1000,'swing');});
+            $('input').eq(1).click(function(){$('#box').hide(1000,'swing');});
+            $('input').eq(2).click(function(){$('#box').slideDown(1000,'swing');});
+            $('input').eq(3).click(function(){$('#box').slideUp(1000,'swing');});
+            $('input').eq(4).click(function(){$('#box').slideToggle(1000,'swing');});
+            $('input').eq(5).click(function(){$('#box').fadeIn(1000,'swing');});
+            $('input').eq(6).click(function(){$('#box').fadeOut(1000,'swing');});
+            $('input').eq(7).click(function(){$('#box').fadeToggle(1000,'swing');});
+            $('input').eq(8).click(function(){$('#box').fadeTo(1000,0.5);});
+            $('input').eq(9).click(function(){$('#box').fadeTo(1000,1);});
+
+        })
+    </script>
+</head>
+<body>
+<div class="box">
+    <h1>图片切入切出</h1>
+    <hr>
+
+    <input type="button" value="显示">
+    <input type="button" value="隐藏">
+    <br>
+    <br>
+    <input type="button" value="滑入">
+    <input type="button" value="滑出">
+    <input type="button" value="slide切换">
+    <br>
+    <br>
+
+    <input type="button" value="淡入">
+    <input type="button" value="淡出">
+    <input type="button" value="fade切换">
+    <br>
+    <br>
+
+    <input type="button" value="fade设置透明度">
+    <input type="button" value="fade取消透明度">
+    <hr>
+</div>
+<div id="box"><img src="2.jpg" alt=""></div>
+<div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+
+</body>
+</html>

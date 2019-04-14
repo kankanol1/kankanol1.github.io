@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>瀑布流(懒加载 跨域请求)</title>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../mogujie/css/bootstrap.css">
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        ul{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        img{
+            width: 100%;
+            padding: 10px;
+        }
+        a{
+            width: 100%;
+            display: block;
+        }
+        .column{
+            box-sizing: border-box;
+            padding: 0;
+        }
+        h1{
+            font-size: 30px;
+            text-align: center;
+            padding: 50px 0 30px;
+        }
+        .wrap{
+            width: 768px;
+            margin: 0 auto;
+        }
+        p{
+            padding: 0 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+<div class="wrap">
+    <h1>瀑布流</h1>
+    <p>此处用的蘑菇街后台数据接口（公开的）</p>
+    <div class="container box">
+        <div class="row">
+            <div class="column col-lg-2 col-md-3 col-sm-4 col-xs-4"></div>
+            <div class="column col-lg-2 col-md-3 col-sm-4 col-xs-4"></div>
+            <div class="column col-lg-2 col-md-3 col-sm-4 col-xs-4"></div>
+        </div>
+    </div>
+</div>
+
+<script src="../js/jquery-1.12.4.js"></script>
+<script>
+    //立执行函数
+    //应用技术    jQuery 跨域请求数据   图片懒加载  图片预加载   瀑布流
+    var oBox = document.querySelector('.box .row');
+    var oChild = oBox.children;
+    var column = oChild.length;
+    var h1 ,h2;
+    var pageNum = 1;
+    var dataUrl = [
+        'http://list.mogujie.com/search?callback=?&cKey=15&fcid=10053206&page=',
+        'http://list.mogujie.com/search?callback=?&cKey=15&fcid=50243&page=',
+        'http://list.mogujie.com/search?callback=?&cKey=15&q=%25E6%2598%25BE%25E7%2598%25A6%25E8%25BF%259E%25E8%25A1%25A3%25E8%25A3%2599&fcid=50243&page=',
+        'http://list.mogujie.com/search?callback=?&cKey=43&q=%25E5%25A4%258F%25E8%25A3%2585%25E6%25B8%2585%25E4%25BB%2593&page=',
+        'http://list.mogujie.com/search?callback=?&cKey=15&fcid=50243&page=',
+        'http://list.mogujie.com/search?callback=?&cKey=43&q=%25E5%258D%25AB%25E8%25A1%25A3&page=',
+        'http://list.mogujie.com/search?callback=?&cKey=15&fcid=50258&page=',
+        'http://list.mogujie.com/search?callback=?&cKey=43&q=%25E5%25BF%2583%25E6%259C%25BA%25E8%25A1%25AC%25E8%25A1%25AB&page=',
+    ];
+    var changUrl = dataUrl[Math.round(Math.random() * dataUrl.length)];//初始化数据
+    var flag = false;
+
+    kankan(changUrl);//第一页数据自动加载
+    window.onscroll = function(){
+        h2 =window.scrollY + document.documentElement.clientHeight;
+        if(h1 < h2 && flag){
+            kankan(changUrl);
+            flag = false;
+        }
+        lanjia(1);
+    };
+
+
+    //懒加载
+    function lanjia(n){
+        var len = getShort();
+        if(n == 0){
+            for(var i=0;i<4;i++){
+                for(var j=0;j<oChild.length;j++){
+                    oChild[j].children[i].children[0].src =  oChild[j].children[i].children[0].getAttribute('data-src');
+                }
+            }
+        }else {
+            for(var i=0;i<oChild[len].children.length;i++){
+                if( getTop(oChild[len].children[i]) < h2 ){
+                    for(var j=0;j<oChild.length;j++){
+                        oChild[j].children[i].children[0].src =  oChild[j].children[i].children[0].getAttribute('data-src');
+                    }
+                }
+            }
+        }
+
+    }
+
+    //跨域请求数据函数
+    function kankan(str){
+        var iurl = str + pageNum;
+        $.getJSON(iurl,function(data){
+            var data = data.result.wall.docs;
+            // console.log(data);
+            for(var i = 0; i < data.length; i++) {
+                var oImg = document.createElement('img');
+                var oA = document.createElement('a');
+                oA.href = data[i].link;
+                oImg.setAttribute('data-src',data[i].img);
+                var num = data[i].img.indexOf('x');
+                num = data[i].img.substring(num-3,num+4).split('x');
+                if(num[1]/2<100){
+                    num[1] = num[1] * 10;
+                }
+                oImg.style.height =  num[1]/2+ 'px';
+                oA.style.height =num[1]/2+ 'px';
+                oA.appendChild(oImg);
+                oChild[i%column].appendChild(oA);
+            }
+            console.log('第'+ pageNum +'页数据');
+            pageNum++;//严格控制按顺序加载每一页的资源
+            h1 = oChild[getShort()].clientHeight;
+            flag = true;
+            lanjia(0);//提高用户体验 第一页数据的第一屏幕图片先加载
+        });
+    }
+
+    //offsetTop:与当前元素最近的经过定位(position不等于static)的父级元素
+    function getTop (obj){
+        var iTop = 0;
+        while (obj){
+            iTop += obj.offsetTop;
+            obj = obj.offsetParent;
+        }
+        return iTop;
+    }
+
+    //找高度最小的li
+    function getShort(){
+        var short = 0;
+        var oLi = oChild[0];
+        for(var i=0;i<2;i++){
+            if(oLi.offsetHeight >oChild[i].offsetHeight){
+                short = i;
+                oLi = oChild[i];
+            }
+        }
+        return short;//返回最短li的索引值
+    }
+
+</script>
+</body>
+</html>

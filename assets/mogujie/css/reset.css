@@ -1,0 +1,73 @@
+@charset "UTF-8";
+/*声明变量*/
+/*-------------------resetCSSS-----------------------*/
+a,
+input,
+button {
+    /* 清楚点击阴影 */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    color: #000;
+}
+a:hover,
+a:focus {
+    color: black;
+    text-decoration: none;
+}
+input,
+button {
+    /* 清除按钮圆角 iOS */
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+body {
+    margin: 0;
+    /* 禁止用户选中文字 */
+    -webkit-user-select: none;
+    /* 禁止文字缩放 */
+    -webkit-text-size-adjust: 100%;
+    /*s设置字体*/
+    font-family: Times New Roman, Arial, Helvetica, sans-serif;
+}
+h1 {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.active {
+    background-color: black;
+}
+.activea {
+    border-color: #FF899F;
+    color: #FF5777;
+}
+
+
+.bottom {
+    position: fixed;
+    bottom: 0;
+    z-index: 9999 !important;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    border-top: 0.04rem solid #bbbbbb;
+    padding: 0.4rem 0;
+}
+.bottom div {
+    color: #333;
+    flex-grow: 1;
+    height: 1.6rem;
+    line-height: 1.6rem;
+}
+.bottom div span {
+    display: block;
+    font-size: 0.72rem;
+    color: #999;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>移动回放</title>
+    <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon" />
+
+    <style>
+        body{
+            background-color: black;
+            background-image: url("c270c2ca9623263d97c8e40050a7fa7e.png");
+        }
+        #box{
+            height: 100px;
+            width: 100px;
+            background-color: #fffbae;
+            position: absolute;
+            left: 400px;
+            border-radius: 50%;
+            box-shadow:0 0 50px  #fff;
+
+        }
+        #box p{
+            padding: 20px 30px;
+        }
+    </style>
+
+</head>
+<body>
+
+<input type="button" value="回放" id="btn">
+
+<div id="box">
+</div>
+
+
+<script>
+    var oDiv = document.querySelector("#box");
+    var oBtn = document.querySelector("#btn");
+    var array = [];
+    var num = 0;
+    //鼠标点击效果
+    oDiv.onmousedown = function(ev) {
+        var ev = ev || event;
+        //初始鼠标到达元素左边界和上边界的值
+        var cY = ev.clientY - oDiv.offsetTop;
+        var cX = ev.clientX - oDiv.offsetLeft;
+        if (oDiv.setCapture) oDiv.setCapture();
+        document.onmousemove = function (ev) {
+            oDiv.style.transition = "";
+            var ev = ev || event;
+            var X = ev.clientX - cX;
+            var Y = ev.clientY - cY;
+            oDiv.style.left = ev.clientX - cX + "px";
+            oDiv.style.top = ev.clientY - cY + "px";
+            array[num++] = {X, Y};
+            // console.log(X,Y);
+        };
+        document.onmouseup = function () {
+            document.onmousemove = document.onmouseup = null;
+        };
+
+    };
+
+    oBtn.onclick = function(){
+        setTimeout(function step() {
+            if (array.length === 0) return false;
+
+            var pop = array.pop();
+            oDiv.style.left = pop.X + "px";
+            oDiv.style.top = pop.Y + "px";
+            setTimeout(step, 1000/60);
+        }, 0)
+
+    };
+</script>
+
+
+</body>
+</html>

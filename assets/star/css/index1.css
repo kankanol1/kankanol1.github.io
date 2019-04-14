@@ -1,0 +1,308 @@
+/*************************通用样式*********************************8*/
+
+body{
+    font-family: "Times New Roman", Times, serif;
+    color: #000;
+}
+
+
+
+/*--------------------------------注册按钮------------------------------*/
+
+.btn-register {
+    color: #FFFFFF;
+    background-color: #0AB4F7;
+    border-color: #FFFFFF;
+}
+
+.btn-register:hover,
+.btn-register:focus,
+.btn-register:active,
+.btn-register.active,
+.open .dropdown-toggle.btn-register {
+    color: #FFFFFF;
+    background-color: #086DF2;
+    border-color: #FFFFFF;
+}
+
+.btn-register:active,
+.btn-register.active,
+.open .dropdown-toggle.btn-register {
+    background-image: none;
+}
+
+.btn-register.disabled,
+.btn-register[disabled],
+fieldset[disabled] .btn-register,
+.btn-register.disabled:hover,
+.btn-register[disabled]:hover,
+fieldset[disabled] .btn-register:hover,
+.btn-register.disabled:focus,
+.btn-register[disabled]:focus,
+fieldset[disabled] .btn-register:focus,
+.btn-register.disabled:active,
+.btn-register[disabled]:active,
+fieldset[disabled] .btn-register:active,
+.btn-register.disabled.active,
+.btn-register[disabled].active,
+fieldset[disabled] .btn-register.active {
+    background-color: #0AB4F7;
+    border-color: #FFFFFF;
+}
+
+.btn-register .badge {
+    color: #0AB4F7;
+    background-color: #FFFFFF;
+}
+/*--------------------------------/注册按钮------------------------------*/
+
+
+#lk-about>img,
+#lk-lesson>img,
+#lk-link>img
+{
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 15px;
+}
+
+
+/*------------------------------------------------------/通用样式-----------------------------------------------------------*/
+
+
+
+/* -------------------------------头部--------------------------------- */
+
+#header{}
+#header .top-bar{
+    height: 40px;
+    line-height: 39px;
+    border-bottom:1px solid #e0e0e0;
+}
+#header .top-bar .row>div+div{
+    border-left: 1px solid #e0e0e0;
+}
+#header .top-bar .row >div:first-child img{
+    width: 120px;
+    display: none;
+    position: absolute;
+    left: 50%;
+    margin-left: -60px;
+    margin-top: -6px;
+    z-index: 1001;
+
+}
+#header .top-bar .row >div:first-child a{
+    position: relative;
+}
+#header .top-bar .row >div:first-child:hover img{
+    display: block;
+}
+#header .top-nav .row{
+    height: 60px;
+    line-height: 60px;
+   font-size: 12px;
+}
+#header .top-nav .row>div:first-child img{
+    height: 40px;
+}
+#header .nav-lk{
+    background-color: white;
+    margin-bottom: 0;
+
+}
+
+
+#header .nav-lk .container .navbar-header a{
+    height: 70px;
+    padding: 10px 15px;
+}
+#header .nav-lk .container ul li a{
+    background: none;
+    line-height: 40px;
+}
+#header .nav-lk .container ul li.active a,
+#header .nav-lk .container ul li a:hover{
+    border-bottom: 2px solid #0AB4F7;
+}
+#header .nav-lk .navbar-toggle{
+    margin-top: 18px;
+}
+
+/* -------------------------------/头部--------------------------------- */
+
+/*-----------------------------------/轮播图--------------------------------------------------*/
+#s1 .item{
+    background: no-repeat center center;
+    background-size: cover;
+}
+@media screen and (min-width: 800px){
+    #s1 .item{
+        height: 410px;
+    }
+}
+/*----------------------------------/轮播图--------------------------------------------------*/
+
+/*-----------------------------------关于我们-------------------------------------------------*/
+#lk-about{
+    padding: 20px 0;
+}
+
+#lk-about .container .row p{
+    line-height: 30px;
+    font-size: 16px;
+}
+/*-----------------------------------/关于我们-------------------------------------------------*/
+
+
+
+/*-----------------------------------明星产品-------------------------------------------------*/
+#lk-product{
+    background-color: #f0f0f0;
+    padding: 30px 0;
+}
+#lk-product .nav li a {
+    font-size: 18px;
+    color: #999;
+}
+#lk-product .nav li.active a{
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #0AB4F7;
+    color: #000;
+}
+
+#lk-product .tab-content {
+    padding-top: 20px;
+}
+
+#pd-one-1{
+    margin: 15px 0;
+}
+
+#pd-one-1  .media-body{
+    padding-top: 100px;
+}
+#pd-one-2{
+    background: none;
+}
+#pd-one-4{
+margin: 15px 0;
+}
+#pd-one-4 button:nth-of-type(1){
+    margin-right: 20px;
+}
+
+#lk-product .pd-left{
+    margin-top: 80px;
+}
+#pd-two-1{
+    padding: 100px 0;
+}
+#pd-two-1 h1{
+    margin-bottom: 15px;
+}
+/*-----------------------------------/明星产品-------------------------------------------------*/
+
+/*-----------------------------------热门课程-------------------------------------------------*/
+#lk-lesson{
+
+}
+#lk-lesson .media .media-left{
+    width: 20%;
+}
+#lk-lesson .media .media-body{
+    width: 60%;
+    vertical-align: middle;
+}
+#lk-lesson .media .media-right{
+    width: 20%;
+    font-size: 16px;
+    vertical-align: middle;
+    text-align: center;
+}
+#lk-lesson .row  .lesson{
+    padding:  20px 10px;
+}
+/*-----------------------------------/热门课程-------------------------------------------------*/
+
+/*-----------------------------------友情链接-------------------------------------------------*/
+#lk-link{
+    padding: 20px 0;
+}
+#lk-link ul{
+    text-align: center;
+    margin: 0;
+}
+#lk-link ul>li{
+    padding: 20px 30px;
+}
+/*-----------------------------------/友情链接-------------------------------------------------*/
+
+
+/*-----------------------------------footer-------------------------------------------------*/
+
+#footer{
+    background: url("../img/ft_bg.png");
+    color: #fff;
+    height: 200px;
+    padding-top: 20px;
+}
+#footer-left{
+    padding: 20px;
+    border-right: 1px solid #ccc;
+    height: 180px;
+    text-align: center;
+
+}
+
+#footer-left ul li a{
+    color: #fff;
+    font-size: 16px;
+    line-height: 40px;
+
+}
+#footer-center{
+    padding: 20px;
+
+    font-size: 14px;
+    text-align: center;
+    height: 180px;
+    border-right: 1px solid #ccc;
+
+}
+#footer-center h5{
+    padding: 5px 0;
+}
+#footer-right{
+    height: 180px;
+    padding: 20px;
+
+}
+/*-----------------------------------/footer-------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
