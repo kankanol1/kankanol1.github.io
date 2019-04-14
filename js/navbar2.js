@@ -14,7 +14,7 @@ const data = [
     },
     {
         name: "Hexo",
-        url: "https:love.kankan.fun"
+        url: "https://love.kankan.fun"
     },
     {
         name: "Jekyll",
