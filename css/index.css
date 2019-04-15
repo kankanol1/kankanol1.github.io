@@ -42,6 +42,101 @@ footer ul li a span {
   padding: 0.390625rem;
   font-size: 1.5625rem;
 }
+.bei {
+  text-align: center;
+}
+.bei a {
+  font-size: 20px;
+  color: blue;
+}
+@media screen and (max-width: 500px) {
+  .box {
+    padding: 5.46875rem 1.5625rem 0.78125rem;
+  }
+  .box .phone h2,
+  .box .pc h2 {
+    font-size: 2.5rem;
+  }
+  .box .phone ul li,
+  .box .pc ul li {
+    display: inline-block;
+    padding: 0.78125rem 1.5625rem;
+  }
+  .box .phone ul li a,
+  .box .pc ul li a {
+    text-align: center;
+    display: block;
+    padding: 0.78125rem;
+    box-shadow: 0.15625rem 0.15625rem 0.78125rem #c0c0c0;
+  }
+  .box .phone ul li a img,
+  .box .pc ul li a img {
+    height: 5.46875rem;
+    width: 5.46875rem;
+    border-radius: 50%;
+    border: 0.078125rem solid #ffc0cb;
+  }
+  .box .phone ul li a span,
+  .box .pc ul li a span {
+    display: block;
+    padding: 0.390625rem;
+    font-size: 2.03125rem;
+  }
+  .box .drawP h2,
+  .box .lun h2 {
+    font-size: 2.5rem;
+  }
+  .box .drawP ul li a,
+  .box .lun ul li a {
+    padding: 0.78125rem 1.5625rem;
+    color: blue;
+    font-size: 2.03125rem;
+  }
+}
+@media screen and (min-width: 500px) {
+  .box {
+    padding: 5.46875rem 1.5625rem 0.78125rem;
+  }
+  .box .phone h2,
+  .box .pc h2 {
+    font-size: 2.5rem;
+  }
+  .box .phone ul li,
+  .box .pc ul li {
+    display: inline-block;
+    padding: 0.78125rem 1.5625rem;
+  }
+  .box .phone ul li a,
+  .box .pc ul li a {
+    text-align: center;
+    display: block;
+    padding: 0.78125rem;
+    box-shadow: 0.15625rem 0.15625rem 0.78125rem #c0c0c0;
+  }
+  .box .phone ul li a img,
+  .box .pc ul li a img {
+    height: 5.46875rem;
+    width: 5.46875rem;
+    border-radius: 50%;
+    border: 0.078125rem solid #ffc0cb;
+  }
+  .box .phone ul li a span,
+  .box .pc ul li a span {
+    display: block;
+    padding: 0.390625rem;
+    font-size: 2.03125rem;
+  }
+  .box .drawP h2,
+  .box .lun h2 {
+    font-size: 2.5rem;
+  }
+  .box .drawP ul li a,
+  .box .lun ul li a {
+    padding: 0.78125rem 1.5625rem;
+    color: blue;
+    font-size: 2.03125rem;
+  }
+}
 .bgImg {
   position: fixed;
   top: 0;
@@ -56,55 +151,13 @@ footer ul li a span {
 .bgImg p {
   float: left;
   position: fixed;
-  top: 6.25rem;
+  top: 7.8125rem;
   right: 1.5625rem;
 }
 .bgImg p span {
   display: block;
   font-style: italic;
-  font-size: 1.5625rem;
-}
-.box {
-  padding: 5.46875rem 1.5625rem 0.78125rem;
-}
-.box .phone h2,
-.box .pc h2 {
-  font-size: 2.5rem;
-}
-.box .phone ul li,
-.box .pc ul li {
-  display: inline-block;
-  padding: 0.78125rem 1.5625rem;
-}
-.box .phone ul li a,
-.box .pc ul li a {
-  text-align: center;
-  display: block;
-  padding: 0.78125rem;
-  box-shadow: 0.15625rem 0.15625rem 0.78125rem #c0c0c0;
-}
-.box .phone ul li a img,
-.box .pc ul li a img {
-  height: 5.46875rem;
-  width: 5.46875rem;
-  border-radius: 50%;
-  border: 0.078125rem solid #ffc0cb;
-}
-.box .phone ul li a span,
-.box .pc ul li a span {
-  display: block;
-  padding: 0.390625rem;
-  font-size: 2.03125rem;
-}
-.box .drawP h2,
-.box .lun h2 {
-  font-size: 2.5rem;
-}
-.box .drawP ul li a,
-.box .lun ul li a {
-  padding: 0.78125rem 1.5625rem;
-  color: blue;
-  font-size: 2.03125rem;
+  font-size: 1.25rem;
 }
 .test,
 .hello {
