@@ -8,10 +8,7 @@ const data = [
         name: "测试页",
         url: "./test"
     },
-    {
-        name: "Hello",
-        url: "./hello"
-    },
+
     {
         name: "Hexo",
         url: "https://love.kankan.fun"
