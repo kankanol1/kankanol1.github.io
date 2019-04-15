@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+	<title>冰原狼歌单</title>
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/baidu.css" />
+	<link rel="shortcut icon" href="../../../img/favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+</head>
+<body>
+	<div class="wrap" id="app">
+		<div class="baidu">
+			<h3>冰原狼音乐歌单<a href="chenyifa/lytic.html">歌词案例</a>
+			</h3>
+			<ul class="list list-head">
+				<li>
+					<div v-on:click="allSelect()">
+						<input type="checkbox" v-bind:checked="isTF" />全选
+					</div>
+					<span>歌单</span>
+					<span>歌手</span>
+					<span>专辑</span>
+					<span>试听</span>
+					<!--<span>下载</span>-->
+				</li>
+			</ul>
+			<ul class="list list-body">
+				<li v-for="item,i in oData" v-bind:class="{checkedColor:item.checked}">
+					<div>
+						<input type="checkbox" v-bind:checked="item.checked" v-on:click="singleSelect(i)" >
+					</div>
+					<span>{{item.song}}</span>
+					<span>{{item.name}}</span>
+					<span>{{item.album}}</span>
+					<div class="little">
+					<!--<a v-bind:href="item.src" class="bo" preload="none" loop="loop" controls="controls"></a>-->
+					<a v-bind:href="item.href" class="bo"><img src="./img/shiting.png" alt=""></a>
+					</div>
+					<!--<div class="little">-->
+						<!--<audio v-bind:src="item.src" class="xia" preload="none"  loop="loop"  controls="controls"></audio>-->
+					<!--</div>-->
+				</li>
+			</ul>
+			<div class="select">
+				<span class="selectAll">
+					<span>统计：</span>
+				</span>
+				<div class="others">
+					<span><em></em>歌手有：{{sumSinger}}位</span>
+					<span><em></em>专辑有{{sumAlbum}}张</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="../js/vue.js"></script>
+	<script src="js/index.js"></script>
+</body>
+</html>

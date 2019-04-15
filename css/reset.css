@@ -25,9 +25,10 @@ html {
     /*s设置字体*/
     font-family: Times New Roman, Arial, Helvetica, sans-serif;
 }
-
-a {
+a,
+a:hover{
     text-decoration: none;
+    color: #111;
 }
 ul {
     list-style: none;

@@ -1,0 +1,104 @@
+@charset 'utf-8'; 
+body {
+    font-size: 14px;
+    font-family: '微软雅黑',Arial, Helvetica, sans-serif;
+} 
+#wrap {
+    margin: 0 auto;
+    width: 1000px;
+    background: url(../images/bg.jpg) repeat-y;
+    overflow: hidden;
+}
+
+/* 居中容器 */
+.container {
+    width: 760px;
+    margin: 0 auto;
+}
+#choose {
+    background: #f00;
+    margin-top: 144px;
+    /* 
+        margin-top 
+            a,上下叠压
+            b,margin-top传递
+     */
+     height: 50px;
+     line-height: 50px;
+     background: url(../images/choose.png);
+     text-indent: 21px;
+}
+#choose span {
+    color: #000;
+    float: left;
+    margin-right: 10px;
+}
+#choose div {
+    float: left;
+}
+#choose mark {
+    position: relative;
+    float: left;
+    height: 24px;
+    line-height: 24px;
+    border: 1px solid #28a5c4; 
+    text-indent: 6px;
+    padding-right: 30px;
+    color: #28a5c4;
+    margin: 13px 10px 0 0;
+}
+#choose mark a {
+    position: absolute;
+    top: 3px;
+    right: 2px;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    background: #28a5c4;
+    color: #fff;
+}
+
+/* ------------list---------- */
+#list {
+    box-sizing: border-box;  /*IE盒子模型*/
+    height: 210px;
+    background: url(../images/item.png);
+    padding: 20px 0 0 28px;
+}
+#list li {
+    height: 44px;
+    line-height: 44px;
+}
+#list li span {
+    float: left;
+    color: #8a8a8a;
+}
+#list li a {
+    float: left;
+    margin: 0 12px;
+    color: #000;
+}
+#list li .color {
+    color: #a2d1df;
+}
+
+/* ------------------nav-list---------------------- */
+#nav-list {
+    box-sizing: border-box;
+    padding-left: 20px;
+    margin-top: 30px;
+    height: 30px;
+    line-height: 30px;
+    background: url(../images/choose.png);
+}
+#nav-list span {
+    color: #999;
+    padding: 0 20px;
+}
+#nav-list .active {
+    color: #28a5c4;
+}
+#product {
+    height: 3000px;
+    background: url(../images/item.png) repeat-y;
+}

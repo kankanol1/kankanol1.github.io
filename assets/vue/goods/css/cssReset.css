@@ -1,0 +1,31 @@
+/* 字符集声明 告诉浏览器我使用的是utf-8的编码格式 */
+@charset 'utf-8';  
+body,h1,h2,h3,h4,h5,h6,p,dl,dd {
+    margin: 0;
+}
+ul,ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+img {
+    border: none;
+    vertical-align: top;
+}
+a {
+    text-decoration: none;
+}
+mark {
+    background: none;
+}
+/* 伪类清浮动 */
+.clearfix::after {
+    content: '.';
+    display: block;
+    visibility: hidden;
+    height: 0;
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}

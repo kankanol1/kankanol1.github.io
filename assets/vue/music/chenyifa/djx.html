@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+
+    <title>盗将行</title>
+    <script src="../../../js/jquery-1.12.4.js"></script>
+    <!--<script src="js/lrctest.js" type="text/javascript"></script>-->
+
+    <style>
+        body{
+            background-image: url("00.jpeg");
+            /*background-repeat: no-repeat;*/
+            background-size: 100% auto;
+
+        }
+        .box{
+            margin: 0 auto;
+            text-align: center;
+        }
+        #lyric{
+            /*background-color: #f0ad4e;*/
+            text-align: center;
+            font-size: 20px;
+            height: 30px;
+            /*color: pink;*/
+            color: #dcf8ff;
+            text-shadow: 5px 5px 5px #0000CD;
+        }
+        #mp{
+            width: 300px;
+            height: 100px;
+            margin-bottom: 100px;
+        }
+        h1{
+            /*font-size: 50px;*/
+            color: #ff5fc4;
+        }
+        .name{
+            font-size: 20px;
+            color: #fff;
+            margin-bottom: 35%;
+        }
+        .text{
+            text-indent: 30px;
+            color: #fff;
+            margin-top: -100px;
+            padding: 0 20px;
+            text-align:justify;
+            text-justify:distribute-all-lines;
+            text-align-last:left;
+            line-height: 24px;
+            font-size: 16px;
+
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h1>盗将行</h1>
+    <p class="name">花粥 / 马雨阳</p>
+    <p class="text">以前，大盗劫城出来掀了姑娘的裙子，反倒被姑娘的笑吸引了，想娶她但自己身份不妥，所以改邪归正，多年后成了将军，但姑娘早已去世，原本要送她的明珠也失去意义，被大盗射向山间。他谢绝了策勋，在庭前种下一棵枇杷树。如果当年没有碍于自己的身份，也许还能在姑娘活着时，为她窃一支玉簪。
+    </p>
+    <audio src="../mp3/daojiangxing.m4a"  autoplay="autoplay" controls id="mp">
+        抱歉你的浏览器版本out了，去升级吧
+    </audio>
+    <div id="lyric"></div>
+</div>
+<script>
+
+    var str = '[00:00.38]盗将行 - 莫籽/neko\n' +
+        '[00:01.53]词 : 姬霄\n' +
+        '[00:02.13]曲 : 花粥\n' +
+        '[00:16.85]男：\n' +
+        '[00:18.27]劫过九重城关 我座下马正酣\n' +
+        '[00:23.58]看那轻飘飘的衣摆 趁擦肩把裙掀\n' +
+        '[00:29.69]女：\n' +
+        '[00:29.87]踏遍三江六岸 借刀光做船帆\n' +
+        '[00:35.86]任露水浸透了短衫 大盗睥睨四野\n' +
+        '[00:42.75]男：\n' +
+        '[00:43.64]枕风宿雪多年 我与虎谋早餐\n' +
+        '[00:49.69]拎着钓叟的鱼弦 问卧龙几两钱\n' +
+        '[00:55.68]女：\n' +
+        '[00:55.91]蜀中大雨连绵 关外横尸遍野\n' +
+        '[01:02.01]你的笑像一条恶犬 撞乱了我心弦\n' +
+        '[01:21.54]女：\n' +
+        '[01:22.86]谈花饮月赋闲 这春宵艳阳天\n' +
+        '[01:28.18]待到梦醒时分睁眼 铁甲寒意凛冽\n' +
+        '[01:34.24]男：\n' +
+        '[01:34.41]夙愿只隔一箭 故乡近似天边\n' +
+        '[01:40.43]不知何人浅唱弄弦 我彷徨不可前\n' +
+        '[01:48.05]合：\n' +
+        '[01:51.19]枕风宿雪多年 我与虎谋早餐\n' +
+        '[01:57.35]拎着钓叟的鱼弦 问卧龙几两钱\n' +
+        '[02:03.60]蜀中大雨连绵 关外横尸遍野\n' +
+        '[02:09.69]你的笑像一条恶犬 撞乱我心弦\n' +
+        '[02:15.85]烽烟万里如衔 掷群雄下酒宴\n' +
+        '[02:21.96]谢绝策勋十二转 想为你窃玉簪\n' +
+        '[02:28.10]入巷间吃汤面 笑看窗边飞雪\n' +
+        '[02:34.25]取腰间明珠弹山雀 立枇杷于庭前\n' +
+        '[02:45.61]入巷间吃汤面 笑看窗边飞雪\n' +
+        '[02:52.86]取腰间明珠弹山雀 立枇杷于庭前';
+    var arr = str.split('\n');
+
+
+
+    $(document).ready(function () {
+        var lrc = []; //创建歌词数组;
+        lrc = arr;
+        var myAudio = $("audio")[0];
+        var result = [];
+        getLrc();
+
+
+        function getLrc() {
+            var timeReg = /\[\d{2}:\d{2}\.\d{2}\]/g;//匹配时间的正则表达式
+
+            for (var i=0;i<lrc.length;i++) {
+                var time = lrc[i].match(timeReg); //获取歌词里的时间
+                var value = lrc[i].replace(timeReg, ""); //获取纯歌词文本
+                for (var j=0;j<time.length;j++ ) {
+                    var t = time[j].slice(1, -1).split(":"); //t[0]分钟，t[1]秒
+                    var timeArr = parseInt(t[0], 10) * 60 + parseFloat(t[1]);
+                    result.push([timeArr, value]);//以[时间(秒)，歌词]的形式存进result
+                }
+            }
+            setInterval(showLrc, 200);//设置定时，每200毫秒更新一下
+            console.log(result);
+        }
+
+        function showLrc() {
+            var curTime = myAudio.currentTime;//获取当前的播放时间
+            for (var i = 0; i < result.length; i++) {
+                if ((curTime >result[i][0])&&(curTime<result[i+1][0])) {
+                    //播放时间大于对应歌词时间小于下一句歌词时间就显示当前歌词
+                    document.getElementById("lyric").innerHTML = result[i][1];
+                    break;//找到对应歌词就停，不停的话，呵呵。。。
+                }
+            }
+        }
+    })
+</script>
+
+</body>
+</html>

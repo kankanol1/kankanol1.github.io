@@ -29,6 +29,11 @@ const dataPc = [
         href: "./assets/star/"
     },
     {
+        name: "冰原歌单",
+        src: './img/ge.png',
+        href: "./assets/vue/music"
+    },
+    {
         name: "京剧高亮",
         src: './img/jing.jpg',
         href: "./assets/jingju/"
@@ -197,6 +202,12 @@ const dataPhone = [
         src: './img/echart.jpg',
         href: "./assets/Echarts/"
     },
+    {
+        name: "冰原歌单",
+        src: './img/ge.png',
+        href: "./assets/vue/music"
+    },
+
 ];
 
 const dataDraw = [

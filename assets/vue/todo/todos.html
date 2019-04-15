@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>任务列表</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="../../../data/images/favicon.ico" type="image/x-icon" />
+
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <div class="page-top">
+        <div class="page-content">
+            <h2>任务计划列表</h2>
+        </div>
+    </div>
+    <div class="main">
+        <h3 class="big-title">添加任务：</h3>
+        <input
+                placeholder="例如：吃饭睡觉打豆豆；提示：+回车即可添加任务"
+                class="task-input"
+                type="text"
+                v-model="itemData"
+                v-on:keyup.enter="addTodo"
+        />
+        <!--{{item}}-->
+        <!--按键修饰符   v-on:keyup.enter= "addTodo"    v-on:key.13 = "addTodo"  -->
+        <ul class="task-count" v-show="list.length">
+            <li>0个任务未完成</li>
+            <li class="action">
+                <a class="active" href="#">所有任务</a>
+                <a href="#">未完成的任务</a>
+                <a href="#">完成的任务</a>
+            </li>
+        </ul>
+        <h3 class="big-title">任务列表：</h3>
+        <div class="tasks">
+
+            <!--4，用v-show命令 用来显示/隐藏元素
+            v-show="表达式"
+            元素会被渲染到页面中，只是根据表达式的值进行css的切换
+            -->
+            <!--{{list.length}}-->
+            <span class="no-task-tip" v-show="!list.length">还没有添加任何任务</span>
+            <ul class="todo-list">
+                <!--  completed  -->
+                <!--   模板循环  -->
+                <!--选中添加删除线-->
+
+                <li
+                        class="todo"
+                        v-for="item,i in list"
+                        v-bind:class="{
+                        completed: item.isChecked,
+                        editing:item.dbl
+                     }"
+
+                        v-on:dblclick="dblFun(i)"
+
+                >
+                    <div class="view" v-on:dblclick="dblFun(i)"  >
+                        <!--    5,双向数据绑定   -->
+                        <input class="toggle" type="checkbox" v-model="item.isChecked"/>
+                        <label v-on:dblclick="dblFun(i)">{{item.title}}</label>
+                        <button class="destroy" v-on:click="deleteTodo(item,i)"></button>
+                    </div>
+                    <input
+                            class="edit"
+                            type="text"
+                            v-model="editV"
+                            v-on:keyup.enter="editF(i)"
+                            v-on:keyup.esc="exitF(i)"
+
+                    />
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+    <script src="./app.js"></script>
+
+</body>
+</html>

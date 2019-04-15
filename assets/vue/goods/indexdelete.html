@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="../../../data/images/favicon.ico" type="image/x-icon" />
+
+    <title>商品筛选</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-size: 14px;
+            font-family: "Lantinghei SC Extralight", Arial;
+            text-decoration: none;
+        }
+
+        /* ---------------------------------------------------------------------------------- */
+
+        #wrap {
+            width: 760px;
+            background: url(img/bg.jpg);
+            margin: 0 auto;
+            padding: 145px 120px;
+        }
+
+        #box {
+            width: 760px;
+            height: 260px;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+        }
+
+        #choose {
+            width: 100%;
+            height: 50px;
+            background: url(img/choose.png);
+            line-height: 50px;
+            text-indent: 21px;
+        }
+
+        #choose span {
+            float: left;
+        }
+
+        #choose div {
+            float: left;
+        }
+
+        #choose mark {
+            position: relative;
+            display: inline-block;
+            height: 24px;
+            line-height: 24px;
+            border: 1px solid #28a5c4;
+            margin: 12px 5px 0;
+            padding: 0 30px 0 6px;
+            background: none;
+            color: #28a5c4;
+            text-indent: 0;
+        }
+
+        #choose mark a {
+            text-decoration: none;
+            position: absolute;
+            top: 3px;
+            right: 2px;
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            background: #28a5c4;
+            color: #fff;
+            line-height: 16px;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        #type {
+            height: 177px;
+            background: url(img/item.png);
+            padding: 17px 0 16px 28px;
+        }
+        #type .active{
+           color: #f66f63;
+        }
+        #type li {
+            height: 44px;
+            line-height: 44px;
+            color: #8a8a8a;
+        }
+
+        #type li a {
+            margin: 0 12px 0 11px;
+            color: #000;
+        }
+
+        .filter-nav {
+            height: 30px;
+            margin-top: 30px;
+            background: url(img/choose.png);
+        }
+
+        .filter-nav span {
+            line-height: 30px;
+            padding: 0 20px;
+            text-align: center;
+            cursor: pointer;
+            color: #999;
+        }
+
+        .filter-nav .nav-color {
+            color: #5683EA;
+        }
+
+        #shop-list {
+            height: 3000px;
+            background: url(img/item.png) repeat-y;
+        }
+    </style>
+
+    <script src="../js/vue.js"> </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="box">
+            <div id="choose">
+                <span>你的选择：</span>
+                <div>
+                    <!--<mark v-for="item in choose">-->
+                    <mark v-for="(item,i) in obj">
+                        {{item}}
+                        <a href="javascript:;" v-on:click="removeHandle(i)">x</a>
+                    </mark>
+
+                </div>
+            </div>
+            <ul id="type">
+                <li v-for="(item,index) in crumbData">
+                    <span>{{item.title}}</span>
+                    <a
+                            href="javascript:;"
+                            v-for="(option,i) in item.data"
+                            v-on:click="addChooseHandle(option,index,i)"
+                            v-bind:class="{active: i===item.index}"
+                    >
+                        {{option}}
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <nav class="filter-nav">
+            <span class="nav-color">综合排序</span>
+            <span>销量排序</span>
+            <span>价格低到高</span>
+            <span>价格高到低</span>
+        </nav>
+        <section id="shop-list"></section>
+    </div>
+</body>
+
+<script>
+    var crumbData = [
+        {
+            "title": "品牌",
+            "data": ["苹果", "小米", "锤子", "魅族", "华为", "三星", "OPPO", "vivo", "乐视"]
+        },
+        {
+            "title": "尺寸",
+            "data": ["4.0-4.5英寸", "4.6-4.9英寸", "5.0-5.5英寸", "6.0英寸以上"]
+        },
+        {
+            "title": "系统",
+            "data": ["android", "ios", "window phone", "无", "其他"]
+        },
+        {
+            "title": "网络",
+            "data": ["联通3G", "双卡单4G", "双卡双4G", "联通4G"]
+        }
+    ];
+    crumbData.forEach(item => item.index = -1);
+    let vm = new Vue({
+        el:'#wrap',
+        data:{
+            crumbData,
+            choose:[],
+            obj:{},
+        },
+        methods:{
+            addChooseHandle(option,index,i){
+                this.$set(this.obj,index,option);
+                this.crumbData[index].index = i;
+            },
+            removeHandle(i){
+                //删除对象上的属性
+                // delete this.obj[i];
+                this.$delete(this.obj,i);
+                console.log(this.obj);
+                this.crumbData[i].index = -1;
+            }
+        }
+    });
+
+
+
+</script>
+</html>
