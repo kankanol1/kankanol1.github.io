@@ -1,6 +1,4 @@
 
-
-
 const dataPc = [
     {
         name: "冰原歌单",
@@ -122,6 +120,7 @@ const dataPc = [
     },
 
 ];
+
 const dataPhone = [
     {
         name: "冰原歌单",
@@ -270,7 +269,6 @@ const dataLun = [
     },
 ];
 
-
 let phoneBar = document.querySelector('.phone');
 let phoneUl = document.createElement('ul');
 for(let i=0;i<dataPhone.length;i++){
@@ -317,7 +315,6 @@ for(let i=0;i<dataDraw.length;i++){
 }
 drBar.appendChild(drUl);
 
-
 let lunBar = document.querySelector('.lun');
 let lunUl = document.createElement('ul');
 for(let i=0;i<dataLun.length;i++){
@@ -330,7 +327,14 @@ for(let i=0;i<dataLun.length;i++){
 }
 lunBar.appendChild(lunUl);
 
-
+let s = '明天的你一定会感谢现在拼命的自己！';
+let p = document.createElement('p');
+for(let i=0;i<s.length;i++){
+    let span = document.createElement('span');
+    span.innerHTML = s[i];
+    p.appendChild(span);
+}
+document.querySelector('.bgImg').appendChild(p);
 
 
 

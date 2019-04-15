@@ -3,55 +3,13 @@
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport"
-          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <link rel="shortcut icon" href="../../../../img/favicon.ico" type="image/x-icon"/>
-
     <title>我的将军啊</title>
     <script src="../../../js/jquery-1.12.4.js"></script>
-
-    <style>
-        body {
-            background-image: url("00.jpeg");
-            background-size: 100% auto;
-
-        }
-
-        .box {
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        #lyric {
-            /*background-color: #f0ad4e;*/
-            text-align: center;
-            font-size: 20px;
-            height: 30px;
-            /*color: pink;*/
-            color: #dcf8ff;
-            text-shadow: 5px 5px 5px #0000CD;
-        }
-
-        #mp {
-            width: 300px;
-            height: 100px;
-            margin-bottom: 100px;
-        }
-
-        h1 {
-            /*font-size: 50px;*/
-            color: #ff5fc4;
-        }
-
-        .name {
-            font-size: 20px;
-            color: #fff;
-            margin-bottom: 35%;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/item.css">
 </head>
 <body>
-
 <div class="box">
     <h1>我的将军啊</h1>
     <p class="name">叶洛洛</p>
@@ -60,61 +18,7 @@
     </audio>
     <div id="lyric"></div>
 </div>
-<script>
-    var str =
-        '[00:00.000]作曲 : 半阳/Nicholas Cheung\n' +
-        '[00:00.395]作词 : 半阳\n' +
-        '[00:00.875]狼烟风沙口\n' +
-        '[00:02.750]还请将军少饮酒\n' +
-        '[00:05.020]前方的路不好走\n' +
-        '[00:08.010]我在家中来等候\n' +
-        '[00:09.870]可愿柳下走\n' +
-        '[00:12.990]满头杨花共白首\n' +
-        '[00:15.940]十两相思二两酒\n' +
-        '[00:18.860]我才把爱说出口\n' +
-        '[00:21.570]狼烟风沙口\n' +
-        '[00:23.910]还请将军少饮酒\n' +
-        '[00:26.670]前方的路不好走\n' +
-        '[00:29.120]我在家中来等候\n' +
-        '[00:31.980]可愿柳下走\n' +
-        '[00:34.620]满头杨花共白首\n' +
-        '[00:37.220]十两相思二两酒\n' +
-        '[00:39.880]我才把爱说出口';
-    var arr = str.split('\n');
-    $(document).ready(function () {
-        var lrc = []; //创建歌词数组;
-        lrc = arr;
-        var myAudio = $("audio")[0];
-        var result = [];
-        getLrc();
-
-
-        function getLrc() {
-            var timeReg = /\[\d{2}:\d{2}\.\d{3}\]/g;//匹配时间的正则表达式
-            for (var i = 0; i < lrc.length; i++) {
-                var time = lrc[i].match(timeReg); //获取歌词里的时间
-                var value = lrc[i].replace(timeReg, ""); //获取纯歌词文本
-                for (var j = 0; j < time.length; j++) {
-                    var t = time[j].slice(1, -1).split(":"); //t[0]分钟，t[1]秒
-                    var timeArr = parseInt(t[0], 10) * 60 + parseFloat(t[1]);
-                    result.push([timeArr, value]);//以[时间(秒)，歌词]的形式存进result
-                }
-            }
-            setInterval(showLrc, 200);//设置定时，每200毫秒更新一下
-        }
-
-        function showLrc() {
-            var curTime = myAudio.currentTime;//获取当前的播放时间
-            for (var i = 0; i < result.length - 1; i++) {
-                if ((curTime > result[i][0]) && (curTime < result[i + 1][0])) {
-                    //播放时间大于对应歌词时间小于下一句歌词时间就显示当前歌词
-                    document.getElementById("lyric").innerHTML = result[i][1];
-                    break;//找到对应歌词就停，不停的话，呵呵。。。
-                }
-            }
-        }
-    })
-</script>
-
+<script src="../js/wdjj.js"></script>
+<script src="../js/lrc.js"></script>
 </body>
 </html>
