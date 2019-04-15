@@ -71,7 +71,7 @@
 </div>
 <script>
 
-    var str = '[00:00.38]盗将行 - 莫籽/neko\n' +
+    let str = '[00:00.38]盗将行 - 莫籽/neko\n' +
         '[00:01.53]词 : 姬霄\n' +
         '[00:02.13]曲 : 花粥\n' +
         '[00:16.85]男：\n' +
@@ -103,37 +103,37 @@
         '[02:34.25]取腰间明珠弹山雀 立枇杷于庭前\n' +
         '[02:45.61]入巷间吃汤面 笑看窗边飞雪\n' +
         '[02:52.86]取腰间明珠弹山雀 立枇杷于庭前';
-    var arr = str.split('\n');
+    let arr = str.split('\n');
 
 
 
     $(document).ready(function () {
-        var lrc = []; //创建歌词数组;
+        let lrc = []; //创建歌词数组;
         lrc = arr;
-        var myAudio = $("audio")[0];
-        var result = [];
+        let myAudio = $("audio")[0];
+        let result = [];
         getLrc();
 
 
         function getLrc() {
-            var timeReg = /\[\d{2}:\d{2}\.\d{2}\]/g;//匹配时间的正则表达式
+            let timeReg = /\[\d{2}:\d{2}\.\d{2}\]/g;//匹配时间的正则表达式
 
-            for (var i=0;i<lrc.length;i++) {
-                var time = lrc[i].match(timeReg); //获取歌词里的时间
-                var value = lrc[i].replace(timeReg, ""); //获取纯歌词文本
-                for (var j=0;j<time.length;j++ ) {
-                    var t = time[j].slice(1, -1).split(":"); //t[0]分钟，t[1]秒
-                    var timeArr = parseInt(t[0], 10) * 60 + parseFloat(t[1]);
+            for (let i=0;i<lrc.length;i++) {
+                let time = lrc[i].match(timeReg); //获取歌词里的时间
+                let value = lrc[i].replace(timeReg, ""); //获取纯歌词文本
+                for (let j=0;j<time.length;j++ ) {
+                    let t = time[j].slice(1, -1).split(":"); //t[0]分钟，t[1]秒
+                    let timeArr = parseInt(t[0], 10) * 60 + parseFloat(t[1]);
                     result.push([timeArr, value]);//以[时间(秒)，歌词]的形式存进result
                 }
             }
             setInterval(showLrc, 200);//设置定时，每200毫秒更新一下
-            console.log(result);
+            // console.log(result);
         }
 
         function showLrc() {
-            var curTime = myAudio.currentTime;//获取当前的播放时间
-            for (var i = 0; i < result.length; i++) {
+            let curTime = myAudio.currentTime;//获取当前的播放时间
+            for (let i = 0; i < result.length; i++) {
                 if ((curTime >result[i][0])&&(curTime<result[i+1][0])) {
                     //播放时间大于对应歌词时间小于下一句歌词时间就显示当前歌词
                     document.getElementById("lyric").innerHTML = result[i][1];
