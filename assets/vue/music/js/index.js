@@ -282,6 +282,15 @@ html.style.fontSize = htmlW/15 + "px";
 let oData = [
     {
         id:Date.now()+Math.random(),
+        name: '叶洛洛',
+        song: '我的将军啊',
+        checked: false,
+        album: 10,
+        src:'mp3/wodejiangjun.m4a',
+        href:'./chenyifa/wdjja.html'
+    },
+    {
+        id:Date.now()+Math.random(),
         name: '抖音浪哥',
         song: '世界第一等',
         checked: false,
