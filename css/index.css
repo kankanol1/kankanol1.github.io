@@ -43,12 +43,13 @@ footer ul li a span {
 }
 .bgImg {
   position: fixed;
+  top: 0;
   z-index: -1;
   width: 100%;
-}
-.bgImg img {
-  height: 1000px;
-  width: 100%;
+  background-image: url("../img/bg.jpg");
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+  height: 4000px;
 }
 .box {
   padding: 70px 20px 10px;
