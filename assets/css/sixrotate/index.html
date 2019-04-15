@@ -1,46 +1,54 @@
 <!doctype html>
 <html>
-
 <head>
     <meta charset="UTF-8">
-    <title>轮播图</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-    <link rel="shortcut icon" href="../../../img/favicon.ico" type="image/x-icon" />
+    <title>六面旋转</title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <link rel="shortcut icon" href="../../../img/favicon.ico" type="image/x-icon"/>
 
     <style id="css">
-        body{
+        body {
             margin: 0;
         }
+
         ol,
-        ul{
+        ul {
             margin: 0;
             padding: 0;
             list-style: none;
         }
-        ul li {float: left;}
-        a{
+
+        ul li {
+            float: left;
+        }
+
+        a {
             user-select: none;
             text-decoration: none;
         }
-        #wrap{
+
+        #wrap {
             transform: scale(0.26);
 
             position: relative;
             /*margin: -50px -210px;*/
-            margin:  0 auto;
+            margin: 0 auto;
 
             /*border: 1px solid pink;*/
             width: 800px;
             height: 360px;
             top: -150px;
         }
-        #piclist{
+
+        #piclist {
             position: relative;
             width: 800px;
             height: 360px;
             perspective: 800px;
         }
-        #piclist>li{
+
+        #piclist > li {
             width: 50px;
             height: 360px;
             position: relative;
@@ -48,6 +56,7 @@
             font-size: 0;
             margin-left: -1px;
         }
+
         #piclist li a {
             display: block;
             left: 0;
@@ -64,37 +73,43 @@
         num = Math.sqrt(2) * 180
         约等于312(像素级别)
         */
-        #piclist li a:nth-of-type(1){
+        #piclist li a:nth-of-type(1) {
             background-image: url("../img/1.jpg");
-            transform:  rotateX(60deg) translateZ(312px);
+            transform: rotateX(60deg) translateZ(312px);
         }
-        #piclist li a:nth-of-type(2){
+
+        #piclist li a:nth-of-type(2) {
             background-image: url("../img/2.jpg");
             transform: rotateX(120deg) translateZ(312px);
         }
-        #piclist li a:nth-of-type(3){
+
+        #piclist li a:nth-of-type(3) {
             background-image: url("../img/3.jpg");
             transform: rotateX(180deg) translateZ(312px);
         }
-        #piclist li a:nth-of-type(4){
+
+        #piclist li a:nth-of-type(4) {
             background-image: url("../img/4.jpg");
             transform: rotateX(240deg) translateZ(312px);
         }
-        #piclist li a:nth-of-type(5){
+
+        #piclist li a:nth-of-type(5) {
             background-image: url("../img/2.jpg");
             transform: rotateX(300deg) translateZ(312px);
         }
-        #piclist li a:nth-of-type(6){
+
+        #piclist li a:nth-of-type(6) {
             background-image: url("../img/6.jpg");
             transform: rotateX(360deg) translateZ(312px);
         }
 
-        #piclist li span{
+        #piclist li span {
             position: absolute;
             width: 360px;
             height: 360px;
         }
-        #btns{
+
+        #btns {
             height: 50px;
             line-height: 50px;
             padding-top: 10px;
@@ -102,7 +117,8 @@
             text-align: center;
             transform: scale(2);
         }
-        #btns li{
+
+        #btns li {
             display: inline-block;
             width: 50px;
             height: 50px;
@@ -114,9 +130,12 @@
             margin: 0 5px;
             text-align: center;
         }
-        #btns .active{background-color: red;}
 
-        h3{
+        #btns .active {
+            background-color: red;
+        }
+
+        h3 {
             text-indent: 50px;
             position: relative;
             top: -220px;
@@ -127,16 +146,8 @@
 <body>
 
 <div id="wrap">
-    <h3>六面体旋转</h3>
+    <h3>六面旋转图片</h3>
     <ul id="piclist">
-<!--        <li>
-            <a href="#"></a>
-            <a href="#"></a>
-            <a href="#"></a>
-            <a href="#"></a>
-            <span></span>
-            <span></span>
-        </li>-->
     </ul>
     <ol id="btns">
         <li class="active">1</li>
@@ -161,30 +172,30 @@
     var sLi = '';
     var sCss = '';
     var liW = 50;
-    var liLen = oList.clientWidth/liW;
+    var liLen = oList.clientWidth / liW;
     var currentZIndex = 0;
 
-    for(var i=0;i<liLen;i++) {
-        i > liLen/2 ? currentZIndex -- : currentZIndex ++;
+    for (var i = 0; i < liLen; i++) {
+        i > liLen / 2 ? currentZIndex-- : currentZIndex++;
         sLi += ' <li><a href="javascript:;"></a><a href="javascript:;"></a><a href="javascript:;"></a><a href="javascript:;"></a><a href="#"></a><a href="#"></a></li>';
-        sCss += '#piclist li:nth-of-type('+ (i+1) +') a{background-position: -'+ i*liW +'px 0;}';
-        sCss += '#piclist li:nth-of-type('+ (i+1) +'){z-index: '+currentZIndex+';}';
+        sCss += '#piclist li:nth-of-type(' + (i + 1) + ') a{background-position: -' + i * liW + 'px 0;}';
+        sCss += '#piclist li:nth-of-type(' + (i + 1) + '){z-index: ' + currentZIndex + ';}';
     }
     oList.innerHTML = sLi;
     oCss.innerHTML += sCss;
 
     aLi = oList.children;
-    for(var i=0;i<aSpan.length;i++){
+    for (var i = 0; i < aSpan.length; i++) {
         aSpan[i].index = i;
-        aSpan[i].addEventListener('click',function(){
+        aSpan[i].addEventListener('click', function () {
             flag.className = '';
             this.className = 'active';
             flag = this;
-            for(var j=0;j<aLi.length;j++){
-                aLi[j].style.transition =  (j*50+100) +"ms";
-                aLi[j].style.transform = 'rotateX('+(this.index * 60)+'deg)';
+            for (var j = 0; j < aLi.length; j++) {
+                aLi[j].style.transition = (j * 50 + 100) + "ms";
+                aLi[j].style.transform = 'rotateX(' + (this.index * 60) + 'deg)';
             }
-        },false);
+        }, false);
     }
 
 

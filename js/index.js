@@ -2,6 +2,11 @@
 
 
 const dataPc = [
+    {
+        name: "冰原歌单",
+        src: './img/ge.png',
+        href: "./assets/vue/music"
+    },
 
     {
         name: "催菜星空",
@@ -28,11 +33,7 @@ const dataPc = [
         src: './img/cof.jpg',
         href: "./assets/star/"
     },
-    {
-        name: "冰原歌单",
-        src: './img/ge.png',
-        href: "./assets/vue/music"
-    },
+
     {
         name: "京剧高亮",
         src: './img/jing.jpg',
@@ -123,6 +124,11 @@ const dataPc = [
 ];
 const dataPhone = [
     {
+        name: "冰原歌单",
+        src: './img/ge.png',
+        href: "./assets/vue/music"
+    },
+    {
         name: "催菜星空",
         src: './img/star.jpg',
         href: "./assets/sky/"
@@ -202,11 +208,7 @@ const dataPhone = [
         src: './img/echart.jpg',
         href: "./assets/Echarts/"
     },
-    {
-        name: "冰原歌单",
-        src: './img/ge.png',
-        href: "./assets/vue/music"
-    },
+
 
 ];
 
