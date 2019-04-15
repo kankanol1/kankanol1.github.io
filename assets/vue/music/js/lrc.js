@@ -29,3 +29,13 @@ $(document).ready(function () {
         }
     }
 })
+
+let oInfo = document.querySelector('.info');
+let h1  = document.createElement('h1');
+h1.innerHTML = data.song;
+let p = document.createElement('p');
+p.className = 'name';
+p.innerHTML  = data.name;
+
+oInfo.appendChild(h1);
+oInfo.appendChild(p);
