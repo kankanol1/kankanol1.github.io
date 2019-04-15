@@ -85,7 +85,8 @@
         '[02:46.37]是缘份是注定 好汉剖腹来叁见\n' +
         '[02:52.24]呒惊风呒惊涌 有情有义好兄弟\n' +
         '[03:00.80]短短仔的光阴迫逍着少年时\n' +
-        '[03:05.81]求名利无了时 千金难买好人生 ';
+        '[03:05.81]求名利无了时 千金难买好人生\n '+
+        '[03:20.80]  ';
     var arr = str.split('\n');
 
     $(document).ready(function () {
@@ -106,10 +107,11 @@
                 }
             }
             setInterval(showLrc, 200);//设置定时，每200毫秒更新一下
+
         }
         function showLrc() {
             var curTime = myAudio.currentTime;//获取当前的播放时间
-            for (var i = 0; i < result.length; i++) {
+            for (var i = 0; i < result.length-1; i++) {
                 if ((curTime >result[i][0])&&(curTime<result[i+1][0])) {
                     //播放时间大于对应歌词时间小于下一句歌词时间就显示当前歌词
                     document.getElementById("lyric").innerHTML = result[i][1];

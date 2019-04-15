@@ -157,14 +157,14 @@
             for (var i=0;i<lrc.length;i++) {
                 var time = lrc[i].match(timeReg); //获取歌词里的时间
                 var value = lrc[i].replace(timeReg, ""); //获取纯歌词文本
-                for (var j=0;j<time.length;j++ ) {
+                for (var j=0;j<time.length-1;j++ ) {
                     var t = time[j].slice(1, -1).split(":"); //t[0]分钟，t[1]秒
                     var timeArr = parseInt(t[0], 10) * 60 + parseFloat(t[1]);
                     result.push([timeArr, value]);//以[时间(秒)，歌词]的形式存进result
                 }
             }
             setInterval(showLrc, 200);//设置定时，每200毫秒更新一下
-            console.log(result);
+            // console.log(result);
         }
 
         function showLrc() {

@@ -103,7 +103,8 @@
         '[02:28.10]入巷间吃汤面 笑看窗边飞雪\n' +
         '[02:34.25]取腰间明珠弹山雀 立枇杷于庭前\n' +
         '[02:45.61]入巷间吃汤面 笑看窗边飞雪\n' +
-        '[02:52.86]取腰间明珠弹山雀 立枇杷于庭前';
+        '[02:52.86]取腰间明珠弹山雀 立枇杷于庭前\n'+
+        '[02:55.86]  ';
     let arr = str.split('\n');
 
 
@@ -134,7 +135,7 @@
 
         function showLrc() {
             let curTime = myAudio.currentTime;//获取当前的播放时间
-            for (let i = 0; i < result.length; i++) {
+            for (let i = 0; i < result.length-1; i++) {
                 if ((curTime >result[i][0])&&(curTime<result[i+1][0])) {
                     //播放时间大于对应歌词时间小于下一句歌词时间就显示当前歌词
                     document.getElementById("lyric").innerHTML = result[i][1];
