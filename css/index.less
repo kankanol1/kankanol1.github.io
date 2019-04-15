@@ -1,3 +1,6 @@
+@charset "UTF-8";
+
+@w: 12.8rem;
 
 body{
   position: relative;
@@ -6,17 +9,17 @@ body{
 nav{
   background-color: #EEE;
   opacity: 0.7;
-  height: 70px;
-  padding: 0 20px;
+  height: 70/@w;
+  padding: 0 20/@w;
   position: fixed;
   width: 100%;
   z-index: 10;
   ul{
     li{
-      padding: 10px 20px;
-      line-height: 50px;
-      height: 50px;
-      font-size: 30px;
+      padding: 10/@w 20/@w;
+      line-height: 50/@w;
+      height: 50/@w;
+      font-size: 30/@w;
       float: left;
       a{
         color: #111;
@@ -26,24 +29,24 @@ nav{
 }
 
 footer{
-  padding:  0 20px;
+  padding:  0 20/@w;
   ul{
     li{
       display: inline-block;
-      padding: 10px 20px;
+      padding: 10/@w;
 
       a{
         text-align: center;
         display: block;
         img{
-          height: 50px;
-          width: 50px;
+          height: 50/@w;
+          width: 50/@w;
           border-radius: 50%;
         }
         span{
           display: block;
-          padding: 5px;
-          font-size: 20px;
+          padding: 5/@w;
+          font-size: 20/@w;
         }
       }
     }
@@ -58,48 +61,48 @@ footer{
   background-image: url("../img/bg.jpg");
   background-repeat: repeat-y;
   background-size: 100% auto;
-  height: 2000px;
+  height: 2000/@w;
   text-align: right;
   p{
     float: left;
 
     position: fixed;
-    top: 80px;
-    right: 10px;
+    top: 80/@w;
+    right: 20/@w;
     span{
       display: block;
       font-style: italic;
-      font-size: 20px;
+      font-size: 20/@w;
     }
   }
 
 }
 .box{
-  padding: 70px 20px 10px;
+  padding: 70/@w 20/@w 10/@w;
     .phone,
     .pc{
       h2{
-        font-size: 32px;
+        font-size: 32/@w;
       }
       ul{
         li{
           display: inline-block;
-          padding: 10px 20px;
+          padding: 10/@w 20/@w;
           a{
             text-align: center;
             display: block;
-            padding: 10px;
-            box-shadow: 2px 2px 10px #C0C0C0;
+            padding: 10/@w;
+            box-shadow: 2/@w 2/@w 10/@w #C0C0C0;
             img{
-              height: 70px;
-              width: 70px;
+              height: 70/@w;
+              width: 70/@w;
               border-radius: 50%;
-              border: 1px solid pink;
+              border: 1/@w solid pink;
             }
             span{
               display: block;
-              padding: 5px;
-              font-size: 26px;
+              padding: 5/@w;
+              font-size: 26/@w;
             }
           }
         }
@@ -108,14 +111,14 @@ footer{
     .drawP,
     .lun{
       h2{
-        font-size: 32px;
+        font-size: 32/@w;
       }
       ul{
         li{
           a{
-            padding: 10px 20px;
+            padding: 10/@w 20/@w;
             color: blue;
-            font-size: 26px;
+            font-size: 26/@w;
           }
         }
       }
@@ -123,6 +126,6 @@ footer{
 }
 .test,
 .hello{
-  padding: 70px 20px 10px;
+  padding: 70/@w 20/@w 10/@w;
 
 }

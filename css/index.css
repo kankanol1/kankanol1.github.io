@@ -1,45 +1,46 @@
+@charset "UTF-8";
 body {
   position: relative;
 }
 nav {
   background-color: #EEE;
   opacity: 0.7;
-  height: 70px;
-  padding: 0 20px;
+  height: 5.46875rem;
+  padding: 0 1.5625rem;
   position: fixed;
   width: 100%;
   z-index: 10;
 }
 nav ul li {
-  padding: 10px 20px;
-  line-height: 50px;
-  height: 50px;
-  font-size: 30px;
+  padding: 0.78125rem 1.5625rem;
+  line-height: 3.90625rem;
+  height: 3.90625rem;
+  font-size: 2.34375rem;
   float: left;
 }
 nav ul li a {
   color: #111;
 }
 footer {
-  padding: 0 20px;
+  padding: 0 1.5625rem;
 }
 footer ul li {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 0.78125rem;
 }
 footer ul li a {
   text-align: center;
   display: block;
 }
 footer ul li a img {
-  height: 50px;
-  width: 50px;
+  height: 3.90625rem;
+  width: 3.90625rem;
   border-radius: 50%;
 }
 footer ul li a span {
   display: block;
-  padding: 5px;
-  font-size: 20px;
+  padding: 0.390625rem;
+  font-size: 1.5625rem;
 }
 .bgImg {
   position: fixed;
@@ -49,63 +50,63 @@ footer ul li a span {
   background-image: url("../img/bg.jpg");
   background-repeat: repeat-y;
   background-size: 100% auto;
-  height: 2000px;
+  height: 156.25rem;
   text-align: right;
 }
 .bgImg p {
   float: left;
   position: fixed;
-  top: 80px;
-  right: 10px;
+  top: 6.25rem;
+  right: 1.5625rem;
 }
 .bgImg p span {
   display: block;
   font-style: italic;
-  font-size: 20px;
+  font-size: 1.5625rem;
 }
 .box {
-  padding: 70px 20px 10px;
+  padding: 5.46875rem 1.5625rem 0.78125rem;
 }
 .box .phone h2,
 .box .pc h2 {
-  font-size: 32px;
+  font-size: 2.5rem;
 }
 .box .phone ul li,
 .box .pc ul li {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 0.78125rem 1.5625rem;
 }
 .box .phone ul li a,
 .box .pc ul li a {
   text-align: center;
   display: block;
-  padding: 10px;
-  box-shadow: 2px 2px 10px #C0C0C0;
+  padding: 0.78125rem;
+  box-shadow: 0.15625rem 0.15625rem 0.78125rem #c0c0c0;
 }
 .box .phone ul li a img,
 .box .pc ul li a img {
-  height: 70px;
-  width: 70px;
+  height: 5.46875rem;
+  width: 5.46875rem;
   border-radius: 50%;
-  border: 1px solid pink;
+  border: 0.078125rem solid #ffc0cb;
 }
 .box .phone ul li a span,
 .box .pc ul li a span {
   display: block;
-  padding: 5px;
-  font-size: 26px;
+  padding: 0.390625rem;
+  font-size: 2.03125rem;
 }
 .box .drawP h2,
 .box .lun h2 {
-  font-size: 32px;
+  font-size: 2.5rem;
 }
 .box .drawP ul li a,
 .box .lun ul li a {
-  padding: 10px 20px;
+  padding: 0.78125rem 1.5625rem;
   color: blue;
-  font-size: 26px;
+  font-size: 2.03125rem;
 }
 .test,
 .hello {
-  padding: 70px 20px 10px;
+  padding: 5.46875rem 1.5625rem 0.78125rem;
 }
