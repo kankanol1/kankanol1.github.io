@@ -54,7 +54,7 @@
   .bgImg p {
     position: fixed;
     top: 3.125rem;
-    right: 0.625rem;
+    right: 0.9375rem;
   }
   .bgImg p span {
     display: block;
@@ -139,6 +139,9 @@
   }
 }
 @media screen and (max-width: 500px) {
+  body {
+    overflow-x: hidden;
+  }
   nav {
     background-color: #EEE;
     opacity: 0.7;
@@ -194,7 +197,7 @@
     float: left;
     position: fixed;
     top: 18.46153846rem;
-    right: 0.76923077rem;
+    right: 1.15384615rem;
   }
   .bgImg p span {
     display: block;
@@ -202,8 +205,7 @@
     font-size: 0.61538462rem;
   }
   .box {
-    padding: 2.1875rem 0.625rem 0.3125rem;
-    width: 100%;
+    padding: 2.1875rem 0.3125rem 0.3125rem 0.625rem;
     position: relative;
   }
   .box hr {
