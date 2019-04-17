@@ -1,5 +1,5 @@
 
-const dataPc = [
+/*const dataPc = [
     {
         name: "冰原歌单",
         src: './img/ge.png',
@@ -124,9 +124,9 @@ const dataPc = [
         href: "./assets/peng"
     },
 
-];
+];*/
 
-const dataPhone = [
+/*const dataPhone = [
     {
         name: "冰原歌单",
         src: './img/ge.png',
@@ -214,7 +214,7 @@ const dataPhone = [
     },
 
 
-];
+];*/
 
 const dataDraw = [
     {
@@ -274,7 +274,7 @@ const dataLun = [
     },
 ];
 
-let phoneBar = document.querySelector('.phone');
+/*let phoneBar = document.querySelector('.phone');
 let phoneUl = document.createElement('ul');
 for(let i=0;i<dataPhone.length;i++){
     let phoneLi = document.createElement('li');
@@ -289,9 +289,9 @@ for(let i=0;i<dataPhone.length;i++){
     phoneA.appendChild(phoneSpan);
     phoneUl.appendChild(phoneLi);
 }
-phoneBar.appendChild(phoneUl);
+phoneBar.appendChild(phoneUl);*/
 
-let pcBar = document.querySelector('.pc');
+/*let pcBar = document.querySelector('.pc');
 let pcUl = document.createElement('ul');
 for(let i=0;i<dataPc.length;i++){
     let pcLi = document.createElement('li');
@@ -306,7 +306,7 @@ for(let i=0;i<dataPc.length;i++){
     pcA.appendChild(pcSpan);
     pcUl.appendChild(pcLi);
 }
-pcBar.appendChild(pcUl);
+pcBar.appendChild(pcUl);*/
 
 let drBar = document.querySelector('.drawP');
 let drUl = document.createElement('ul');

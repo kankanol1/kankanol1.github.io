@@ -71,13 +71,35 @@
       }
     }
   }
+  .slide{
+    //position: relative;
+    //padding: 70/@w 0 10/@w;
+    //margin-top: 70/@w;
+    //padding-top: 70/@w;
+    //text-align: center;
+    img{
+      //position: relative;left: -10px;
+      width: 100%;
+      //height: 20%;
+    }
+    .carousel-caption{
+      font-size: 50px;
+      font-family: "Lantinghei SC Extralight", Arial;
+      color: lawngreen;
+    }
+  }
+
 
   .box {
     padding: 70/@w 20/@w 10/@w;
+    width: 100%;
+    position: relative;
     .phone,
     .pc {
+      width: 100%;
       h2 {
         font-size: 24/@w;
+        text-align: center;
       }
       ul {
         li {
@@ -102,6 +124,18 @@
           }
         }
       }
+
+
+      .pcA{
+        display: block;
+        margin:  0 auto;
+        width: 50%;
+        box-shadow: 10px 10px 5px #999;
+        img{
+          width: 100%;
+        }
+      }
+
     }
     .drawP,
     .lun {
@@ -133,6 +167,7 @@
 }
 
 @media screen and (max-width: 500px) {
+
   nav {
     background-color: #EEE;
     opacity: 0.7;
@@ -204,49 +239,67 @@
     }
 
   }
-
   .box {
-    padding: 70/@wp 20/@wp 10/@wp;
+    padding: 70/@w 20/@w 10/@w;
+    width: 100%;
+    position: relative;
+    hr{
+      margin: 2px;
+    }
     .phone,
     .pc {
+      width: 100%;
       h2 {
-        font-size: 32/@wp;
+        font-size: 24/@w;
+        text-align: center;
       }
       ul {
         li {
           display: inline-block;
-          padding: 10/@wp 20/@wp;
+          padding: 10/@w 20/@w;
           a {
             text-align: center;
             display: block;
-            padding: 10/@wp;
-            box-shadow: 2/@wp 2/@wp 10/@wp #C0C0C0;
+            padding: 10/@w;
+            box-shadow: 2/@w 2/@w 10/@w #C0C0C0;
             img {
-              height: 70/@wp;
-              width: 70/@wp;
+              height: 50/@w;
+              width: 50/@w;
               border-radius: 50%;
-              border: 1/@wp solid pink;
+              border: 1/@w solid pink;
             }
             span {
               display: block;
-              padding: 5/@wp;
-              font-size: 26/@wp;
+              padding: 5/@w;
+              font-size: 20/@w;
             }
           }
         }
       }
+
+
+      .pcA{
+        display: block;
+        margin:  0 auto;
+        width: 70%;
+        box-shadow: 10px 10px 5px #999;
+        img{
+          width: 100%;
+        }
+      }
+
     }
     .drawP,
     .lun {
       h2 {
-        font-size: 32/@wp;
+        font-size: 24/@w;
       }
       ul {
         li {
           a {
-            padding: 10/@wp 20/@wp;
+            padding: 10/@w 20/@w;
             color: blue;
-            font-size: 26/@wp;
+            font-size: 20/@w;
           }
         }
       }
