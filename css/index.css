@@ -65,7 +65,7 @@
     width: 100%;
   }
   .slide .carousel-caption {
-    font-size: 50px;
+    font-size: 1.5625rem;
     font-family: "Lantinghei SC Extralight", Arial;
     color: lawngreen;
   }
@@ -139,9 +139,6 @@
   }
 }
 @media screen and (max-width: 500px) {
-  body {
-    overflow-x: hidden;
-  }
   nav {
     background-color: #EEE;
     opacity: 0.7;
@@ -203,6 +200,14 @@
     display: block;
     font-style: italic;
     font-size: 0.61538462rem;
+  }
+  .slide img {
+    width: 100%;
+  }
+  .slide .carousel-caption {
+    font-size: 1.92307692rem;
+    font-family: "Lantinghei SC Extralight", Arial;
+    color: lawngreen;
   }
   .box {
     padding: 2.1875rem 0.3125rem 0.3125rem 0.625rem;
