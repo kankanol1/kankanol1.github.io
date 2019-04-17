@@ -1,6 +1,11 @@
 
 const dataPc = [
     {
+        name: "怦然心动",
+        src: '../assets/love/img/xin.svg',
+        href: "../assets/love"
+    },
+    {
         name: "冰原歌单",
         src: '../img/ge.png',
         href: "../assets/vue/music"
