@@ -16,6 +16,11 @@ const dataFo = [
         href: "https://blog.csdn.net/qq_38025939"
     },
     {
+        name: "博客园主页",
+        src: '../img/github.jpg',
+        href: "https://www.cnblogs.com/kankanol/"
+    },
+    {
         name: "segmentFault主页",
         src: '../img/github.jpg',
         href: "https://segmentfault.com/u/kankanol1"
@@ -44,5 +49,4 @@ for(let i=0;i<dataFo.length;i++){
     foA.appendChild(foSpan);
     foUl.appendChild(foLi);
 }
-// console.log(navBar);
 foBar.appendChild(foUl);
