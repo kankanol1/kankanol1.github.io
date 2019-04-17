@@ -97,6 +97,11 @@ const dataPc = [
         src: './img/move.jpg',
         href: "./assets/move"
     },
+    {
+        name: "阴阳日历",
+        src: './img/ri.png',
+        href: "./assets/calender"
+    },
 
     {
         name: "方格定位",

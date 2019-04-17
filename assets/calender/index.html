@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>测试</title>
+    <link rel="stylesheet" href="stylesheets/simple-calendar.css">
+    <script src="javascripts/simple-calendar-es.js"></script>
+    <style>
+        .url{
+            text-align: center;
+            font-size: 20px;
+        }
+        h2{
+            text-align: center;
+            color: pink;
+            margin-top: 50px;
+        }
+        #container{
+            margin: 0 auto;
+            float: none;
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+<h2>日历插件</h2>
+<div id="container"></div>
+<p class="url">代码地址：<a href="https://github.com/kankanol1/calindar.git">https://github.com/kankanol1/calindar.git</a></p>
+<script>
+    let myCalendar = new SimpleCalendar('#container');
+</script>
+</body>
+</html>
