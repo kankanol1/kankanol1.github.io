@@ -33,8 +33,8 @@
     }
 
     //解决图像模糊的问题
-    var getPixelRatio = function (context) {
-        var backingStore = context.backingStorePixelRatio ||
+    let getPixelRatio = function (context) {
+        let backingStore = context.backingStorePixelRatio ||
             context.webkitBackingStorePixelRatio ||
             context.mozBackingStorePixelRatio ||
             context.msBackingStorePixelRatio ||
@@ -154,9 +154,9 @@
         let n = 0;//标记
         let outL = 3;//放大系数
         for (let j = 0; j < nodes.length; j++) {
-            if (matrix[flag][j] == 1 && nodes[j].degree == 1) {
+            if (matrix[flag][j] === 1 && nodes[j].degree === 1) {
                 let scaleC = outL * (nodes[flag].degree + Math.abs(nodes[flag].degree - MAX_VALUE)) / MAX_VALUE * R;//拉伸系数
-                if (nodes[flag].degree != 1) {
+                if (nodes[flag].degree !== 1) {
                     scaleC = (1 - 2 / nodes[flag].degree) * scaleC;
                 } else {
                     scaleC = scaleC / 2;
@@ -542,17 +542,17 @@
     function checkPoint(n, nodes, centerNodes) {
         let flag = 0;
         for (let i = 0; i < centerNodes.length; i++) {
-            if (nodes[n].id == centerNodes[i]) {
+            if (nodes[n].id === centerNodes[i]) {
                 flag = 1;
             }
         }
         return flag;
     }
 
-    //根据id检测节点索引
+    //根据id检测节点索引=
     function checkIndex(id, nodes) {
         for (let i = 0; i < nodes.length; i++) {
-            if (id == nodes[i].id) {
+            if (id === nodes[i].id) {
                 return nodes[i];
             }
         }
@@ -561,7 +561,7 @@
     //根据id检测节点索引
     function checkIndexId(id, nodes) {
         for (let i = 0; i < nodes.length; i++) {
-            if (id == nodes[i].id) {
+            if (id === nodes[i].id) {
                 return i;
             }
         }

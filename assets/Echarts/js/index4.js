@@ -223,7 +223,7 @@
         for (let i = 0; i < splitNodes.length; i++) {
             nodes[splitNodes[i][0]].positionX = x;
             nodes[splitNodes[i][0]].positionY = y;
-            if (i % 3 == 2) {
+            if (i % 3 === 2) {
                 x = l;
                 y = y + h / 3;
             } else {
