@@ -130,6 +130,15 @@ const dataPc = [
     },
 
 ];
+let obj=[];
+for(let i=0;i<dataPc.length;i++){
+    obj.push({
+        category: 'phone',
+        stocked: true,
+        name: dataPc[i].name,
+        href:dataPc[i].href
+    });
+}
 let pcBar = document.querySelector('.pc');
 let pcUl = document.createElement('ul');
 for(let i=0;i<dataPc.length;i++){

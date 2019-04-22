@@ -68,8 +68,8 @@
     position: relative;
     text-align: center;
     top: -9.375rem;
-    color: green;
-    width: 100px;
+    color: white;
+    width: 200px;
     font-size: 1.5625rem;
     margin: 0 auto;
   }
@@ -140,6 +140,11 @@
     padding: 0.3125rem 0.625rem;
     color: blue;
     font-size: 0.625rem;
+    text-decoration: none;
+  }
+  .box .drawP ul li a:hover,
+  .box .lun ul li a:hover {
+    color: green;
   }
   .bei {
     text-align: center;
@@ -148,6 +153,36 @@
   .bei a {
     font-size: 0.5rem;
     color: blue;
+  }
+  .search {
+    padding: 0.3125rem 0.625rem;
+  }
+  .search table {
+    width: 6.25rem;
+    text-align: center;
+    padding-top: 0.3125rem;
+  }
+  .search table thead tr {
+    text-align: center;
+  }
+  .search table thead tr th {
+    text-align: center;
+  }
+  .search table tbody .center {
+    text-align: center;
+  }
+  .search table tbody tr {
+    padding: 0.0625rem 0.3125rem;
+  }
+  .search table tbody tr td {
+    margin-right: 0.625rem;
+  }
+  .search table tbody tr td a {
+    text-decoration: none;
+    color: blue;
+  }
+  .search table tbody tr td a:hover {
+    color: green;
   }
 }
 @media screen and (max-width: 500px) {
@@ -289,6 +324,39 @@
     padding: 0.38461538rem 0.76923077rem;
     color: blue;
     font-size: 1rem;
+  }
+  .search {
+    padding: 0.38461538rem 0.76923077rem;
+  }
+  .search table {
+    width: 11.53846154rem;
+    text-align: center;
+  }
+  .search table form input {
+    border: none;
+    outline: none;
+  }
+  .search table thead tr {
+    text-align: center;
+  }
+  .search table thead tr th {
+    text-align: center;
+  }
+  .search table tbody {
+    font-size: 1.15384615rem;
+  }
+  .search table tbody .center {
+    text-align: center;
+  }
+  .search table tbody tr {
+    padding: 0.07692308rem 0.38461538rem;
+  }
+  .search table tbody tr td {
+    margin-right: 0.76923077rem;
+  }
+  .search table tbody tr td a {
+    text-decoration: none;
+    color: blue;
   }
   .bei {
     text-align: center;
