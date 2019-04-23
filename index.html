@@ -18,8 +18,9 @@
     <style>
         audio{
             position: relative;
-            top: -55px;
+            top: -8px;
             left: -8px;
+            z-index: 1000;
         }
     </style>
 </head>
@@ -27,11 +28,7 @@
 
 
 <nav class="nav-bar"> </nav>
-<div class="au" style=" border-radius: 50%;height: 36px;width:36px;position: fixed;z-index: 1000;left:50px;top: 100px;overflow: hidden;">
-    <audio src="./mp3/zhuoniqiu.aac" style="height: 100px;position: absolute" controls>
-        <span>浏览器不支持</span>
-    </audio>
-</div>
+
 <div class="bgImg"></div>
 <div class="slide">
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -91,7 +88,12 @@
     </div>
     <p class="kankan">冰原狼</p>
 </div>
-<div class="box">
+<div class="au" style=" border-radius: 50%;height: 36px;width:36px;position:fixed;z-index: 1000;left:50px;top: 100px;overflow: hidden;">
+    <audio src="./mp3/zhuoniqiu.aac" style="position: absolute" controls>
+        <span>浏览器不支持</span>
+    </audio>
+</div>
+<div class="box" style="padding-top: 0">
     <div class="pc">
         <h2>PC端demo</h2>
         <hr>
