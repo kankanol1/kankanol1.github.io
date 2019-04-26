@@ -1,6 +1,28 @@
 @charset "UTF-8";
 /*声明变量*/
 /*-------------------resetCSSS-----------------------*/
+
+@font-face {
+    font-family: myFont;
+    src: url("./my-font.ttf");
+}
+body,
+li,
+p,
+a,
+td,
+h2,
+table{
+    font-family: 'myFont';
+}
+.lun h2,
+.phone h2,
+.pc h2,
+.drawP h2
+{
+    font-family: 'myFont';
+
+}
 a,
 input,
 button {
