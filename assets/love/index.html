@@ -94,13 +94,14 @@
     $(document).ready(function(){
         //卷轴展开效果
         $(".l-pic-index").animate({'left':'8px'},1500);
-        $(".r-pic-index").animate({'right':'9px'},1500);
+        $(".r-pic-index").animate({'right':'59px'},1500);
         $(".l-bg-index").animate({'width':'432px','left':'73px'},1500);
         $(".r-bg-index").animate({'width':'432px','left':'504px'},1500,function(){
             $(".main-index").fadeIn(1500);
         });
-    });
 
+
+    });
     let cW = window.innerWidth - 50;
     let cH = window.innerHeight -50;
     console.log(cW,cH);

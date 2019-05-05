@@ -82,6 +82,7 @@ img{
     height:460px;
     background: url("../img/zhou.jpg") no-repeat left 0;
     background-size: auto 100%;
+    transform: rotate3d(0,0,1,180deg);
     /*background: url("../img/r-pic-index.png") no-repeat left 0;*/
 }
 .l-bg-index{
