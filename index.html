@@ -18,11 +18,14 @@
     <script src="assets/js/jquery-1.12.4.js"></script>
     <script src="assets/js/bootstrap.js"></script>
     <style>
+        .au{
+            top: 250px;
+        }
         audio{
             position: relative;
-            top: 250px;
+            top: -8px;
             left: -8px;
-            z-index: 8;
+            z-index: 99999;
         }
     </style>
 </head>
@@ -91,7 +94,7 @@
     </div>
     <p class="kankan">冰原狼</p>
 </div>
-<div class="au" style=" opacity:0.5;border-radius: 50%;height: 36px;width:36px;position:fixed;z-index: 1000;left:10px;top: 100px;overflow: hidden;">
+<div class="au" style=" opacity:0.5;border-radius: 50%;height: 36px;width:36px;position:fixed;z-index: 1000;right:20px;top: 240px;overflow: hidden;">
     <audio src="./mp3/zhuoniqiu.aac" style="position: absolute" controls>
         <span>浏览器不支持</span>
     </audio>
