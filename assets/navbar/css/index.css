@@ -83,6 +83,9 @@ h1{
         float: left; }
     nav ul li a {
         color: #111; }
+    nav ul li a:hover{
+        color:#ee82ee;
+    }
 
 }
 
