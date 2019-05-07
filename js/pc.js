@@ -17,6 +17,11 @@ const dataPc = [
         href: "../assets/sky/"
     },
     {
+        name: "导航优化",
+        src: '../img/navbar.png',
+        href: "../assets/navbar/"
+    },
+    {
         name: "蘑菇街装",
         src: '../img/mogujie.jpg',
         href: "../assets/mogujie/"
