@@ -28,11 +28,15 @@ h1{
         float: left; }
     nav ul li a {
         color: #111; }
+    nav ul li a:hover{
+        color:#ee82ee;
+    }
 
 
 
 
- }
+
+}
 @media screen and (max-width: 800px) {
     nav {
         height: 2.6923076923rem;
