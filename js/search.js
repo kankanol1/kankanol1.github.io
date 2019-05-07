@@ -18,6 +18,9 @@ const PRODUCTS = [
     {category: "phone", stocked: true, name: "瀑布流图 ", href: "./assets/pu/"},
     {category: "phone", stocked: true, name: "绘制网络 ", href: "./assets/Echarts/"},
     {category: "phone", stocked: true, name: "阴阳日历 ", href: "./assets/calender"},
+    {category: "phone", stocked: true, name: "Hexo网站", href: "https://love.kankan.fun"},
+    {category: "phone", stocked: true, name: "Jekyll网站", href: "https://fanny.kankan.fun"},
+
     {category: "pc", stocked: true, name: "怦然心动", href: "./assets/love"},
     {category: "pc", stocked: true, name: "冰原歌单", href: "./assets/vue/music"},
     {category: "pc", stocked: true, name: "催菜星空", href: "./assets/sky/"},
@@ -43,6 +46,8 @@ const PRODUCTS = [
     {category: "pc", stocked: true, name: "图片拖拽", href: "./assets/dragp"},
     {category: "pc", stocked: true, name: "你画我猜", href: "./assets/guess"},
     {category: "pc", stocked: true, name: "碰撞检测", href: "./assets/peng"},
+    {category: "pc", stocked: true, name: "Hexo网站", href: "https://love.kankan.fun"},
+    {category: "pc", stocked: true, name: "Jekyll网站", href: "https://fanny.kankan.fun"},
 ];
 
 class ProductCategoryRow extends React.Component {
