@@ -17,8 +17,12 @@
         height: 1.5625rem;
         font-size: 0.75rem;
         float: left; }
-        nav ul li a {
+        nav ul li .item {
+          text-decoration: none;
           color: #111; }
+        nav ul li .item:hover {
+          text-decoration: none;
+          color: #EE82ee; }
 
   footer {
     padding: 0 0.625rem; }
@@ -130,7 +134,8 @@
     .box .drawP ul li a:hover,
     .box .lun ul li a:hover,
     .box .learn ul li a:hover {
-      color: green; }
+      color: green;
+      text-decoration: none; }
 
   .bei {
     text-align: center;

@@ -21,9 +21,14 @@ $wp: 26;
         height: 50rem/$w;
         font-size: 24rem/$w;
         float: left;
-        a {
-
+        .item {
+          text-decoration: none;
           color: #111;
+        }
+        .item:hover{
+          text-decoration: none;
+          color: #EE82ee;
+
         }
       }
     }
@@ -165,6 +170,8 @@ $wp: 26;
           }
           a:hover{
             color: green;
+            text-decoration: none;
+
           }
         }
       }

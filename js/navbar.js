@@ -35,6 +35,7 @@ for(let i=0;i<data.length-1;i++){
     let navA = document.createElement('a');
     navLi.appendChild(navA);
     navA.href = data[i].url;
+    navA.classList="item";
     navA.innerHTML = data[i].name;
     navUl.appendChild(navLi);
 }
