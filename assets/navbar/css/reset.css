@@ -1,0 +1,72 @@
+@charset "UTF-8";
+/*声明变量*/
+/*-------------------resetCSSS-----------------------*/
+
+@font-face {
+    font-family: myFont;
+    src: url("./my-font.ttf");
+}
+body,
+li,
+p,
+a,
+td,
+h2,
+table{
+    font-family: 'myFont';
+}
+.lun h2,
+.phone h2,
+.pc h2,
+.drawP h2,
+.learn h2
+{
+    font-family: 'myFont';
+
+}
+a,
+input,
+button {
+    /* 清楚点击阴影 */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    color: #000;
+}
+input,
+button {
+    /* 清除按钮圆角 iOS */
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+body,
+html {
+    margin: 0;
+    padding: 0;
+    /* 禁止用户选中文字 */
+    -webkit-user-select: none;
+    /* 禁止文字缩放 */
+    -webkit-text-size-adjust: 100%;
+    /*s设置字体*/
+    font-family: Times New Roman, Arial, Helvetica, sans-serif;
+}
+a,
+a:hover{
+    text-decoration: none;
+    color: #111;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.clearfix{
+    zoom:1;
+}
+
+.clearfix:after{
+    content:'';
+    display:block;
+    height:0;
+    font-size:0;
+    clear:both;
+    overflow:hidden;
+}

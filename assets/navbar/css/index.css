@@ -1,0 +1,88 @@
+
+body{
+    background-color: #fafb83;
+}
+h1{
+    text-align: center;
+    font-family: myFont;
+    font-size: 30px;
+}
+@media screen and (min-width: 800px) {
+    nav {
+        background-color: #EEE;
+        opacity: 0.75;
+        height: 2.1875rem;
+        padding: 0 0.625rem;
+        position: fixed;
+        width: 100%;
+        z-index: 10; }
+    nav img {
+        display: none; }
+    nav ul {
+        display: block; }
+    nav ul li {
+        padding: 0.3125rem 0.625rem;
+        line-height: 1.5625rem;
+        height: 1.5625rem;
+        font-size: 0.75rem;
+        float: left; }
+    nav ul li a {
+        color: #111; }
+
+
+
+
+ }
+@media screen and (max-width: 800px) {
+    nav {
+        height: 2.6923076923rem;
+        padding: 0;
+        position: fixed;
+        width: 100%;
+        z-index: 10; }
+    nav img {
+        display: block;
+        float: right;
+        height: 2.3076923077rem;
+        margin: 0.1923076923rem 0.7692307692rem;
+        z-index: 99999;
+        position: relative;
+        top: 0;
+        cursor: pointer; }
+    nav .nav-ul {
+        display: block;
+        background-color: black;
+        position: relative;
+        top: -1.9230769231rem;
+        z-index: 9999;
+        opacity: 0.7; }
+    nav .nav-ul li {
+        width: 100%;
+        line-height: 1.9230769231rem;
+        height: 1.9230769231rem;
+        text-align: center;
+        border-bottom: 1px solid #ee82ee;
+        padding: 0; }
+    nav .nav-ul li a {
+        color: #fff;
+        display: block;
+        font-size: 1.1538461538rem;
+        line-height: 1.9230769231rem;
+        height: 1.9230769231rem;
+        width: 100%;
+        text-decoration: none; }
+    nav .nav-ul li a:hover {
+        color: #58ff11; }
+    nav ul {
+        display: none; }
+    nav ul li {
+        padding: 0.3846153846rem 0.7692307692rem;
+        line-height: 1.9230769231rem;
+        height: 1.9230769231rem;
+        font-size: 1.1538461538rem;
+        float: left; }
+    nav ul li a {
+        color: #111; }
+
+}
+
