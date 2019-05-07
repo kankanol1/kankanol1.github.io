@@ -1,221 +1,4 @@
 
-/*const dataPc = [
-    {
-        name: "冰原歌单",
-        src: './img/ge.png',
-        href: "./assets/vue/music"
-    },
-
-    {
-        name: "催菜星空",
-        src: './img/star.jpg',
-        href: "./assets/sky/"
-    },
-    {
-        name: "蘑菇街装",
-        src: './img/mogujie.jpg',
-        href: "./assets/mogujie/"
-    },
-    {
-        name: "儿童写真",
-        src: './img/marry.jpg',
-        href: "./assets/marry/"
-    },
-    {
-        name: "视频截图",
-        src: './img/mv.jpg',
-        href: "./assets/scripmv/"
-    },
-    {
-        name: "星巴咖啡",
-        src: './img/cof.jpg',
-        href: "./assets/star/"
-    },
-
-    {
-        name: "京剧高亮",
-        src: './img/jing.jpg',
-        href: "./assets/jingju/"
-    },
-    {
-        name: "陀螺仪图",
-        src: './img/tuo.jpg',
-        href: "./assets/css/allperspective/"
-    },
-    {
-        name: "炫酷轮播",
-        src: './img/xuan.jpg',
-        href: "./assets/css/cssstyle/"
-    },
-    {
-        name: "六面炫图",
-        src: './img/six.jpg',
-        href: "./assets/css/sixrotate/"
-    },
-    {
-        name: "左右集图",
-        src: './img/lr.jpg',
-        href: "./assets/css/trotatey/"
-    },
-    {
-        name: "上下相册",
-        src: './img/shang.jpg',
-        href: "./assets/css/trotatex/"
-    },
-    {
-        name: "王者战报",
-        src: './img/wang.jpg',
-        href: "./assets/wang/"
-    },
-    {
-        name: "雪夜长安",
-        src: './img/snow.jpg',
-        href: "./assets/css/snow/"
-    },
-    {
-        name: "观澜数据",
-        src: './img/gl.jpg',
-        href: "./assets/glsite/"
-    },
-    {
-        name: "图片切入",
-        src: './img/qie.jpg',
-        href: "./assets/api/"
-    },
-    {
-        name: "瀑布流图",
-        src: './img/pu.jpg',
-        href: "./assets/pu/"
-    },
-    {
-        name: "绘制网络",
-        src: './img/echart.jpg',
-        href: "./assets/Echarts/"
-    },
-    {
-        name: "移动回放",
-        src: './img/move.jpg',
-        href: "./assets/move"
-    },
-    {
-        name: "阴阳日历",
-        src: './img/ri.png',
-        href: "./assets/calender"
-    },
-
-    {
-        name: "方格定位",
-        src: './img/fange.jpg',
-        href: "./assets/fangge"
-    },
-    {
-        name: "图片拖拽",
-        src: './img/dragp.jpg',
-        href: "./assets/dragp"
-    },
-    {
-        name: "你画我猜",
-        src: './img/hello.jpg',
-        href: "./assets/guess"
-    },
-    {
-        name: "碰撞检测",
-        src: './img/hell.jpg',
-        href: "./assets/peng"
-    },
-
-];*/
-
-/*const dataPhone = [
-    {
-        name: "冰原歌单",
-        src: './img/ge.png',
-        href: "./assets/vue/music"
-    },
-    {
-        name: "催菜星空",
-        src: './img/star.jpg',
-        href: "./assets/sky/"
-    },
-    {
-        name: "蘑菇街装",
-        src: './img/mogujie.jpg',
-        href: "./assets/mogujie/"
-    },
-    {
-        name: "儿童写真",
-        src: './img/marry.jpg',
-        href: "./assets/marry/"
-    },
-    {
-        name: "视频截图",
-        src: './img/mv.jpg',
-        href: "./assets/scripmv/"
-    },
-    {
-        name: "星巴咖啡",
-        src: './img/cof.jpg',
-        href: "./assets/star/"
-    },
-    {
-        name: "陀螺仪图",
-        src: './img/tuo.jpg',
-        href: "./assets/css/allperspective/"
-    },
-    {
-        name: "炫酷轮播",
-        src: './img/xuan.jpg',
-        href: "./assets/css/cssstyle/"
-    },
-    {
-        name: "六面炫图",
-        src: './img/six.jpg',
-        href: "./assets/css/sixrotate/"
-    },
-    {
-        name: "左右集图",
-        src: './img/lr.jpg',
-        href: "./assets/css/trotatey/"
-    },
-    {
-        name: "上下相册",
-        src: './img/shang.jpg',
-        href: "./assets/css/trotatex/"
-    },
-    {
-        name: "王者战报",
-        src: './img/wang.jpg',
-        href: "./assets/wang/"
-    },
-    {
-        name: "雪夜长安",
-        src: './img/snow.jpg',
-        href: "./assets/css/snow/"
-    },
-    {
-        name: "观澜数据",
-        src: './img/gl.jpg',
-        href: "./assets/glsite/"
-    },
-    {
-        name: "图片切入",
-        src: './img/qie.jpg',
-        href: "./assets/api/"
-    },
-    {
-        name: "瀑布流图",
-        src: './img/pu.jpg',
-        href: "./assets/pu/"
-    },
-    {
-        name: "绘制网络",
-        src: './img/echart.jpg',
-        href: "./assets/Echarts/"
-    },
-
-
-];*/
-
 const dataDraw = [
     {
         name: "1、Canvas | MDN",
@@ -246,7 +29,6 @@ const dataDraw = [
         href: "https://d3js.org/"
     },
 ];
-
 const dataLun = [
     {
         name:"1、边栏过渡效果",
@@ -274,40 +56,22 @@ const dataLun = [
     },
 ];
 
-/*let phoneBar = document.querySelector('.phone');
-let phoneUl = document.createElement('ul');
-for(let i=0;i<dataPhone.length;i++){
-    let phoneLi = document.createElement('li');
-    let phoneA = document.createElement('a');
-    let phoneImg = document.createElement('img');
-    let phoneSpan = document.createElement('span');
-    phoneLi.appendChild(phoneA);
-    phoneA.href = dataPhone[i].href;
-    phoneImg.src = dataPhone[i].src;
-    phoneSpan.innerText = dataPhone[i].name;
-    phoneA.appendChild(phoneImg);
-    phoneA.appendChild(phoneSpan);
-    phoneUl.appendChild(phoneLi);
-}
-phoneBar.appendChild(phoneUl);*/
+const dataLearn = [
 
-/*let pcBar = document.querySelector('.pc');
-let pcUl = document.createElement('ul');
-for(let i=0;i<dataPc.length;i++){
-    let pcLi = document.createElement('li');
-    let pcA = document.createElement('a');
-    let pcImg = document.createElement('img');
-    let pcSpan = document.createElement('span');
-    pcLi.appendChild(pcA);
-    pcA.href = dataPc[i].href;
-    pcImg.src = dataPc[i].src;
-    pcSpan.innerText = dataPc[i].name;
-    pcA.appendChild(pcImg);
-    pcA.appendChild(pcSpan);
-    pcUl.appendChild(pcLi);
-}
-pcBar.appendChild(pcUl);*/
+    {
+        name:'Bootstrap相关优质项目推荐',
+        url:'http://www.bootcss.com/'
+    },
 
+    {
+        name:'JAMstack 站点的静态站点生成器列表',
+        url:'https://www.staticgen.com/'
+    },
+
+
+
+
+];
 let drBar = document.querySelector('.drawP');
 let drUl = document.createElement('ul');
 for(let i=0;i<dataDraw.length;i++){
@@ -331,6 +95,20 @@ for(let i=0;i<dataLun.length;i++){
     lunUl.appendChild(lunLi);
 }
 lunBar.appendChild(lunUl);
+
+
+let learnBar = document.querySelector('.learn');
+let learnUl = document.createElement('ul');
+for(let i=0;i<dataLearn.length;i++){
+    let learnLi = document.createElement('li');
+    let learnA = document.createElement('a');
+    learnLi.appendChild(learnA);
+    learnA.href = dataLearn[i].url;
+    learnA.innerHTML =(i+1) +"、"+ dataLearn[i].name;
+    learnUl.appendChild(learnLi);
+}
+learnBar.appendChild(learnUl);
+
 
 let s = '明天的你一定会感谢现在拼命的自己！';
 let p = document.createElement('p');

@@ -1,45 +1,38 @@
-@charset "UTF-8";
 @media screen and (min-width: 500px) {
   nav {
     background-color: #EEE;
-    opacity: 0.7;
+    opacity: 0.75;
     height: 2.1875rem;
     padding: 0 0.625rem;
     position: fixed;
     width: 100%;
-    z-index: 10;
-  }
-  nav ul li {
-    padding: 0.3125rem 0.625rem;
-    line-height: 1.5625rem;
-    height: 1.5625rem;
-    font-size: 0.75rem;
-    float: left;
-  }
-  nav ul li a {
-    color: #111;
-  }
+    z-index: 10; }
+    nav ul li {
+      padding: 0.3125rem 0.625rem;
+      line-height: 1.5625rem;
+      height: 1.5625rem;
+      font-size: 0.75rem;
+      float: left; }
+      nav ul li a {
+        color: #111; }
+
   footer {
-    padding: 0 0.625rem;
-  }
-  footer ul li {
-    display: inline-block;
-    padding: 0.3125rem;
-  }
-  footer ul li a {
-    text-align: center;
-    display: block;
-  }
-  footer ul li a img {
-    height: 1.5625rem;
-    width: 1.5625rem;
-    border-radius: 50%;
-  }
-  footer ul li a span {
-    display: block;
-    padding: 0.15625rem;
-    font-size: 0.5625rem;
-  }
+    padding: 0 0.625rem; }
+    footer ul li {
+      display: inline-block;
+      padding: 0.3125rem; }
+      footer ul li a {
+        text-align: center;
+        display: block; }
+        footer ul li a img {
+          height: 1.5625rem;
+          width: 1.5625rem;
+          border-radius: 50%; }
+        footer ul li a span {
+          display: block;
+          padding: 0.15625rem;
+          font-size: 0.5625rem; }
+
   .bgImg {
     position: fixed;
     top: 0;
@@ -49,180 +42,151 @@
     background-repeat: repeat-y;
     background-size: 100% auto;
     height: 62.5rem;
-    text-align: right;
-  }
-  .bgImg p {
-    position: fixed;
-    top: 3.125rem;
-    right: 0.9375rem;
-  }
-  .bgImg p span {
-    display: block;
-    font-style: italic;
-    font-size: 0.5rem;
-  }
+    text-align: right; }
+    .bgImg p {
+      position: fixed;
+      top: 3.125rem;
+      right: 0.9375rem; }
+      .bgImg p span {
+        display: block;
+        font-style: italic;
+        font-size: 0.5rem; }
+
   .slide {
-    position: relative;
-  }
-  .slide .kankan {
-    position: relative;
-    text-align: center;
-    top: -9.375rem;
-    color: white;
-    width: 200px;
-    font-size: 1.5625rem;
-    margin: 0 auto;
-  }
-  .slide img {
-    width: 100%;
-  }
-  .slide .carousel-caption {
-    font-size: 1.5625rem;
-    font-family: "Lantinghei SC Extralight", Arial;
-    color: lawngreen;
-  }
+    position: relative; }
+    .slide .kankan {
+      position: relative;
+      text-align: center;
+      top: -9.375rem;
+      color: white;
+      width: 200px;
+      font-size: 1.5625rem;
+      margin: 0 auto; }
+    .slide img {
+      width: 100%; }
+    .slide .carousel-caption {
+      font-size: 1.5625rem;
+      font-family: "Lantinghei SC Extralight", Arial;
+      color: lawngreen; }
+
   .box {
     padding: 2.1875rem 0.625rem 0.3125rem;
     width: 100%;
-    position: relative;
-  }
-  .box .phone,
-  .box .pc {
-    width: 100%;
-  }
-  .box .phone h2,
-  .box .pc h2 {
-    font-size: 0.75rem;
-    text-align: center;
-  }
-  .box .phone ul li,
-  .box .pc ul li {
-    display: inline-block;
-    padding: 0.3125rem 0.625rem;
-  }
-  .box .phone ul li a,
-  .box .pc ul li a {
-    text-align: center;
-    display: block;
-    padding: 0.3125rem;
-    box-shadow: 0.0625rem 0.0625rem 0.3125rem #c0c0c0;
-  }
-  .box .phone ul li a img,
-  .box .pc ul li a img {
-    height: 1.5625rem;
-    width: 1.5625rem;
-    border-radius: 50%;
-    border: 0.03125rem solid #ffc0cb;
-  }
-  .box .phone ul li a span,
-  .box .pc ul li a span {
-    display: block;
-    padding: 0.15625rem;
-    font-size: 0.625rem;
-  }
-  .box .phone .pcA,
-  .box .pc .pcA {
-    display: block;
-    margin: 0 auto;
-    width: 50%;
-    box-shadow: 10px 10px 5px #999;
-  }
-  .box .phone .pcA img,
-  .box .pc .pcA img {
-    width: 100%;
-  }
-  .box .drawP h2,
-  .box .lun h2 {
-    font-size: 0.75rem;
-  }
-  .box .drawP ul li a,
-  .box .lun ul li a {
-    padding: 0.3125rem 0.625rem;
-    color: blue;
-    font-size: 0.625rem;
-    text-decoration: none;
-  }
-  .box .drawP ul li a:hover,
-  .box .lun ul li a:hover {
-    color: green;
-  }
+    position: relative; }
+    .box .phone,
+    .box .pc {
+      width: 100%; }
+      .box .phone h2,
+      .box .pc h2 {
+        font-size: 0.75rem;
+        text-align: center; }
+      .box .phone ul li,
+      .box .pc ul li {
+        display: inline-block;
+        padding: 0.3125rem 0.625rem; }
+        .box .phone ul li a,
+        .box .pc ul li a {
+          text-align: center;
+          display: block;
+          padding: 0.3125rem;
+          box-shadow: 0.0625rem 0.0625rem 0.3125rem #C0C0C0; }
+          .box .phone ul li a img,
+          .box .pc ul li a img {
+            height: 1.5625rem;
+            width: 1.5625rem;
+            border-radius: 50%;
+            border: 0.03125rem solid pink; }
+          .box .phone ul li a span,
+          .box .pc ul li a span {
+            display: block;
+            padding: 0.15625rem;
+            font-size: 0.625rem; }
+      .box .phone .pcA,
+      .box .pc .pcA {
+        display: block;
+        margin: 0 auto;
+        width: 50%;
+        box-shadow: 10px 10px 5px #999; }
+        .box .phone .pcA img,
+        .box .pc .pcA img {
+          width: 100%; }
+    .box .drawP h2,
+    .box .lun h2,
+    .box .learn h2 {
+      font-size: 0.75rem; }
+    .box .drawP ul li a,
+    .box .lun ul li a,
+    .box .learn ul li a {
+      padding: 0.3125rem 0.625rem;
+      color: blue;
+      font-size: 0.625rem;
+      text-decoration: none; }
+    .box .drawP ul li a:hover,
+    .box .lun ul li a:hover,
+    .box .learn ul li a:hover {
+      color: green; }
+
   .bei {
     text-align: center;
-    padding-bottom: 10px;
-  }
-  .bei a {
-    font-size: 0.5rem;
-    color: blue;
-  }
+    padding-bottom: 10px; }
+    .bei a {
+      font-size: 0.5rem;
+      color: blue; }
+
   .search {
-    padding: 0.3125rem 0.625rem;
-  }
-  .search table {
-    width: 6.25rem;
-    text-align: center;
-    padding-top: 0.3125rem;
-  }
-  .search table thead tr {
-    text-align: center;
-  }
-  .search table thead tr th {
-    text-align: center;
-  }
-  .search table tbody .center {
-    text-align: center;
-  }
-  .search table tbody tr {
-    padding: 0.0625rem 0.3125rem;
-  }
-  .search table tbody tr td {
-    margin-right: 0.625rem;
-  }
-  .search table tbody tr td a {
-    text-decoration: none;
-    color: blue;
-  }
-}
+    padding: 0.3125rem 0.625rem; }
+    .search table {
+      width: 6.25rem;
+      text-align: center;
+      padding-top: 0.3125rem; }
+      .search table thead tr {
+        text-align: center; }
+        .search table thead tr th {
+          text-align: center; }
+      .search table tbody .center {
+        text-align: center; }
+      .search table tbody tr {
+        padding: 0.0625rem 0.3125rem; }
+        .search table tbody tr td {
+          margin-right: 0.625rem; }
+          .search table tbody tr td a {
+            text-decoration: none;
+            color: blue; } }
 @media screen and (max-width: 500px) {
   nav {
     background-color: #EEE;
     opacity: 0.7;
-    height: 2.69230769rem;
-    padding: 0 0.76923077rem;
+    height: 2.6923076923rem;
+    padding: 0 0.7692307692rem;
     position: fixed;
     width: 100%;
-    z-index: 10;
-  }
-  nav ul li {
-    padding: 0.38461538rem 0.76923077rem;
-    line-height: 1.92307692rem;
-    height: 1.92307692rem;
-    font-size: 1.15384615rem;
-    float: left;
-  }
-  nav ul li a {
-    color: #111;
-  }
+    z-index: 10; }
+    nav ul li {
+      padding: 0.3846153846rem 0.7692307692rem;
+      line-height: 1.9230769231rem;
+      height: 1.9230769231rem;
+      font-size: 1.1538461538rem;
+      float: left; }
+      nav ul li a {
+        color: #111; }
+
   footer {
-    padding: 0 0.76923077rem;
-  }
-  footer ul li {
-    display: inline-block;
-    padding: 0.38461538rem;
-  }
-  footer ul li a {
-    text-align: center;
-    display: block;
-  }
-  footer ul li a img {
-    height: 1.92307692rem;
-    width: 1.92307692rem;
-    border-radius: 50%;
-  }
-  footer ul li a span {
-    display: block;
-    padding: 0.19230769rem;
-    font-size: 0.76923077rem;
-  }
+    padding: 0 0.7692307692rem; }
+    footer ul li {
+      display: inline-block;
+      padding: 0.3846153846rem; }
+      footer ul li a {
+        text-align: center;
+        display: block; }
+        footer ul li a img {
+          height: 1.9230769231rem;
+          width: 1.9230769231rem;
+          border-radius: 50%; }
+        footer ul li a span {
+          display: block;
+          padding: 0.1923076923rem;
+          font-size: 0.7692307692rem; }
+
   .bgImg {
     position: fixed;
     top: 0;
@@ -231,139 +195,115 @@
     background-image: url("../img/bg.jpg");
     background-repeat: repeat-y;
     background-size: 100% auto;
-    height: 76.92307692rem;
-    text-align: right;
-  }
-  .bgImg p {
-    float: left;
-    position: fixed;
-    top: 18.46153846rem;
-    right: 1.15384615rem;
-  }
-  .bgImg p span {
-    display: block;
-    font-style: italic;
-    font-size: 0.61538462rem;
-  }
+    height: 76.9230769231rem;
+    text-align: right; }
+    .bgImg p {
+      float: left;
+      position: fixed;
+      top: 18.4615384615rem;
+      right: 1.1538461538rem; }
+      .bgImg p span {
+        display: block;
+        font-style: italic;
+        font-size: 0.6153846154rem; }
+
   .slide {
-    position: relative;
-  }
-  .slide .kankan {
-    position: relative;
-    text-align: center;
-    top: -9.375rem;
-    color: green;
-    width: 100px;
-    font-size: 1.5625rem;
-    margin: 0 auto;
-  }
-  .slide img {
-    width: 100%;
-  }
-  .slide .carousel-caption {
-    font-size: 1.92307692rem;
-    font-family: "Lantinghei SC Extralight", Arial;
-    color: lawngreen;
-  }
+    position: relative; }
+    .slide .kankan {
+      position: relative;
+      text-align: center;
+      top: -9.375rem;
+      color: green;
+      width: 100px;
+      font-size: 1.5625rem;
+      margin: 0 auto; }
+    .slide img {
+      width: 100%; }
+    .slide .carousel-caption {
+      font-size: 1.9230769231rem;
+      font-family: "Lantinghei SC Extralight", Arial;
+      color: lawngreen; }
+
   .box {
     padding: 2.1875rem 0.3125rem 0.3125rem 0.625rem;
-    position: relative;
-  }
-  .box hr {
-    margin: 2px;
-  }
-  .box .phone h2,
-  .box .pc h2 {
-    font-size: 1.23076923rem;
-  }
-  .box .phone ul li,
-  .box .pc ul li {
-    display: inline-block;
-    padding: 0.38461538rem 0.76923077rem;
-  }
-  .box .phone ul li a,
-  .box .pc ul li a {
-    text-align: center;
-    display: block;
-    padding: 0.38461538rem;
-    box-shadow: 0.07692308rem 0.07692308rem 0.38461538rem #c0c0c0;
-  }
-  .box .phone ul li a img,
-  .box .pc ul li a img {
-    height: 2.69230769rem;
-    width: 2.69230769rem;
-    border-radius: 50%;
-    border: 0.03846154rem solid #ffc0cb;
-  }
-  .box .phone ul li a span,
-  .box .pc ul li a span {
-    display: block;
-    padding: 0.19230769rem;
-    font-size: 1rem;
-  }
-  .box .phone .pcA,
-  .box .pc .pcA {
-    display: block;
-    margin: 0 auto;
-    width: 70%;
-    box-shadow: 10px 10px 5px #999;
-  }
-  .box .phone .pcA img,
-  .box .pc .pcA img {
-    width: 100%;
-  }
-  .box .drawP h2,
-  .box .lun h2 {
-    font-size: 1.23076923rem;
-  }
-  .box .drawP ul li a,
-  .box .lun ul li a {
-    padding: 0.38461538rem 0.76923077rem;
-    color: blue;
-    font-size: 1rem;
-  }
+    position: relative; }
+    .box hr {
+      margin: 2px; }
+    .box .phone h2,
+    .box .pc h2 {
+      font-size: 1.2307692308rem; }
+    .box .phone ul li,
+    .box .pc ul li {
+      display: inline-block;
+      padding: 0.3846153846rem 0.7692307692rem; }
+      .box .phone ul li a,
+      .box .pc ul li a {
+        text-align: center;
+        display: block;
+        padding: 0.3846153846rem;
+        box-shadow: 0.0769230769rem 0.0769230769rem 0.3846153846rem #C0C0C0; }
+        .box .phone ul li a img,
+        .box .pc ul li a img {
+          height: 2.6923076923rem;
+          width: 2.6923076923rem;
+          border-radius: 50%;
+          border: 0.0384615385rem solid pink; }
+        .box .phone ul li a span,
+        .box .pc ul li a span {
+          display: block;
+          padding: 0.1923076923rem;
+          font-size: 1rem; }
+    .box .phone .pcA,
+    .box .pc .pcA {
+      display: block;
+      margin: 0 auto;
+      width: 70%;
+      box-shadow: 10px 10px 5px #999; }
+      .box .phone .pcA img,
+      .box .pc .pcA img {
+        width: 100%; }
+    .box .drawP h2,
+    .box .lun h2,
+    .box .learn h2 {
+      font-size: 1.2307692308rem; }
+    .box .drawP ul li a,
+    .box .lun ul li a,
+    .box .learn ul li a {
+      padding: 0.3846153846rem 0.7692307692rem;
+      color: blue;
+      font-size: 1rem; }
+
   .search {
-    padding: 0.38461538rem 0.76923077rem;
-  }
-  .search table {
-    width: 11.53846154rem;
-    text-align: center;
-  }
-  .search table form input {
-    border: none;
-    outline: none;
-  }
-  .search table thead tr {
-    text-align: center;
-  }
-  .search table thead tr th {
-    text-align: center;
-  }
-  .search table tbody {
-    font-size: 1.15384615rem;
-  }
-  .search table tbody .center {
-    text-align: center;
-  }
-  .search table tbody tr {
-    padding: 0.07692308rem 0.38461538rem;
-  }
-  .search table tbody tr td {
-    margin-right: 0.76923077rem;
-  }
-  .search table tbody tr td a {
-    text-decoration: none;
-    color: blue;
-  }
+    padding: 0.3846153846rem 0.7692307692rem; }
+    .search table {
+      width: 11.5384615385rem;
+      text-align: center; }
+      .search table form input {
+        border: none;
+        outline: none; }
+      .search table thead tr {
+        text-align: center; }
+        .search table thead tr th {
+          text-align: center; }
+      .search table tbody {
+        font-size: 1.1538461538rem; }
+        .search table tbody .center {
+          text-align: center; }
+        .search table tbody tr {
+          padding: 0.0769230769rem 0.3846153846rem; }
+          .search table tbody tr td {
+            margin-right: 0.7692307692rem; }
+            .search table tbody tr td a {
+              text-decoration: none;
+              color: blue; }
+
   .bei {
     text-align: center;
-    padding-bottom: 10px;
-  }
-  .bei a {
-    font-size: 0.61538462rem;
-    color: blue;
-  }
-}
+    padding-bottom: 10px; }
+    .bei a {
+      font-size: 0.6153846154rem;
+      color: blue; } }
 .test {
-  padding: 2.1875rem 0.625rem 0.3125rem;
-}
+  padding: 2.1875rem 0.625rem 0.3125rem; }
+
+/*# sourceMappingURL=index.css.map */

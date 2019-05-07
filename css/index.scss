@@ -1,25 +1,24 @@
 @charset "UTF-8";
-@w: 32rem;
-@wp: 26rem;
-
+$w: 32;
+$wp: 26;
 @media screen and (min-width: 500px) {
-
   nav {
     background-color: #EEE;
-    opacity: 0.7;
-    height: 70/@w;
-    padding: 0 20/@w;
+    opacity: 0.75;
+    height: 70rem/$w;
+    padding: 0 20rem/$w;
     position: fixed;
     width: 100%;
     z-index: 10;
     ul {
       li {
-        padding: 10/@w 20/@w;
-        line-height: 50/@w;
-        height: 50/@w;
-        font-size: 24/@w;
+        padding: 10rem/$w 20rem/$w;
+        line-height: 50rem/$w;
+        height: 50rem/$w;
+        font-size: 24rem/$w;
         float: left;
         a {
+
           color: #111;
         }
       }
@@ -27,24 +26,24 @@
   }
 
   footer {
-    padding: 0 20/@w;
+    padding: 0 20rem/$w;
     ul {
       li {
         display: inline-block;
-        padding: 10/@w;
+        padding: 10rem/$w;
 
         a {
           text-align: center;
           display: block;
           img {
-            height: 50/@w;
-            width: 50/@w;
+            height: 50rem/$w;
+            width: 50rem/$w;
             border-radius: 50%;
           }
           span {
             display: block;
-            padding: 5/@w;
-            font-size: 18/@w;
+            padding: 5rem/$w;
+            font-size: 18rem/$w;
           }
         }
       }
@@ -59,16 +58,16 @@
     background-image: url("../img/bg.jpg");
     background-repeat: repeat-y;
     background-size: 100% auto;
-    height: 2000/@w;
+    height: 2000rem/$w;
     text-align: right;
     p {
       position: fixed;
-      top: 100/@w;
-      right: 30/@w;
+      top: 100rem/$w;
+      right: 30rem/$w;
       span {
         display: block;
         font-style: italic;
-        font-size: 16/@w;
+        font-size: 16rem/$w;
       }
     }
   }
@@ -78,19 +77,17 @@
     .kankan{
       position: relative;
       text-align: center;
-      top: -300/@w;
+      top: -300rem/$w;
       color: white;
       width: 200px;
-      font-size: 50/@w;
+      font-size: 50rem/$w;
       margin: 0 auto;
     }
     img{
-      //position: relative;left: -10px;
       width: 100%;
-      //height: 20%;
     }
     .carousel-caption{
-      font-size: 50/@w;
+      font-size: 50rem/$w;
       font-family: "Lantinghei SC Extralight", Arial;
       color: lawngreen;
     }
@@ -98,35 +95,35 @@
 
 
   .box {
-    padding: 70/@w 20/@w 10/@w;
+    padding: 70rem/$w 20rem/$w 10rem/$w;
     width: 100%;
     position: relative;
     .phone,
     .pc {
       width: 100%;
       h2 {
-        font-size: 24/@w;
+        font-size: 24rem/$w;
         text-align: center;
       }
       ul {
         li {
           display: inline-block;
-          padding: 10/@w 20/@w;
+          padding: 10rem/$w 20rem/$w;
           a {
             text-align: center;
             display: block;
-            padding: 10/@w;
-            box-shadow: 2/@w 2/@w 10/@w #C0C0C0;
+            padding: 10rem/$w;
+            box-shadow: 2rem/$w 2rem/$w 10rem/$w #C0C0C0;
             img {
-              height: 50/@w;
-              width: 50/@w;
+              height: 50rem/$w;
+              width: 50rem/$w;
               border-radius: 50%;
-              border: 1/@w solid pink;
+              border: 1rem/$w solid pink;
             }
             span {
               display: block;
-              padding: 5/@w;
-              font-size: 20/@w;
+              padding: 5rem/$w;
+              font-size: 20rem/$w;
             }
           }
         }
@@ -145,16 +142,17 @@
 
     }
     .drawP,
-    .lun {
+    .lun,
+    .learn{
       h2 {
-        font-size: 24/@w;
+        font-size: 24rem/$w;
       }
       ul {
         li {
           a {
-            padding: 10/@w 20/@w;
+            padding: 10rem/$w 20rem/$w;
             color: blue;
-            font-size: 20/@w;
+            font-size: 20rem/$w;
             text-decoration: none;
           }
           a:hover{
@@ -169,19 +167,19 @@
     text-align: center;
     padding-bottom: 10px;
     a {
-      font-size: 16/@w;
+      font-size: 16rem/$w;
       color: blue;
     }
 
   }
 
   .search{
-    padding: 10/@w 20/@w;
+    padding: 10rem/$w 20rem/$w;
     table{
-      width: 200/@w;
+      width: 200rem/$w;
       text-align: center;
-      //font-size: 20/@w;
-      padding-top: 10/@w;
+      //font-size: 20rem/$w;
+      padding-top: 10rem/$w;
 
       thead{
         tr{
@@ -197,9 +195,9 @@
           text-align: center;
         }
         tr{
-          padding: 2/@w 10/@w;
+          padding: 2rem/$w 10rem/$w;
           td{
-            margin-right: 20/@w;
+            margin-right: 20rem/$w;
             a{
               text-decoration: none;
               color: blue;
@@ -218,17 +216,17 @@
   nav {
     background-color: #EEE;
     opacity: 0.7;
-    height: 70/@wp;
-    padding: 0 20/@wp;
+    height: 70rem/$wp;
+    padding: 0 20rem/$wp;
     position: fixed;
     width: 100%;
     z-index: 10;
     ul {
       li {
-        padding: 10/@wp 20/@wp;
-        line-height: 50/@wp;
-        height: 50/@wp;
-        font-size: 30/@wp;
+        padding: 10rem/$wp 20rem/$wp;
+        line-height: 50rem/$wp;
+        height: 50rem/$wp;
+        font-size: 30rem/$wp;
         float: left;
         a {
           color: #111;
@@ -238,24 +236,24 @@
   }
 
   footer {
-    padding: 0 20/@wp;
+    padding: 0 20rem/$wp;
     ul {
       li {
         display: inline-block;
-        padding: 10/@wp;
+        padding: 10rem/$wp;
 
         a {
           text-align: center;
           display: block;
           img {
-            height: 50/@wp;
-            width: 50/@wp;
+            height: 50rem/$wp;
+            width: 50rem/$wp;
             border-radius: 50%;
           }
           span {
             display: block;
-            padding: 5/@wp;
-            font-size: 20/@wp;
+            padding: 5rem/$wp;
+            font-size: 20rem/$wp;
           }
         }
       }
@@ -270,18 +268,18 @@
     background-image: url("../img/bg.jpg");
     background-repeat: repeat-y;
     background-size: 100% auto;
-    height: 2000/@wp;
+    height: 2000rem/$wp;
     text-align: right;
     p {
       float: left;
 
       position: fixed;
-      top: 480/@wp;
-      right: 30/@wp;
+      top: 480rem/$wp;
+      right: 30rem/$wp;
       span {
         display: block;
         font-style: italic;
-        font-size: 16/@wp;
+        font-size: 16rem/$wp;
       }
     }
 
@@ -293,23 +291,23 @@
     .kankan{
       position: relative;
       text-align: center;
-      top: -300/@w;
+      top: -300rem/$w;
       color: green;
       width: 100px;
-      font-size: 50/@w;
+      font-size: 50rem/$w;
       margin: 0 auto;
     }
     img{
       width: 100%;
     }
     .carousel-caption{
-      font-size: 50/@wp;
+      font-size: 50rem/$wp;
       font-family: "Lantinghei SC Extralight", Arial;
       color: lawngreen;
     }
   }
   .box {
-    padding: 70/@w 10/@w 10/@w 20/@w;
+    padding: 70rem/$w 10rem/$w 10rem/$w 20rem/$w;
     position: relative;
     hr{
       margin: 2px;
@@ -318,27 +316,27 @@
     .phone,
     .pc {
       h2 {
-        font-size: 32/@wp;
+        font-size: 32rem/$wp;
       }
       ul {
         li {
           display: inline-block;
-          padding: 10/@wp 20/@wp;
+          padding: 10rem/$wp 20rem/$wp;
           a {
             text-align: center;
             display: block;
-            padding: 10/@wp;
-            box-shadow: 2/@wp 2/@wp 10/@wp #C0C0C0;
+            padding: 10rem/$wp;
+            box-shadow: 2rem/$wp 2rem/$wp 10rem/$wp #C0C0C0;
             img {
-              height: 70/@wp;
-              width: 70/@wp;
+              height: 70rem/$wp;
+              width: 70rem/$wp;
               border-radius: 50%;
-              border: 1/@wp solid pink;
+              border: 1rem/$wp solid pink;
             }
             span {
               display: block;
-              padding: 5/@wp;
-              font-size: 26/@wp;
+              padding: 5rem/$wp;
+              font-size: 26rem/$wp;
             }
           }
         }
@@ -354,16 +352,17 @@
       }
     }
     .drawP,
-    .lun {
+    .lun,
+    .learn{
       h2 {
-        font-size: 32/@wp;
+        font-size: 32rem/$wp;
       }
       ul {
         li {
           a {
-            padding: 10/@wp 20/@wp;
+            padding: 10rem/$wp 20rem/$wp;
             color: blue;
-            font-size: 26/@wp;
+            font-size: 26rem/$wp;
           }
         }
       }
@@ -371,10 +370,10 @@
   }
 
   .search{
-    padding: 10/@wp 20/@wp;
+    padding: 10rem/$wp 20rem/$wp;
 
     table{
-      width: 300/@wp;
+      width: 300rem/$wp;
       text-align: center;
       form{
         input{
@@ -393,14 +392,14 @@
         }
       }
       tbody{
-        font-size: 30/@wp;
+        font-size: 30rem/$wp;
         .center{
           text-align: center;
         }
         tr{
-          padding: 2/@wp 10/@wp;
+          padding: 2rem/$wp 10rem/$wp;
           td{
-            margin-right: 20/@wp;
+            margin-right: 20rem/$wp;
             a{
               text-decoration: none;
               color: blue;
@@ -415,7 +414,7 @@
     text-align: center;
     padding-bottom: 10px;
     a {
-      font-size: 16/@wp;
+      font-size: 16rem/$wp;
       color: blue;
     }
   }
@@ -423,5 +422,5 @@
 }
 
 .test {
-  padding: 70/@w 20/@w 10/@w;
+  padding: 70rem/$w 20rem/$w 10rem/$w;
 }
