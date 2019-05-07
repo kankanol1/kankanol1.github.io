@@ -64,8 +64,12 @@ const dataLearn = [
     },
 
     {
+        name:'jQuery插件大集合',
+        url:'http://www.jq22.com'
+    },
+    {
         name:'JAMstack 站点的静态站点生成器列表',
-        url:'https://www.staticgen.com/'
+        url:'http://www.jq22.com/jquery%E5%AF%BC%E8%88%AA-3-jq'
     },
 
 
