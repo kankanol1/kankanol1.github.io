@@ -10,13 +10,15 @@ $wp: 26;
     position: fixed;
     width: 100%;
     z-index: 10;
-    img{
+
+    .img{
       display: none;
     }
-    ul {
+    .ul-be {
       display: block;
+      margin: 0;
       li {
-        padding: 10rem/$w 20rem/$w;
+        margin: 10rem/$w 20rem/$w;
         line-height: 50rem/$w;
         height: 50rem/$w;
         font-size: 24rem/$w;
@@ -24,6 +26,12 @@ $wp: 26;
         .item {
           text-decoration: none;
           color: #111;
+          .title{
+            width: 50rem/$w;
+            line-height: 50rem/$w;
+            position: relative;
+            top: -4rem/$w;
+          }
         }
         .item:hover{
           text-decoration: none;
@@ -232,43 +240,49 @@ $wp: 26;
     position: fixed;
     width: 100%;
     z-index: 10;
-    img{
+
+    .img{
       display: block;
-      float: right;
       height: 60rem/$wp;
-      margin: 5rem/$wp 20rem/$wp;
+      margin: 2rem/$wp 20rem/$wp;
       z-index: 99999;
-      position: relative;
-      top: 0;
+      position: absolute;
+      top: 0rem/$wp;
+      right: 1rem/$wp;
       cursor: pointer;
-
-    }
-    img:hover{
-
     }
     .nav-ul {
 
       display: block;
       background-color: black;
       position: relative;
-      top: -50rem/$wp;
+      top: -60rem/$wp;
       z-index: 9999;
+      text-align: center;
       opacity: 0.7;
       li {
         width: 100%;
-        line-height: 50rem/$wp;
-        height: 50rem/$wp;
+        line-height: 60rem/$wp;
+        height: 60rem/$wp;
         text-align: center;
         border-bottom: 1px solid #ee82ee;
         padding: 0;
-        a {
+        //padding: 10rem/$w 20rem/$w;
+        a.item {
           color:#fff;
           display: block;
+          text-align: center;
           font-size: 30rem/$wp;
-          line-height: 50rem/$wp;
-          height: 50rem/$wp;
+          line-height: 60rem/$wp;
+          height: 60rem/$wp;
           width: 100%;
           text-decoration: none;
+          .title{
+            width: 60rem/$w;
+            line-height: 60rem/$w;
+            position: relative;
+            //top: -4rem/$w;
+          }
         }
         a:hover{
           color: #58ff11;
@@ -278,16 +292,6 @@ $wp: 26;
     }
     ul {
       display: none;
-      li {
-        padding: 10rem/$wp 20rem/$wp;
-        line-height: 50rem/$wp;
-        height: 50rem/$wp;
-        font-size: 30rem/$wp;
-        float: left;
-        a {
-          color: #111;
-        }
-      }
     }
   }
 

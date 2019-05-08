@@ -7,20 +7,26 @@
     position: fixed;
     width: 100%;
     z-index: 10; }
-    nav img {
+    nav .img {
       display: none; }
-    nav ul {
-      display: block; }
-      nav ul li {
-        padding: 0.3125rem 0.625rem;
+    nav .ul-be {
+      display: block;
+      margin: 0; }
+      nav .ul-be li {
+        margin: 0.3125rem 0.625rem;
         line-height: 1.5625rem;
         height: 1.5625rem;
         font-size: 0.75rem;
         float: left; }
-        nav ul li .item {
+        nav .ul-be li .item {
           text-decoration: none;
           color: #111; }
-        nav ul li .item:hover {
+          nav .ul-be li .item .title {
+            width: 1.5625rem;
+            line-height: 1.5625rem;
+            position: relative;
+            top: -0.125rem; }
+        nav .ul-be li .item:hover {
           text-decoration: none;
           color: #EE82ee; }
 
@@ -170,49 +176,47 @@
     position: fixed;
     width: 100%;
     z-index: 10; }
-    nav img {
+    nav .img {
       display: block;
-      float: right;
       height: 2.3076923077rem;
-      margin: 0.1923076923rem 0.7692307692rem;
+      margin: 0.0769230769rem 0.7692307692rem;
       z-index: 99999;
-      position: relative;
-      top: 0;
+      position: absolute;
+      top: 0rem;
+      right: 0.0384615385rem;
       cursor: pointer; }
     nav .nav-ul {
       display: block;
       background-color: black;
       position: relative;
-      top: -1.9230769231rem;
+      top: -2.3076923077rem;
       z-index: 9999;
+      text-align: center;
       opacity: 0.7; }
       nav .nav-ul li {
         width: 100%;
-        line-height: 1.9230769231rem;
-        height: 1.9230769231rem;
+        line-height: 2.3076923077rem;
+        height: 2.3076923077rem;
         text-align: center;
         border-bottom: 1px solid #ee82ee;
         padding: 0; }
-        nav .nav-ul li a {
+        nav .nav-ul li a.item {
           color: #fff;
           display: block;
+          text-align: center;
           font-size: 1.1538461538rem;
-          line-height: 1.9230769231rem;
-          height: 1.9230769231rem;
+          line-height: 2.3076923077rem;
+          height: 2.3076923077rem;
           width: 100%;
           text-decoration: none; }
+          nav .nav-ul li a.item .title {
+            width: 1.875rem;
+            line-height: 1.875rem;
+            position: relative; }
         nav .nav-ul li a:hover {
           color: #58ff11; }
     nav ul {
       display: none; }
-      nav ul li {
-        padding: 0.3846153846rem 0.7692307692rem;
-        line-height: 1.9230769231rem;
-        height: 1.9230769231rem;
-        font-size: 1.1538461538rem;
-        float: left; }
-        nav ul li a {
-          color: #111; }
 
   footer {
     padding: 0 0.7692307692rem; }
