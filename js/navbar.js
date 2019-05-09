@@ -26,8 +26,6 @@ const data = [
         url:"./img/icon.png"
     }
 ];
-
-
 let navBar = document.querySelector('.nav-bar');
 let navUl = document.createElement('ul');
 let navLiI = document.createElement('li');
@@ -40,7 +38,6 @@ navAI.classList = 'item';
 navImg.src = './img/favicon.ico';
 navImg.classList = "title";
 navUl.appendChild(navLiI);
-
 for(let i=0;i<data.length-1;i++){
     let navLi = document.createElement('li');
     let navA = document.createElement('a');
@@ -50,33 +47,27 @@ for(let i=0;i<data.length-1;i++){
     navA.innerHTML = data[i].name;
     navUl.appendChild(navLi);
 }
-// console.log(navBar);
 let img = document.createElement('img');
-
 img.src = data[data.length-1].url;
 img.classList = "img";
 navBar.appendChild(img);
 navUl.classList = 'clearfix ul-be';
 navBar.appendChild(navUl);
-
 let flag = true;
-/*img.addEventListener('mouseover',function(){
-    document.querySelector('nav ul').classList = 'nav-ul clearfix';
-});*/
-
 img.addEventListener('click',function(){
     if(flag) {
         flag = !flag;
 
         document.querySelector('nav ul').classList = 'nav-ul clearfix';
     }else{
-        document.querySelector('nav ul').classList = '';
+        document.querySelector('nav ul').classList = 'clearfix ul-be';
         flag = !flag;
 
     }
 
 });
 document.querySelector('nav').addEventListener('mouseleave',function(){
-    // document.querySelector('nav ul').classList = '';
     flag = !flag;
+    document.querySelector('nav ul').classList = 'clearfix ul-be';
+
 });

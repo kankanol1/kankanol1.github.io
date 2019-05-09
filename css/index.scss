@@ -14,7 +14,7 @@ $wp: 26;
     .img{
       display: none;
     }
-    .ul-be {
+    .ul-be{
       display: block;
       margin: 0;
       li {
@@ -66,7 +66,6 @@ $wp: 26;
       }
     }
   }
-
   .bgImg {
     position: fixed;
     top: 0;
@@ -109,8 +108,6 @@ $wp: 26;
       color: lawngreen;
     }
   }
-
-
   .box {
     padding: 70rem/$w 20rem/$w 10rem/$w;
     width: 100%;
@@ -185,7 +182,6 @@ $wp: 26;
       }
     }
   }
-
   .bei {
     text-align: center;
     padding-bottom: 10px;
@@ -195,7 +191,6 @@ $wp: 26;
     }
 
   }
-
   .search{
     padding: 10rem/$w 20rem/$w;
     table{
@@ -229,18 +224,15 @@ $wp: 26;
       }
     }
   }
-
 }
 
 @media screen and (max-width: 600px) {
-
   nav {
     height: 70rem/$wp;
     padding: 0/$wp;
     position: fixed;
     width: 100%;
     z-index: 10;
-
     .img{
       display: block;
       height: 60rem/$wp;
@@ -252,7 +244,6 @@ $wp: 26;
       cursor: pointer;
     }
     .nav-ul {
-
       display: block;
       background-color: black;
       position: relative;
@@ -267,7 +258,6 @@ $wp: 26;
         text-align: center;
         border-bottom: 1px solid #ee82ee;
         padding: 0;
-        //padding: 10rem/$w 20rem/$w;
         a.item {
           color:#fff;
           display: block;
