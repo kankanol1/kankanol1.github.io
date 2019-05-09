@@ -123,7 +123,7 @@
 </div>
 <hr>
 <footer class="footer"> </footer><hr>
-
+<div class="users"></div>
 <div class="bei"><a href="http://www.miitbeian.gov.cn/">陕ICP备19006627号-1</a></div>
 <script src="js/navbar.js"></script>
 <script src="js/footer.js"></script>
@@ -154,6 +154,24 @@
     let oPh = document.querySelector('.phImg');
     oPc.src = imgList[parseInt(Math.random()*imgList.length)];
     oPh.src = imgList[parseInt(Math.random()*imgList.length)];
+</script>
+<script>
+    let requestURL = './Global.json';
+    let request = new XMLHttpRequest();
+    request.open('get',requestURL);
+    request.responseType = "text";
+    request.send();
+    request.onload = function(){
+        let superHeroesText = request.response;
+        let superHeroes =  JSON.parse(superHeroesText);
+        document.querySelector('.users').innerHTML = superHeroes.num;
+    };
+
+
+
+
+
+
 </script>
 </body>
 </html>
