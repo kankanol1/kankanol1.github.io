@@ -60,4 +60,11 @@ a{
 }
 h3{
     text-align: center;
+    color: #fff;
 }
+h3 a{
+    color: #fff;
+    font-size: 14px;
+}
+
+
