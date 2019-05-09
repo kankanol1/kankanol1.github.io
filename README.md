@@ -15,26 +15,38 @@
 
 #### 框架：
 BootStrap[中文网](http://www.bootcss.com/)；
+
 BootStrap[英文网](https://getbootstrap.com/)；
+
 [VueJs](https://vuejs.org/)；
+
 [NodeJs](https://www.nodeapp.cn/)；
+
 [ReactJs](https://reactjs.org/)；
+
 [AngularJs](https://angular.io/)
 
 ### CSS:
 [Sass](https://www.sasscss.com/)；
-[less](http://lesscss.cn/)
-[Stylus](http://stylus-lang.com/)
-[tailwind CSS](https://www.tailwindcss.cn/)
+
+[less](http://lesscss.cn/)；
+
+[Stylus](http://stylus-lang.com/)；
+
+[tailwind CSS](https://www.tailwindcss.cn/).
 
 ### JS:
 [Babel](https://www.babeljs.cn/)
 
 #### 网站：
-[静态网站生成器列表](https://www.staticgen.com/)
+[静态网站生成器列表](https://www.staticgen.com/);
+
 [webpack](https://www.webpackjs.com/)；
+
 [Jekyll](https://jekyllrb.com/)；
+
 [Hexo](https://hexo.io/zh-cn/)；
+
 [Next](https://www.nextjs.cn);
 
 
