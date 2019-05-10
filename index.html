@@ -11,9 +11,7 @@
     <!--<link rel="stylesheet" href="css/resetbar.css">-->
     <!--<link rel="stylesheet" href="css/indexbar.css">-->
     <link rel="stylesheet" href="assets/mogujie/css/bootstrap.css">
-    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
     <script src="js/top.js"></script>
     <script src="assets/js/jquery-1.12.4.js"></script>
     <script src="assets/js/bootstrap.js"></script>
@@ -118,10 +116,15 @@
 
     </div>
 </div><hr>
-&nbsp;&nbsp;&nbsp;&nbsp;<span>React 搜索引擎</span>
-<div class="search">
 
+<div class="ser" style="padding: 10px 30px">
+    &nbsp;&nbsp;&nbsp;&nbsp;<p style="font-size: 20px">搜索demo:</p>
+    <p style="font-size: 10px">由于用React制作的搜索引擎太大，增加发送http请求，特优化如下，具体React引擎可前往
+        <a href="./pc/">下拉查看</a></p>
+    <input type="text" onfocus="loadJson(this.value)" onkeyup="loadJson(this.value)" placeholder="eg:图、歌、星等">
+    <div class="ajax"></div>
 </div>
+
 <hr>
 <footer class="footer"> </footer><hr>
 <div class="users"></div>
@@ -129,50 +132,17 @@
 <script src="js/navbar.js"></script>
 <script src="js/footer.js"></script>
 <script src="js/index.js"></script>
-<script  type="text/babel" src="js/search.js"></script>
 <script>
     const imgList =[
-        './img/s-1.jpg',
-        './img/s-2.jpg',
-        './img/s-3.jpg',
-        './img/s-4.jpg',
-        './img/s-5.jpg',
-        './img/s-6.jpg',
-        './img/s-7.jpg',
-        './img/s-8.jpg',
-        './img/s-9.jpg',
-        './img/s-10.jpg',
-        './img/s-11.jpg',
-        './img/s-12.jpg',
-        './img/s-13.jpg',
-        './img/s-14.jpg',
-        './img/s-15.jpg',
-        './img/s-16.jpg',
-        './img/s-17.jpg',
-        './img/s-18.jpg',
+        './img/s-1.jpg', './img/s-2.jpg', './img/s-3.jpg', './img/s-4.jpg', './img/s-5.jpg',
+        './img/s-6.jpg', './img/s-7.jpg', './img/s-8.jpg', './img/s-9.jpg',
+        './img/s-10.jpg', './img/s-11.jpg', './img/s-12.jpg', './img/s-13.jpg',
+        './img/s-14.jpg', './img/s-15.jpg', './img/s-16.jpg', './img/s-17.jpg', './img/s-18.jpg',
     ];
     let oPc = document.querySelector('.pcImg');
     let oPh = document.querySelector('.phImg');
     oPc.src = imgList[parseInt(Math.random()*imgList.length)];
     oPh.src = imgList[parseInt(Math.random()*imgList.length)];
-</script>
-<script>
-    let requestURL = './Global.json';
-    let request = new XMLHttpRequest();
-    request.open('get',requestURL);
-    request.responseType = "text";
-    request.send();
-    request.onload = function(){
-        let superHeroesText = request.response;
-        let superHeroes =  JSON.parse(superHeroesText);
-        document.querySelector('.users').innerHTML = superHeroes.num;
-    };
-
-
-
-
-
-
 </script>
 </body>
 </html>

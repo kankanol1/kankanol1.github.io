@@ -125,3 +125,41 @@ document.querySelector('.bgImg').appendChild(p);
 
 
 
+function loadJson(str){
+    let xmlhttp;
+    if(window.XMLHttpRequest){
+        xmlhttp = new XMLHttpRequest();
+    }else{
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.onreadystatechange = function(){
+        if(xmlhttp.readyState===4 && xmlhttp.status===200){
+            let data = JSON.parse(xmlhttp.responseText).data;
+            let showItem = [];
+            for(let i=0;i<data.length;i++){
+                if (str !== ""){
+                    let l = str.length;
+                    console.log(str === data[2].name.slice(1,l));
+                    if(
+                        str === data[i].name.slice(0,l) ||
+                        str === data[i].name.slice(1,l+1) ||
+                        str === data[i].name.slice(2,l+2) ||
+                        str === data[i].name.slice(3,l+3)){
+                        showItem.push(data[i]);
+                    }
+                }else{
+                    document.querySelector('.ajax').innerHTML ="";
+                }
+            }
+            if(showItem.length){
+                let strItem = "";
+                for(let i=0;i<showItem.length;i++){
+                    strItem = strItem + '<p style="padding-left: 10px;margin: 10px 0 0;"><sapn>' + showItem[i]["name"] + '</sapn><a style="opacity: 1" href="'+showItem[i]["href"]+'">查看详情>></a></p>';
+                }
+                document.querySelector('.ajax').innerHTML = strItem;
+            }
+        }
+    };
+    xmlhttp.open("GET","./js/data.txt",true);
+    xmlhttp.send();
+}

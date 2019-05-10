@@ -12,7 +12,7 @@ const dataPc = [
     },
 
     {
-        name: "催菜星空",
+        name: "璀璨星空",
         src: '../img/star.jpg',
         href: "../assets/sky/"
     },
