@@ -6,6 +6,10 @@
 [冰原狼主页](https://kankan.fun/)
 [CSDN主页](https://blog.csdn.net/qq_38025939/)
 [Github主页](https://github.com/kankanol1)
+[WorldPress主页](http://fannyol.fun)
+
+[![npm](https://img.shields.io/npm/dm/stylus.svg)](https://www.npmjs.com/package/stylus)
+
 
 # 资料链接
 工具分类文档：[tool](http://tool.oschina.net/)
