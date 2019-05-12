@@ -54,7 +54,7 @@ BootStrap[英文网](https://getbootstrap.com/)；
 [Next](https://www.nextjs.cn);
 
 
-<p style="color:red">明天的你一定会感谢现在拼命的自己！</p>
+<font color="red">明天的你一定会感谢现在拼命的自己！</font>
 
 
 
