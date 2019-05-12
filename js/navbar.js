@@ -5,13 +5,17 @@ const data = [
         url: "https://kankan.fun"
     },
     {
-        name: "优质项目推荐",
+        name: "项目推荐",
         url: "http://www.bootcss.com/"
     },
 
     {
-        name: "静态站点生成器列表",
+        name: "静态站点列表",
         url: "https://www.staticgen.com/"
+    },
+    {
+        name: "WorldPress",
+        url: "http://fannyol.fun"
     },
     {
         name: "Github",
