@@ -24,7 +24,7 @@ $(document).ready(function () {
 
         if( curTime>result[flagN+1][0]){
             for(let i=0;i<result.length;i++){
-                if((curTime >result[flagN][0]) && (curTime<result[flagN+1][0])) flagN = i;
+                if((curTime >result[i][0]) && (curTime<result[i+1][0])) flagN = i;
             }
         }
 
