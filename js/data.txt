@@ -115,6 +115,9 @@
 "category": "pc", "stocked": true, "name": "碰撞检测", "href": "./assets/peng"
 },
 {
+"category": "pc", "stocked": true, "name": "本科视频", "href": "./assets/mv"
+},
+{
 "category": "pc", "stocked": true, "name": "Hexo网站", "href": "https://love.kankan.fun"
 },
 {
