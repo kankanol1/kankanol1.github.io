@@ -2,7 +2,7 @@
 const dataFo = [
     {
         name: "kankan主页",
-        src: './img/zhuye.jpg',
+        src: './img/github.jpg',
         href: "https://kankan.fun"
     },
     {
@@ -12,7 +12,7 @@ const dataFo = [
     },
     {
         name: "CSDN主页",
-        src: './img/csdn.jpg',
+        src: './img/github.jpg',
         href: "https://blog.csdn.net/qq_38025939"
     },
     {
@@ -27,7 +27,7 @@ const dataFo = [
     },
     {
         name: "微博主页",
-        src: './img/weibo.jpg',
+        src: './img/github.jpg',
         href: "https://weibo.com/3029315223"
     }
 
