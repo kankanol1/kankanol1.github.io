@@ -15,11 +15,18 @@ html.style.fontSize = htmlW/15 + "px";
 let oData = [
     {
         id:Date.now()+Math.random(),
+        name: '萨顶顶',
+        song: '左手指月',
+        checked: false,
+        album: 10,
+        href:'./chenyifa/zszy.html'
+    },
+    {
+        id:Date.now()+Math.random(),
         name: '李春花',
         song: '公子向北走',
         checked: false,
         album: 10,
-        src:'mp3/gzbz.mp3',
         href:'./chenyifa/gzxbz.html'
     },
     {
@@ -28,7 +35,6 @@ let oData = [
         song: '我的将军啊',
         checked: false,
         album: 10,
-        src:'mp3/wodejiangjun.m4a',
         href:'./chenyifa/wdjja.html'
     },
     {
@@ -37,7 +43,6 @@ let oData = [
         song: '世界第一等',
         checked: false,
         album: 10,
-        src:'mp3/shijiediyideng.m4a',
         href:'./chenyifa/sjdyid.html'
     },
     {
@@ -46,7 +51,6 @@ let oData = [
         song: '盗将行',
         checked: false,
         album: 10,
-        src:'mp3/saojaingxing.m4a',
         href:'./chenyifa/djx.html',
 
     },
@@ -56,7 +60,6 @@ let oData = [
         song: '童话镇',
         checked: false,
         album: 10,
-        src:'mp3/tonghuazhen.mp3',
         href:'./chenyifa/thz.html'
 
     },

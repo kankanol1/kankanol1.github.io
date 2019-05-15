@@ -46,6 +46,6 @@ let str =
     '[03:52.000] ';
 let data = {
     name:'萨顶顶',
-    song:'以手指月'
+    song:'左手指月'
 };
 

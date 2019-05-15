@@ -24,9 +24,6 @@ $(document).ready(function () {
             }
             // time = lrc[i].match(timeReg1) || lrc[i].match(timeReg2);
             // value = lrc[i].replace(timeReg1, "") || lrc[i].replace(timeReg2, "");
-
-
-
             // let time = lrc[i].match(timeReg2) || lrc[i].match(timeReg1); //获取歌词里的时间
             // let value = lrc[i].replace(timeReg2, "")  ||  lrc[i].replace(timeReg1, ""); //获取纯歌词文本
             // console.log(time);
