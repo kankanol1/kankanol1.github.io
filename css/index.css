@@ -152,7 +152,7 @@
   .search {
     padding: 0.3125rem 0.625rem; }
     .search table {
-      width: 6.25rem;
+      width: 8.125rem;
       text-align: center;
       padding-top: 0.3125rem; }
       .search table thead tr {
@@ -325,7 +325,7 @@
   .search {
     padding: 0.3846153846rem 0.7692307692rem; }
     .search table {
-      width: 11.5384615385rem;
+      width: 250px;
       text-align: center; }
       .search table form input {
         border: none;
