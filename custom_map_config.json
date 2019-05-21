@@ -1,0 +1,19 @@
+[{
+    "featureType": "country",
+    "elementType": "labels",
+    "stylers": {
+        "visibility": "on"
+    }
+}, {
+    "featureType": "educationlabel",
+    "elementType": "labels.text.fill",
+    "stylers": {
+        "color": "#d80b0bff"
+    }
+}, {
+    "featureType": "educationlabel",
+    "elementType": "labels.text.stroke",
+    "stylers": {
+        "color": "#ffffffff"
+    }
+}]

@@ -109,6 +109,8 @@
 "category": "pc", "stocked": true, "name": "方格定位", "href": "./assets/fangge"},
 {
 "category": "pc", "stocked": true, "name": "图片拖拽", "href": "./assets/dragp"},
+{
+"category": "pc", "stocked": true, "name": "百度地图", "href": "./map"},
 {"category": "pc", "stocked": true, "name": "你画我猜", "href": "./assets/guess"
 },
 {
