@@ -1,4 +1,6 @@
 const PRODUCTS = [
+    {category: "phone", stocked: true, name: "黑客帝国 ", href: "./assets/zero"},
+
     {category: "phone", stocked: true, name: "怦然心动 ", href: "./assets/love"},
     {category: "phone", stocked: true, name: "冰原歌单 ", href: "./assets/vue/music"},
     {category: "phone", stocked: true, name: "催菜星空 ", href: "./assets/sky/"},

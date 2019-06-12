@@ -3,6 +3,11 @@
 
 const dataPhone = [
     {
+        name: "黑客帝国",
+        src: './img/zero.png',
+        href: "./assets/zero/"
+    },
+    {
         name: "蘑菇街装",
         src: './img/mogujie.png',
         href: "./assets/mogujie/"
@@ -51,7 +56,11 @@ const dataPhone = [
 
 ];
 const dataPc = [
-
+    {
+        name: "黑客帝国",
+        src: './img/zero.png',
+        href: "./assets/zero/"
+    },
     {
         name: "方格定位",
         src: './img/fange.png',
