@@ -22,6 +22,7 @@ const PRODUCTS = [
     {category: "phone", stocked: true, name: "Hexo网站 ", href: "https://love.kankan.fun"},
     {category: "phone", stocked: true, name: "Jekyll网站 ", href: "https://fanny.kankan.fun"},
 
+    {category: "pc", stocked: true, name: "黑客帝国", href: "./assets/zero"},
     {category: "pc", stocked: true, name: "怦然心动", href: "./assets/love"},
     {category: "pc", stocked: true, name: "冰原歌单", href: "./assets/vue/music"},
     {category: "pc", stocked: true, name: "催菜星空", href: "./assets/sky/"},
