@@ -78,7 +78,7 @@
         let flag = 0;
         nodes[i].index = 0;
         for (let j = 0; j < centerNodes.length; j++) {
-            if (nodes[i].id == centerNodes[j]) {
+            if (nodes[i].id === centerNodes[j]) {
                 flag = 1;
             }
         }
@@ -94,7 +94,7 @@
 
     //去除异常 数据
     for (let i = 0; i < links.length; i++) {
-        if (links[i].startNode == links[i].endNode) {
+        if (links[i].startNode === links[i].endNode) {
             links.splice(i, 1);
         }
     }
@@ -266,8 +266,8 @@
         }
 
         for (let i = 0; i < nodes.length; i++) {
-            nodes[i].positionX = c.width / 2 - c.width / 6 + R * Math.cos(i / nodes.length * 2 * Math.PI);
-            nodes[i].positionY = c.height / 2 - c.width / 6 + dis + R * Math.sin(i / nodes.length * 2 * Math.PI);
+            nodes[i].positionX = c.width / (ratio / 0.5) + R * Math.cos(i / nodes.length * 2 * Math.PI);
+            nodes[i].positionY = c.height / (ratio / 0.5)  + dis + R * Math.sin(i / nodes.length * 2 * Math.PI);
         }
 
     }
@@ -301,8 +301,8 @@
         }
         nodes = nodesData;
         for (let i = 0; i < nodes.length; i++) {
-            nodes[i].positionX = c.width / 2 - c.width / 6 + R * Math.cos(i / nodes.length * 2 * Math.PI);
-            nodes[i].positionY = c.height / 2 - c.width / 6 + dis + R * Math.sin(i / nodes.length * 2 * Math.PI);
+            nodes[i].positionX = c.width / (ratio / 0.5)  + R * Math.cos(i / nodes.length * 2 * Math.PI);
+            nodes[i].positionY = c.height / (ratio / 0.5) + dis + R * Math.sin(i / nodes.length * 2 * Math.PI);
         }
     }
 
@@ -339,8 +339,8 @@
         nodes = nodesData;
         // console.log(nodes.length);
         for (let i = 0; i < nodes.length; i++) {
-            nodes[i].positionX = c.width / 2 - c.width / 6 + R * Math.cos(i / nodes.length * 2 * Math.PI);
-            nodes[i].positionY = c.height / 2 - c.width / 6 + dis + R * Math.sin(i / nodes.length * 2 * Math.PI);
+            nodes[i].positionX = c.width / (ratio / 0.5) + R * Math.cos(i / nodes.length * 2 * Math.PI);
+            nodes[i].positionY = c.height / (ratio / 0.5) + dis + R * Math.sin(i / nodes.length * 2 * Math.PI);
         }
     }
 

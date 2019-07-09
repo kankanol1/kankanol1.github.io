@@ -49,7 +49,7 @@
     c.width = w * ratio;
     c.height = h * ratio;
     ct.scale(ratio, ratio);
-    console.log(ratio);
+    // console.log(ratio);
 
 
     //中心点
@@ -74,7 +74,7 @@
         centerNodes = dataC.centerNodes;
     nodes = checkData(nodes);// 去重
     for (let i = 0; i < links.length; i++) {
-        if (links[i].startNode == links[i].endNode) {
+        if (links[i].startNode === links[i].endNode) {
             links.splice(i, 1);
         }
     }
@@ -83,7 +83,7 @@
         let flag = 0;
         nodes[i].index = 0;
         for (let j = 0; j < centerNodes.length; j++) {
-            if (nodes[i].id == centerNodes[j]) {
+            if (nodes[i].id === centerNodes[j]) {
                 flag = 1;
             }
         }
