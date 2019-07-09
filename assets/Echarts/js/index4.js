@@ -67,7 +67,7 @@
 
         //删除links中自我付款条目
         for (let i = 0; i < links.length; i++) {
-            if (links[i].startNode == links[i].endNode) {
+            if (links[i].startNode === links[i].endNode) {
                 links.splice(i, 1);
             }
         }
@@ -76,7 +76,7 @@
             let flag = 0;
             nodes[i].index = 0;
             for (let j = 0; j < centerNodes.length; j++) {
-                if (nodes[i].id == centerNodes[j]) {
+                if (nodes[i].id === centerNodes[j]) {
                     flag = 1;
                 }
             }
@@ -101,7 +101,7 @@
             for (let i = 0; i < nodes.length; i++) {
                 for (let j = 0; j < nodes.length; j++) {
                     for (let k = 0; k < links.length; k++) {
-                        if (nodes[i].id == links[k].startNode && nodes[j].id == links[k].endNode) {
+                        if (nodes[i].id === links[k].startNode && nodes[j].id === links[k].endNode) {
                             matrix[i][j] = 1;
                             matrix[j][i] = 1;
                         }
@@ -137,21 +137,22 @@
             let n = 0;//标记
             let outL = 1;//放大系数
             for (let j = 0; j < nodes.length; j++) {
-                if (matrix[flag][j] == 1 && nodes[j].degree == 1) {
-                    let scaleC = outL * (nodes[flag].degree + Math.abs(nodes[flag].degree - MAX_VALUE)) / MAX_VALUE;//拉伸系数
-                    if (nodes[flag].degree != 1) {
-                        scaleC = (1 - 2 / nodes[flag].degree) * scaleC;
-                    } else {
+                if (matrix[flag][j] === 1 && nodes[j].degree === 1) {
+                    let scaleC = 0*outL * (nodes[flag].degree + Math.abs(nodes[flag].degree - MAX_VALUE)) / MAX_VALUE;//拉伸系数
+                   /* if (nodes[flag].degree !== 1) {
+                        scaleC = (1 - 2 / nodes[flag].degree) * scaleC*4;
+                    }*/
+                   /* else {
                         scaleC = scaleC / 2;
-                    }
-                    let chang = Math.PI / centerNodes.length * n / nodes[flag].degree * 1;
+                    }*/
+                    let chang = (Math.PI / centerNodes.length * n) / (nodes[flag].degree * 1);
                     if (nodes[flag].positionX - ratioW > 0 && nodes[flag].positionY - ratioH > 0) {
                         if (n % 2) {
                             nodes[j].positionX = ratioW + scaleC * Math.cos(alpha + chang);
-                            nodes[j].positionY = c.height / 2 + scaleC * Math.sin(alpha + chang);
+                            nodes[j].positionY = c.height / (ratio/0.5) + scaleC * Math.sin(alpha + chang);
                         } else {
                             nodes[j].positionX = ratioW + scaleC * Math.cos(alpha - chang);
-                            nodes[j].positionY = c.height / 2 + scaleC * Math.sin(alpha - chang);
+                            nodes[j].positionY = c.height /  (ratio/0.5) + scaleC * Math.sin(alpha - chang);
                         }
                     }
                     if (nodes[flag].positionX - ratioW > 0 && nodes[flag].positionY - ratioH <= 0) {
@@ -193,7 +194,7 @@
                     let xL = 0,
                         yL = 0;
                     for (let j = 0; j < nodes.length; j++) {
-                        if (matrix[i][j] == 1) {
+                        if (matrix[i][j] === 1) {
                             xL = xL + nodes[j].positionX;
                             yL = yL + nodes[j].positionY;
                         }
@@ -233,8 +234,8 @@
         }
         for (let i = 0; i < splitNodes.length; i++) {
             for (let j = 1; j < splitNodes[i].length; j++) {
-                nodes[splitNodes[i][j]].positionX = nodes[splitNodes[i][0]].positionX - c.width / 12 * Math.cos(j * Math.PI * 2 / (splitNodes[i].length - 1));
-                nodes[splitNodes[i][j]].positionY = nodes[splitNodes[i][0]].positionY - c.width / 12 * Math.sin(j * Math.PI * 2 / (splitNodes[i].length - 1));
+                nodes[splitNodes[i][j]].positionX = nodes[splitNodes[i][0]].positionX - c.width / 15 * Math.cos(j * Math.PI * 2 / (splitNodes[i].length - 1));
+                nodes[splitNodes[i][j]].positionY = nodes[splitNodes[i][0]].positionY - c.width / 15 * Math.sin(j * Math.PI * 2 / (splitNodes[i].length - 1));
             }
         }
         //初始化绘制网络
