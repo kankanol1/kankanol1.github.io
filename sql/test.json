@@ -1,0 +1,23 @@
+{
+  "status": "成功",
+  "data": {
+    "name": "user",
+    "items": [
+      {
+        "id": "1",
+        "name": "kankan",
+        "age": "27"
+      },
+      {
+        "id": "2",
+        "name": "Fanny",
+        "age": "26"
+      },
+      {
+        "id": "3",
+        "name": "Jone",
+        "age": "27"
+      }
+    ]
+  }
+}

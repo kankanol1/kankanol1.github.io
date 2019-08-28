@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <div>
+        今天你快乐吗？
+    </div>
+    <form action="test.php" method="post">
+        名字: <input type="text" name="fname">
+        年龄: <input type="text" name="age">
+        <input type="submit" value="提交">
+    </form>
+</div>
+
+<script>
+
+    timedGetText('./test.json',2000,function(res){
+        console.log(JSON.parse(res));
+    });
+    function timedGetText( url, time, callback ){
+        var request = new XMLHttpRequest();
+        var timeout = false;
+        var timer = setTimeout( function(){
+            timeout = true;
+            request.abort();
+        }, time );
+        request.open( "GET", url );
+        request.onreadystatechange = function(){
+            if( request.readyState !== 4 ) return;
+            if( timeout ) return;
+            clearTimeout( timer );
+            if( request.status === 200 ){
+                callback( request.responseText );
+            }
+        };
+        request.send( null );
+    }
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
+
+<!---
+    Created by kankan on 2019/7/2.
+    email: lidainzhong@gl-data.com
+-->
