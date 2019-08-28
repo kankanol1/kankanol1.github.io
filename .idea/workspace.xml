@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b343a518-caed-4959-82c1-fa1020175a70" name="Default Changelist" comment="12">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/circal.html" beforeDir="false" afterPath="$PROJECT_DIR$/demo/circal.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -57,9 +56,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/demo/circal.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="76" column="39" selection-start-line="76" selection-start-column="39" selection-end-line="76" selection-end-column="39" />
+            <state relative-caret-position="150">
+              <caret line="77" column="103" selection-start-line="77" selection-start-column="103" selection-end-line="77" selection-end-column="103" />
               <folding>
+                <element signature="n#style#0;n#p#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#audio#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -212,7 +212,7 @@
       <workItem from="1564795860066" duration="175000" />
       <workItem from="1565754065127" duration="272000" />
       <workItem from="1566956063896" duration="1848000" />
-      <workItem from="1566962845882" duration="368000" />
+      <workItem from="1566962845882" duration="1010000" />
     </task>
     <task id="LOCAL-00001" summary="12">
       <created>1561987862187</created>
@@ -253,7 +253,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14488000" />
+    <option name="totallyTimeSpent" value="15130000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="151" y="19" width="1097" height="712" extended-state="0" />
@@ -489,9 +489,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/circal.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="76" column="39" selection-start-line="76" selection-start-column="39" selection-end-line="76" selection-end-column="39" />
+        <state relative-caret-position="150">
+          <caret line="77" column="103" selection-start-line="77" selection-start-column="103" selection-end-line="77" selection-end-column="103" />
           <folding>
+            <element signature="n#style#0;n#p#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#audio#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
